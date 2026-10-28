@@ -52,6 +52,17 @@ translationOf: fr/ce-que-souverain-veut-dire # optional, links the other languag
 Drafts (`draft: true`) show in `bun run dev` but are left out of production builds.
 Each language has its own RSS feed at `/rss.xml` and `/fr/rss.xml`.
 
+## Updating the CV
+
+The downloadable CV (`static/cv/cedric-pontet-cv.pdf`) is generated from `cv/cv.html`:
+
+```bash
+bun run cv   # renders cv/cv.html to A4 PDF with a local Playwright Chromium
+```
+
+Edit the HTML, run the command, and commit both files. If no Chromium is installed yet,
+run `bunx playwright-core install chromium` once.
+
 ## Project structure
 
 ```

@@ -61,7 +61,6 @@ const lang = $derived(data.lang);
         {d.home.ctaContact}
         <ArrowRight class="size-[18px]" aria-hidden="true" />
       </a>
-      <!-- TODO(cedric): public PDF CV in static/cv/ -->
       <a href="/cv/cedric-pontet-cv.pdf" class={btnSecondary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {d.home.ctaCv}

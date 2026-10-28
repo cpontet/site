@@ -3,7 +3,7 @@
 declare global {
   namespace App {
     interface Platform {
-      env: Env & { TURNSTILE_SECRET_KEY?: string };
+      env: Env & { CONTACT_TO?: string; TURNSTILE_SECRET_KEY?: string };
       ctx: ExecutionContext;
       caches: CacheStorage;
       cf?: IncomingRequestCfProperties;

@@ -38,7 +38,7 @@ Analytics: Cloudflare Web Analytics only (no cookies, no banner).
 - Spam: Cloudflare Turnstile (site key public env, secret as Worker secret
   `TURNSTILE_SECRET_KEY`) plus a hidden honeypot field.
 - Delivery: Cloudflare Email Routing `send_email` binding (`SEND_EMAIL` in `wrangler.jsonc`)
-  to the verified inbox. Fallback if needed: a transactional email API (ask first).
+  to the verified inbox, read from the `CONTACT_TO` Worker secret (never commit it). Fallback if needed: a transactional email API (ask first).
 - Optional rate limiting with the Workers Rate Limiting binding, keyed by IP.
 - GDPR: no storage of submissions; a one-line notice under the form explains the data is only
   used to reply. The legal notice page names the data controller.

@@ -89,7 +89,7 @@ on every push to `main`.
    `https://cedricpontet.com/${1}` (301), plus a proxied DNS record for `www`.
 3. **Contact form**:
    - Enable Email Routing on the domain and verify the inbox that should receive messages,
-     then set it as `CONTACT_TO` in `wrangler.jsonc` (and run `bun run gen`).
+     then store it as a secret: `bunx wrangler secret put CONTACT_TO` (kept out of the public repo).
    - Create a Turnstile widget for `cedricpontet.com`, put its site key in `src/lib/config.ts`,
      and store the secret: `bunx wrangler secret put TURNSTILE_SECRET_KEY`.
 4. **Analytics** (optional): enable Cloudflare Web Analytics for the domain (no cookies).

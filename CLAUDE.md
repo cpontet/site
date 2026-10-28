@@ -166,10 +166,10 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 - Design canvas: https://claude.ai/artifact/AZKNx2AnSkyyRFMCCKUtKt
   - v1 editorial & calm: rejected (serif hard to read).
   - v2 playful / EventStorming colours: kept for reference only, do not implement its sticky style.
-  - **v3 playful, #play14 orange: the chosen design.** Pages: Home (light + dark), About,
-    Blog index, Blog post, Legal notice & privacy, 404, and a Style guide artboard (light/dark
-    tokens and components) that was the source of truth for `src/routes/layout.css`.
-    Since then the accent has moved from orange to #play14 blue; the canvas still shows orange.
+  - **v3 playful, #play14 blue accent: the chosen design, in sync with the live site.** Pages:
+    Home (light + dark), About, Blog index, Blog post, Legal notice & privacy, 404, and a Style
+    guide artboard (light/dark tokens and components) matching `src/routes/layout.css`.
+    Keep the canvas and the code in step when the visual design changes.
 - Fonts (self-host via `@fontsource`):
   - Headings: **Bricolage Grotesque** 700–800, tight tracking.
   - Body: **Atkinson Hyperlegible** 400/700, 18px base — readability is a hard requirement.

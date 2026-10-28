@@ -1,0 +1,46 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:02.325
+Level three: Software Design.
+
+2
+00:00:02.325 --> 00:00:07.212
+Process Modelling gave us Commands and Events — but what enforces the rules?
+
+3
+00:00:07.212 --> 00:00:13.350
+The Aggregate emerges — a consistency boundary that decides and emits the event.
+
+4
+00:00:13.350 --> 00:00:18.387
+A Command acts on an Aggregate, or an external system, to produce that event.
+
+5
+00:00:18.387 --> 00:00:24.550
+So Software Design is Process Modelling plus the Aggregate — almost a spec for code.
+
+6
+00:00:24.550 --> 00:00:27.362
+Some behaviour spans several Aggregates.
+
+7
+00:00:27.362 --> 00:00:31.237
+A Process Manager coordinates them — a stateful saga.
+
+8
+00:00:31.237 --> 00:00:35.012
+It starts on one Aggregate's event, then commands the next.
+
+9
+00:00:35.012 --> 00:00:40.512
+That events back, so it sends the next command — advancing its state with each round.
+
+10
+00:00:40.512 --> 00:00:47.337
+…until the process is final: one long-running transaction, kept consistent across aggregates.
+
+11
+00:00:47.337 --> 00:00:52.712
+Aggregates with behaviour, synced by Process Managers — the blueprint for code.
+

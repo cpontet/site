@@ -1,0 +1,46 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:02.537
+Level two: Process Modelling.
+
+2
+00:00:02.537 --> 00:00:04.500
+Make sure we build the right thing.
+
+3
+00:00:04.500 --> 00:00:07.500
+Scope one feature — the Command that triggers it…
+
+4
+00:00:07.500 --> 00:00:13.175
+…and the final state it must reach: a Domain Event, and the Read Model it leaves behind.
+
+5
+00:00:13.175 --> 00:00:19.387
+Between them lies the flow to discover — and we discover it by enforcing the grammar.
+
+6
+00:00:19.387 --> 00:00:21.300
+Follow the colours, in order.
+
+7
+00:00:21.300 --> 00:00:27.887
+A Command runs on a System and produces a Domain Event — blue, to pink, to orange.
+
+8
+00:00:27.887 --> 00:00:35.675
+Then a Policy turns that event into the next Command: whenever this happened, do that — the lilac between the orange and the blue.
+
+9
+00:00:35.675 --> 00:00:43.112
+And it chains — Command, System, Event, Policy, Command — again and again, until the final state.
+
+10
+00:00:43.112 --> 00:00:46.300
+A chain of Commands and Events, built by the grammar.
+
+11
+00:00:46.300 --> 00:00:48.900
+No Aggregate yet — that comes next.
+

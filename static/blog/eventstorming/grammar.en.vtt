@@ -1,0 +1,46 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:03.725
+Here's the grammar — one picture that explains the whole notation.
+
+2
+00:00:03.725 --> 00:00:07.987
+It revolves around Domain Events — something that happened in the business.
+
+3
+00:00:07.987 --> 00:00:09.625
+Orange, past tense.
+
+4
+00:00:09.625 --> 00:00:12.537
+An Actor issues a Command — an intention.
+
+5
+00:00:12.537 --> 00:00:13.900
+Blue, imperative.
+
+6
+00:00:13.900 --> 00:00:18.887
+The Command lands on an Aggregate, which guards the rules and generates the event.
+
+7
+00:00:18.887 --> 00:00:23.825
+…or on an external system we don't control — it still produces events.
+
+8
+00:00:23.825 --> 00:00:28.525
+Events build Read Models — the information people read, shown on screen.
+
+9
+00:00:28.525 --> 00:00:32.750
+Events also trigger Policies: whenever this happens, do that.
+
+10
+00:00:32.750 --> 00:00:36.662
+And a Policy invokes a new Command — the loop closes.
+
+11
+00:00:36.662 --> 00:00:43.850
+Read it as a sentence: when a Ticket is Purchased, the Loyalty policy tells the system to Award Points.
+

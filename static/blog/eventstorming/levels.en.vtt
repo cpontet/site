@@ -1,0 +1,26 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:06.512
+EventStorming works at three levels of resolution — the same events, seen ever closer.
+
+2
+00:00:06.512 --> 00:00:13.850
+The Big Picture: every Domain Event across the business, its hotspots, and where Bounded Contexts emerge.
+
+3
+00:00:13.850 --> 00:00:22.087
+Process Modelling adds the commands, policies, read models and external systems — how the work actually flows.
+
+4
+00:00:22.087 --> 00:00:27.925
+Software Design surfaces the Aggregates and their invariants — ready to become code.
+
+5
+00:00:27.925 --> 00:00:29.937
+Zoom in; don't pile up.
+
+6
+00:00:29.937 --> 00:00:32.850
+Each level adds detail, never noise.
+

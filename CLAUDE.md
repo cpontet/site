@@ -61,7 +61,8 @@ bunx shadcn-svelte@latest add <component>   # add a UI component
 - Biome handles `.ts`, `.js`, `.json`, `.css` fully; its Svelte support covers the
   `<script>` and `<style>` blocks only, so `svelte-check` remains the safety net for markup.
 - Biome config: tabs off, 2-space indent, single quotes, line width 100;
-  ignore `.svelte-kit/`, `build/`, `src/lib/components/ui/` (generated) and all `*.md`
+  ignore `.svelte-kit/`, `build/`, `src/lib/components/ui/` (generated), `wrangler.jsonc`
+  (its content is hashed by `wrangler types --check`) and all `*.md`
   (Biome's Markdown formatter is experimental and breaks blog front matter).
 - A Claude Code Stop hook (`.claude/hooks/biome-on-stop.sh`) runs `biome check --write` after
   every turn and reports unfixable errors back to Claude.
@@ -80,7 +81,8 @@ src/
     assets/                  # portrait.webp (720px, transparent), favicon
     components/ui/           # shadcn-svelte generated components (don't hand-edit heavily)
     components/              # SiteHeader, SiteFooter, ThemeToggle, …
-    content/                 # (to come) profile.ts, experience.ts — typed data, both languages
+    content/                 # profile.ts, experience.ts — typed bilingual data (L10n)
+    server/contact.ts        # validation, Turnstile check, MIME for send_email
     i18n.ts                  # Lang type, t(), localize(), switchLang()
     i18n/en.ts, i18n/fr.ts   # UI strings (fr is typed against en)
     blog.ts                  # loads posts via import.meta.glob, reading time, drafts
@@ -96,9 +98,10 @@ src/
       about/                 # profile + experience timeline
       blog/                  # index (topic + language filters) + [slug]
       rss.xml/               # RSS per language
-      contact/               # (to come) form action — the only non-prerendered route
+      contact/               # form action — the only non-prerendered route
       legal/                 # legal notice & privacy (placeholders: RCS, VAT, permit, address)
-    +error.svelte            # (to come) playful 404 / error page
+    +error.svelte            # playful 404 / error page
+    sitemap.xml/             # sitemap with hreflang alternates
 static/
   cv/                        # public PDF CV (missing: build only warns until added)
 resources/                   # SOURCE material only (docx CVs, bio, raw photos) — gitignored, never served
@@ -200,7 +203,9 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 
 - Domain `cedricpontet.com` is on Cloudflare (registrar + DNS).
 - Deployed as a Cloudflare Worker with static assets (`wrangler.jsonc`); `www` redirects to apex.
-- CI: GitHub Actions with `oven-sh/setup-bun` →
+- `www` → apex is a Cloudflare Redirect Rule, not app code: prerendered assets are served
+  before the Worker runs. One-time setup steps are in README.md.
+- CI: `.github/workflows/ci.yml`, GitHub Actions with `oven-sh/setup-bun` →
   `bun install --frozen-lockfile && bun run lint && bun run check && bun run build && bunx wrangler deploy`
   using `CLOUDFLARE_API_TOKEN` secret.
 

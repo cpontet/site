@@ -14,7 +14,8 @@
       "!src/lib/components/ui",
       "!worker-configuration.d.ts",
       "!bun.lock",
-      "!**/*.md"
+      "!**/*.md",
+      "!wrangler.jsonc"
     ]
   },
   "formatter": {

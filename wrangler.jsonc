@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "cedricpontet",
+  // "cpontet" account, which owns the cedricpontet.com zone.
+  "account_id": "079789269b213c27c3cb28ea7764b6b5",
   "compatibility_date": "2026-10-28",
   "compatibility_flags": ["nodejs_als"],
   "main": ".svelte-kit/cloudflare/_worker.js",

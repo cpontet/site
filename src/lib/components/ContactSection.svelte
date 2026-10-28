@@ -1,5 +1,5 @@
 <script lang="ts">
-import { CONTACT_EMAIL } from '#lib/config.js';
+import { CONTACT_EMAIL, LINKEDIN_URL } from '#lib/config.js';
 import type { ContactFormState } from '#lib/contact.js';
 import type { Dictionary, Lang } from '#lib/i18n.js';
 import ContactForm from './ContactForm.svelte';
@@ -34,10 +34,9 @@ const c = $derived(dict.contact);
           class="underline decoration-orange decoration-2 underline-offset-4"
           href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a
         >
-        <!-- TODO(cedric): LinkedIn handle -->
         <a
           class="underline decoration-orange decoration-2 underline-offset-4"
-          href="https://www.linkedin.com/in/[HANDLE]">LinkedIn</a
+          href={LINKEDIN_URL}>LinkedIn</a
         >
       </div>
     </div>

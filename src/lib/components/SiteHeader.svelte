@@ -26,7 +26,7 @@ const links = $derived([
       {#each links as link (link.href)}
         <a
           href={link.href}
-          class="hover:text-orange-text"
+          class="decoration-orange decoration-2 underline-offset-8 hover:text-orange-text aria-[current=page]:underline"
           aria-current={page.url.pathname === link.href ? 'page' : undefined}>{link.label}</a
         >
       {/each}

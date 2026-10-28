@@ -8,6 +8,14 @@
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare"
   },
+  // Contact form: Email Routing must be enabled on cedricpontet.com and CONTACT_TO verified there.
+  "send_email": [{ "name": "SEND_EMAIL" }],
+  "vars": {
+    // TODO(cedric): verified destination inbox for contact form messages.
+    "CONTACT_TO": ""
+  },
+  // TURNSTILE_SECRET_KEY is a secret: `bunx wrangler secret put TURNSTILE_SECRET_KEY`.
+  "observability": { "enabled": true },
   "workers_dev": true,
   "preview_urls": true
 }

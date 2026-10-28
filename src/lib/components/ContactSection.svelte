@@ -26,16 +26,16 @@ const c = $derived(dict.contact);
     class="dark flex flex-wrap gap-12 rounded-[2rem] border-[1.5px] border-border bg-background p-[clamp(1.75rem,5vw,3.5rem)] text-foreground"
   >
     <div class="flex flex-[1_1_320px] flex-col gap-4">
-      <p class="text-[15px] font-bold tracking-[0.08em] text-orange-text uppercase">{c.eyebrow}</p>
+      <p class="text-[15px] font-bold tracking-[0.08em] text-brand-text uppercase">{c.eyebrow}</p>
       <svelte:element this={`h${headingLevel}`} class={h2}>{c.title}</svelte:element>
       <p class="text-muted-foreground">{c.lead}</p>
       <div class="flex flex-col gap-2 pt-2 font-bold">
         <a
-          class="underline decoration-orange decoration-2 underline-offset-4"
+          class="underline decoration-brand decoration-2 underline-offset-4"
           href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a
         >
         <a
-          class="underline decoration-orange decoration-2 underline-offset-4"
+          class="underline decoration-brand decoration-2 underline-offset-4"
           href={LINKEDIN_URL}>LinkedIn</a
         >
       </div>

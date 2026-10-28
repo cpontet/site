@@ -32,10 +32,10 @@
   --border: #e4e4ec;
   --input: #9a9db0;
 
-  /* orange: fill with ink text on top; orange-text: AA-safe for small text */
-  --orange: #ff5200;
-  --orange-foreground: #1f2340;
-  --orange-text: #c43f00;
+  /* brand: fill with ink text on top; brand-text: AA-safe for small text */
+  --brand: #0098dd;
+  --brand-foreground: #1f2340;
+  --brand-text: #0076ad;
 
   /* soft tints for cards and tags */
   --tint-peach: #ffe6d9;
@@ -55,10 +55,10 @@
   --secondary: var(--raised);
   --secondary-foreground: var(--foreground);
   --muted: var(--surface);
-  --accent: var(--orange);
-  --accent-foreground: var(--orange-foreground);
+  --accent: var(--brand);
+  --accent-foreground: var(--brand-foreground);
   --destructive: #b91c1c;
-  --ring: var(--orange);
+  --ring: var(--brand);
   --radius: 1.5rem;
 }
 
@@ -71,9 +71,9 @@
   --border: #343a66;
   --input: #5a608f;
 
-  --orange: #ff5200;
-  --orange-foreground: #14162b;
-  --orange-text: #ff8f5c;
+  --brand: #0098dd;
+  --brand-foreground: #14162b;
+  --brand-text: #5cc3f2;
 
   --tint-peach: #3a2618;
   --tint-sky: #1c2a4a;
@@ -114,9 +114,9 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-orange: var(--orange);
-  --color-orange-foreground: var(--orange-foreground);
-  --color-orange-text: var(--orange-text);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-text: var(--brand-text);
   --color-tint-peach: var(--tint-peach);
   --color-tint-sky: var(--tint-sky);
   --color-tint-mint: var(--tint-mint);
@@ -157,7 +157,7 @@
     line-height: 1.05;
   }
   :focus-visible {
-    outline: 3px solid var(--orange);
+    outline: 3px solid var(--brand);
     outline-offset: 2px;
   }
   @media (prefers-reduced-motion: reduce) {

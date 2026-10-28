@@ -26,7 +26,7 @@ function toggle() {
   type="button"
   onclick={toggle}
   aria-label={dark ? labels.toLight : labels.toDark}
-  class="flex size-11 items-center justify-center rounded-full bg-raised text-foreground transition-colors hover:text-orange-text"
+  class="flex size-11 items-center justify-center rounded-full bg-raised text-foreground transition-colors hover:text-brand-text"
 >
   {#if dark}
     <Sun class="size-5" aria-hidden="true" />

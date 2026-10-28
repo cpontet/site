@@ -20,4 +20,4 @@ const icons = {
 const Icon = $derived(icons[name]);
 </script>
 
-<Icon class="size-6 text-orange-text" aria-hidden="true" />
+<Icon class="size-6 text-brand-text" aria-hidden="true" />

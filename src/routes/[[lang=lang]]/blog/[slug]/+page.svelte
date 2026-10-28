@@ -37,7 +37,7 @@ const translation = $derived(data.post.translationOf?.match(/^(en|fr)\/(.+)$/));
           href={localize(`/blog/${translation[2]}`, translation[1] as 'en' | 'fr')}
           hreflang={translation[1]}
           lang={translation[1]}
-          class="font-bold underline decoration-orange decoration-2 underline-offset-4"
+          class="font-bold underline decoration-brand decoration-2 underline-offset-4"
           >{d.blog.readOtherLang}</a
         >
       {/if}
@@ -45,7 +45,7 @@ const translation = $derived(data.post.translationOf?.match(/^(en|fr)\/(.+)$/));
   </header>
 
   <div
-    class="prose prose-lg mt-14 max-w-[720px] text-foreground prose-headings:font-display prose-headings:text-foreground prose-a:decoration-orange prose-a:decoration-2 prose-a:underline-offset-4 prose-strong:text-foreground prose-code:text-foreground"
+    class="prose prose-lg mt-14 max-w-[720px] text-foreground prose-headings:font-display prose-headings:text-foreground prose-a:decoration-brand prose-a:decoration-2 prose-a:underline-offset-4 prose-strong:text-foreground prose-code:text-foreground"
   >
     <Content />
   </div>

@@ -79,7 +79,7 @@ SvelteKit 3 specifics and deployment.
 
 ## Design
 
-The visual design (playful, #play14 orange, light and dark themes) lives in a design canvas;
+The visual design (playful, #play14 colours with a blue accent, light and dark themes) lives in a design canvas;
 its style guide is the reference for the tokens in `src/routes/layout.css`.
 
 ## Deployment

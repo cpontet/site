@@ -140,7 +140,7 @@ const labelClass = 'text-base font-bold';
       <button
         type="submit"
         disabled={pending}
-        class="inline-flex min-h-13 cursor-pointer items-center gap-2.5 rounded-full bg-orange px-7 font-bold text-orange-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-70"
+        class="inline-flex min-h-13 cursor-pointer items-center gap-2.5 rounded-full bg-brand px-7 font-bold text-brand-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-70"
       >
         {pending ? c.sending : c.submit}
         <ArrowRight class="size-[18px]" aria-hidden="true" />

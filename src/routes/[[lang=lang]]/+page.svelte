@@ -39,7 +39,7 @@ const lang = $derived(data.lang);
     </p>
     <h1 class="text-[clamp(2.5rem,5.4vw,4.5rem)]">
       {d.home.titleStart}
-      <span class="relative inline-block text-orange-text">
+      <span class="relative inline-block text-brand-text">
         {d.home.titleHighlight}<svg
           viewBox="0 0 200 16"
           preserveAspectRatio="none"
@@ -48,7 +48,7 @@ const lang = $derived(data.lang);
           ><path
             d="M2 10 C 30 2, 50 14, 80 8 S 130 2, 160 9 S 190 6, 198 7"
             fill="none"
-            stroke="var(--orange)"
+            stroke="var(--brand)"
             stroke-width="4"
             stroke-linecap="round"
           /></svg
@@ -81,13 +81,13 @@ const lang = $derived(data.lang);
       ></span>
       <span
         aria-hidden="true"
-        class="absolute right-0 bottom-[10%] h-[13%] w-[26%] rounded-t-full bg-play-blue"
+        class="absolute right-0 bottom-[10%] h-[13%] w-[26%] rounded-t-full bg-play-orange"
       ></span>
       <span
         aria-hidden="true"
         class="absolute bottom-[4%] left-0 size-0 -rotate-[14deg] border-x-[28px] border-b-[48px] border-x-transparent border-b-play-green"
       ></span>
-      <div class="absolute inset-[12%] overflow-hidden rounded-full bg-orange">
+      <div class="absolute inset-[12%] overflow-hidden rounded-full bg-brand">
         <img
           src={portrait}
           alt={d.home.portraitAlt}
@@ -158,7 +158,7 @@ const lang = $derived(data.lang);
 <!-- Facilitation: Playful Learner & #play14 -->
 <section class="px-7">
   <div
-    class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-orange p-[clamp(2.25rem,6vw,5rem)] text-orange-foreground"
+    class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-brand p-[clamp(2.25rem,6vw,5rem)] text-brand-foreground"
   >
     <span
       aria-hidden="true"
@@ -180,7 +180,7 @@ const lang = $derived(data.lang);
             href={venture.url}
             class={['flex flex-col gap-2 rounded-lg bg-background p-6.5 text-foreground', cardLift]}
           >
-            <span class="text-sm font-bold text-orange-text">{venture.role[lang]}</span>
+            <span class="text-sm font-bold text-brand-text">{venture.role[lang]}</span>
             <span class="font-display text-[28px] leading-tight font-extrabold">{venture.name}</span>
             <span class="text-base text-muted-foreground">{venture.body[lang]}</span>
           </a>
@@ -198,7 +198,7 @@ const lang = $derived(data.lang);
         <dt
           class={[
             'font-display leading-none font-extrabold',
-            stat.big ? 'text-[52px] text-orange-text' : 'text-[34px] leading-tight',
+            stat.big ? 'text-[52px] text-brand-text' : 'text-[34px] leading-tight',
           ]}
         >
           {stat.value[lang]}

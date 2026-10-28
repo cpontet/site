@@ -18,7 +18,7 @@ const links = $derived([
       href={localize('/', lang)}
       class="flex items-center gap-2.5 font-display text-2xl font-extrabold tracking-tight"
     >
-      <span aria-hidden="true" class="size-3.5 rounded-full bg-orange"></span>
+      <span aria-hidden="true" class="size-3.5 rounded-full bg-brand"></span>
       Cédric Pontet
     </a>
 
@@ -26,7 +26,7 @@ const links = $derived([
       {#each links as link (link.href)}
         <a
           href={link.href}
-          class="decoration-orange decoration-2 underline-offset-8 hover:text-orange-text aria-[current=page]:underline"
+          class="decoration-brand decoration-2 underline-offset-8 hover:text-brand-text aria-[current=page]:underline"
           aria-current={page.url.pathname === link.href ? 'page' : undefined}>{link.label}</a
         >
       {/each}
@@ -54,7 +54,7 @@ const links = $derived([
 
       <a
         href={localize('/', lang) + '#contact'}
-        class="inline-flex min-h-11 items-center rounded-full bg-orange px-5 text-orange-foreground transition-transform hover:-translate-y-0.5"
+        class="inline-flex min-h-11 items-center rounded-full bg-brand px-5 text-brand-foreground transition-transform hover:-translate-y-0.5"
         >{dict.nav.contact}</a
       >
     </nav>

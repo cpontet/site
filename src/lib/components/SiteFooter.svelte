@@ -6,7 +6,7 @@ let { lang, dict }: { lang: Lang; dict: Dictionary } = $props();
 
 const year = new Date().getFullYear();
 const linkClass =
-  'underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-text';
+  'underline decoration-brand decoration-2 underline-offset-4 hover:text-brand-text';
 </script>
 
 <footer class="border-t-[1.5px] border-border">

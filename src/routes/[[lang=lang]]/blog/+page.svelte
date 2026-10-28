@@ -47,7 +47,7 @@ const seg = (on: boolean) => [
   >
     <span
       aria-hidden="true"
-      class="absolute -top-10 right-[6%] size-30 rounded-full border-[18px] border-orange opacity-50"
+      class="absolute -top-10 right-[6%] size-30 rounded-full border-[18px] border-brand opacity-50"
     ></span>
     <div class="relative flex max-w-3xl flex-col gap-3.5">
       <p class={eyebrow}>{data.dict.nav.blog}</p>
@@ -58,7 +58,7 @@ const seg = (on: boolean) => [
       href={localize('/rss.xml', data.lang)}
       class="relative inline-flex min-h-11 items-center gap-2 rounded-full bg-background px-5 text-base font-bold"
     >
-      <Rss class="size-[18px] text-orange-text" aria-hidden="true" />
+      <Rss class="size-[18px] text-brand-text" aria-hidden="true" />
       RSS
     </a>
   </section>

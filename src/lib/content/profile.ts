@@ -163,10 +163,10 @@ export const stats: Stat[] = [
     big: true,
   },
   {
-    value: { en: 'AZ-305 · AZ-400', fr: 'AZ-305 · AZ-400' },
+    value: { en: 'Certified', fr: 'Certifié' },
     label: {
-      en: 'Azure architect & DevOps certified, plus AWS',
-      fr: 'Certifié architecte Azure & DevOps, plus AWS',
+      en: 'Azure, AWS, Clever Cloud, DevOps, ITIL',
+      fr: 'Azure, AWS, Clever Cloud, DevOps, ITIL',
     },
     big: false,
   },
@@ -182,7 +182,7 @@ export const stats: Stat[] = [
 
 export const ventures = {
   playfulLearner: {
-    url: 'https://playfullearner.com', // TODO(cedric): confirm URL
+    url: 'https://playfullearner.com',
     role: { en: 'Founder', fr: 'Fondateur' },
     body: {
       en: 'Workshops, talks and immersive experiences to rediscover curiosity and intrinsic motivation.',

@@ -73,9 +73,28 @@ its style guide is the reference for the tokens in `src/routes/layout.css`.
 
 ## Deployment
 
-The domain is registered and served on Cloudflare. Pushing to `main` builds and deploys the
-Worker (GitHub Actions + `wrangler deploy`, using a `CLOUDFLARE_API_TOKEN` secret).
-To deploy by hand:
+The site runs as a Cloudflare Worker serving prerendered pages as static assets; only
+`/contact` (form posts) and unknown URLs (404) run Worker code.
+
+[CI](.github/workflows/ci.yml) runs lint, type check and build on every pull request, and deploys
+on every push to `main`.
+
+### One-time setup
+
+1. **GitHub secrets** (repo → Settings → Secrets → Actions):
+   - `CLOUDFLARE_API_TOKEN`: token from the "Edit Cloudflare Workers" template.
+   - `CLOUDFLARE_ACCOUNT_ID`: shown in the Cloudflare dashboard sidebar.
+2. **Custom domain**: `wrangler.jsonc` attaches `cedricpontet.com` to the Worker on deploy.
+   Add a Redirect Rule (Rules → Redirect Rules) from `www.cedricpontet.com/*` to
+   `https://cedricpontet.com/${1}` (301), plus a proxied DNS record for `www`.
+3. **Contact form**:
+   - Enable Email Routing on the domain and verify the inbox that should receive messages,
+     then set it as `CONTACT_TO` in `wrangler.jsonc` (and run `bun run gen`).
+   - Create a Turnstile widget for `cedricpontet.com`, put its site key in `src/lib/config.ts`,
+     and store the secret: `bunx wrangler secret put TURNSTILE_SECRET_KEY`.
+4. **Analytics** (optional): enable Cloudflare Web Analytics for the domain (no cookies).
+
+### Deploy by hand
 
 ```bash
 bun run build && bunx wrangler deploy

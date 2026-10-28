@@ -28,7 +28,7 @@ const lang = $derived(data.lang);
         aria-hidden="true"
         class="absolute bottom-[6%] left-0 size-[24%] rounded-full border-8 border-foreground"
       ></span>
-      <div class="absolute inset-[8%] overflow-hidden rounded-full bg-orange">
+      <div class="absolute inset-[8%] overflow-hidden rounded-full bg-brand">
         <img
           src={portrait}
           alt={data.dict.home.portraitAlt}
@@ -82,7 +82,7 @@ const lang = $derived(data.lang);
       <li class="relative flex flex-col gap-1.5">
         <span
           aria-hidden="true"
-          class="absolute top-1 -left-[41px] size-5 rounded-full border-4 border-background bg-orange"
+          class="absolute top-1 -left-[41px] size-5 rounded-full border-4 border-background bg-brand"
         ></span>
         <span
           class={[
@@ -99,7 +99,7 @@ const lang = $derived(data.lang);
 
 <section class="px-7">
   <div
-    class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-orange p-[clamp(2.25rem,6vw,4.5rem)] text-orange-foreground"
+    class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-brand p-[clamp(2.25rem,6vw,4.5rem)] text-brand-foreground"
   >
     <span
       aria-hidden="true"

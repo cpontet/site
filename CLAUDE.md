@@ -166,18 +166,20 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
   - v2 playful / EventStorming colours: kept for reference only, do not implement its sticky style.
   - **v3 playful, #play14 orange: the chosen design.** Pages: Home (light + dark), About,
     Blog index, Blog post, Legal notice & privacy, 404, and a Style guide artboard (light/dark
-    tokens and components) that is the source of truth for `src/routes/layout.css`.
+    tokens and components) that was the source of truth for `src/routes/layout.css`.
+    Since then the accent has moved from orange to #play14 blue; the canvas still shows orange.
 - Fonts (self-host via `@fontsource`):
   - Headings: **Bricolage Grotesque** 700–800, tight tracking.
   - Body: **Atkinson Hyperlegible** 400/700, 18px base — readability is a hard requirement.
-- v3 palette: signature orange `#FF5200` (official #play14 orange; ink text on it, never white — white fails AA),
+- Palette: brand accent #play14 blue `#0098DD` (tokens `--brand*`, Tailwind `bg-brand`, `text-brand-text`;
+  ink text on it, never white — white fails AA),
   ink `#1F2340`, muted text `#4B4F66`, white ground, soft tints for cards
   (peach `#FFE6D9`, sky `#E4EEFF`, mint `#E2F4EA`, lilac `#EEE7FB`, sun `#FFF3C9`, rose `#FFE1E8`),
-  small orange text `#C43F00` (same hue, AA on white).
+  small brand text `#0076AD` (same hue, AA on white).
 - #play14 palette (decor shapes and accents only, never body text):
   red `#D80000`, orange `#FF5200`, yellow `#FFC900`, green `#92C900`, blue `#0098DD`, gray `#393939`.
-  Hero shapes: yellow dot, green triangle, blue half-disc, ink ring.
-- v3 shapes: 24px card radius, pill buttons, orange circle behind the portrait with a few
+  Hero shapes: yellow dot, green triangle, orange half-disc, ink ring (no blue: it is the accent).
+- v3 shapes: 24px card radius, pill buttons, blue circle behind the portrait with a few
   geometric "game piece" shapes (ring, dot, half-disc, triangle), hand-drawn squiggle underline
   in the hero; gentle hover lift, disabled under `prefers-reduced-motion`.
 - Dark theme (required): follows `prefers-color-scheme` by default, with a sun/moon toggle in
@@ -185,11 +187,11 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
   `app.html` before paint to avoid a flash). Implemented as CSS variables swapped on the
   `.dark` class on `<html>` (shadcn convention); components never branch on theme.
   Dark tokens: bg `#14162B`, surface `#1D2040`, raised `#262A50`, border `#343A66`,
-  input border `#5A608F`, text `#F3F3F8`, muted `#B4B7CC`, orange `#FF5200` (ink text on it),
-  orange text `#FF8F5C`; tints become deep tones (peach `#3A2618`, sky `#1C2A4A`,
+  input border `#5A608F`, text `#F3F3F8`, muted `#B4B7CC`, brand `#0098DD` (dark text on it),
+  brand text `#5CC3F2`; tints become deep tones (peach `#3A2618`, sky `#1C2A4A`,
   mint `#173328`, lilac `#2A2148`, sun `#3A3216`, rose `#3A1D2A`). Dark surfaces step up in
   lightness instead of using shadows. Primary button inverts (light pill, dark text).
-- Focus: 3px orange outline, 2px offset, on every interactive element in both themes.
+- Focus: 3px brand (blue) outline, 2px offset, on every interactive element in both themes.
 - Tokens only: never hardcode hex colors in components; use the CSS variables / Tailwind theme.
 - Accessibility: WCAG AA contrast, visible focus, semantic landmarks, `alt` on every image,
   respects `prefers-reduced-motion`.

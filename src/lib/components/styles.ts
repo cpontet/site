@@ -15,9 +15,9 @@ export const btnPrimary =
 export const btnSecondary =
   'inline-flex min-h-13 items-center gap-2.5 rounded-full border-2 border-foreground px-7 font-bold transition-transform hover:-translate-y-0.5';
 export const btnAccent =
-  'inline-flex min-h-13 items-center gap-2.5 rounded-full bg-orange px-7 font-bold text-orange-foreground transition-transform hover:-translate-y-0.5';
-export const eyebrow = 'text-[15px] font-bold tracking-[0.08em] text-orange-text uppercase';
+  'inline-flex min-h-13 items-center gap-2.5 rounded-full bg-brand px-7 font-bold text-brand-foreground transition-transform hover:-translate-y-0.5';
+export const eyebrow = 'text-[15px] font-bold tracking-[0.08em] text-brand-text uppercase';
 export const h2 = 'text-[clamp(2.1rem,3.8vw,3.2rem)]';
 export const cardLift = 'transition hover:-translate-y-1 hover:shadow-lg';
 export const linkUnderline =
-  'underline decoration-orange decoration-2 underline-offset-4 hover:text-orange-text';
+  'underline decoration-brand decoration-2 underline-offset-4 hover:text-brand-text';

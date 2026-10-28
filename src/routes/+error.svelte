@@ -24,7 +24,7 @@ const is404 = $derived(page.status === 404);
     <span class="absolute top-[30px] left-0 font-display text-[220px] leading-none font-extrabold">
       {String(page.status)[0]}
     </span>
-    <span class="absolute top-[54px] left-[150px] size-[170px] rounded-full bg-orange"></span>
+    <span class="absolute top-[54px] left-[150px] size-[170px] rounded-full bg-brand"></span>
     <span class="absolute top-[30px] left-[330px] font-display text-[220px] leading-none font-extrabold">
       {String(page.status)[2]}
     </span>
@@ -33,7 +33,7 @@ const is404 = $derived(page.status === 404);
       class="absolute bottom-1.5 left-[120px] size-0 rotate-[18deg] border-x-[22px] border-b-[38px] border-x-transparent border-b-play-green"
     ></span>
     <span class="absolute right-2.5 bottom-5 size-[30px] rounded-full bg-play-yellow"></span>
-    <span class="absolute bottom-0 left-[260px] h-10 w-20 rounded-t-full bg-play-blue"></span>
+    <span class="absolute bottom-0 left-[260px] h-10 w-20 rounded-t-full bg-play-orange"></span>
   </div>
   <div class="flex max-w-[520px] flex-[1_1_380px] flex-col gap-4.5">
     <p class={eyebrow}>{n.eyebrow} {page.status}</p>

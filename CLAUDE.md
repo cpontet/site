@@ -104,6 +104,7 @@ src/
     sitemap.xml/             # sitemap with hreflang alternates
 static/
   cv/                        # public PDF CV (missing: build only warns until added)
+cv/cv.html                   # source of static/cv/cedric-pontet-cv.pdf (`bun run cv`); public: no birth date
 resources/                   # SOURCE material only (docx CVs, bio, raw photos) — gitignored, never served
 ```
 

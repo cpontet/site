@@ -17,14 +17,6 @@ export default defineConfig({
       preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
       extensions: ['.svelte', '.svx', '.md'],
       prerender: {
-        handleHttpError: ({ path, message }) => {
-          // TODO(cedric): add the public CV PDF to static/cv/, then remove this exception.
-          if (path.startsWith('/cv/')) {
-            console.warn(`[prerender] missing ${path}`);
-            return;
-          }
-          throw new Error(message);
-        },
         // Blog posts are unseen while every article is still a draft.
         handleUnseenRoutes: 'warn',
       },

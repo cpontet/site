@@ -45,7 +45,6 @@ const lang = $derived(data.lang);
     <p class="text-xl">{a.lead}</p>
     <p class="text-muted-foreground">{a.body}</p>
     <div class="flex flex-wrap gap-3.5 pt-1.5">
-      <!-- TODO(cedric): public PDF CV in static/cv/ -->
       <a href="/cv/cedric-pontet-cv.pdf" class={btnPrimary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {a.ctaCv}

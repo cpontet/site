@@ -63,7 +63,7 @@ export const en = {
       'is a global movement I co-founded in 2014, of people who believe play is the best metaphor for learning, bringing together thousands of participants across continents.',
     certifications: 'Certifications',
     speaking: 'Speaking',
-    languages: 'Languages: French (native), English (fluent). Basic German and Spanish.',
+    languages: 'Languages: French (native), English (fluent). Conversational German and Spanish.',
   },
   contact: {
     eyebrow: 'Contact',

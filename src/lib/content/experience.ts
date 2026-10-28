@@ -129,6 +129,7 @@ export const certifications = [
   'Azure DevOps Engineer · AZ-400',
   'Azure Administrator · AZ-104',
   'AWS Certified Cloud Practitioner',
+  'Clever Cloud · Cloud Concepts 101',
   'DevOps Foundation · ITIL 4',
   'Certified Scrum Master',
 ];

@@ -65,7 +65,7 @@ export const fr: typeof en = {
       "est un mouvement mondial que j'ai cofondé en 2014, de personnes convaincues que le jeu est la meilleure métaphore pour apprendre, qui rassemble des milliers de participants sur plusieurs continents.",
     certifications: 'Certifications',
     speaking: 'Conférences',
-    languages: 'Langues : français (natif), anglais (courant), allemand et espagnol (bon niveau).',
+    languages: 'Langues : français (natif), anglais (courant). Notions d’allemand et d’espagnol.',
   },
   contact: {
     eyebrow: 'Contact',

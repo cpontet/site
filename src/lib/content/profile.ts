@@ -171,8 +171,11 @@ export const stats: Stat[] = [
     big: false,
   },
   {
-    value: { en: 'EN · FR · DE · ES', fr: 'FR · EN · DE · ES' },
-    label: { en: 'working languages, French native', fr: 'langues de travail, français natif' },
+    value: { en: 'EN · FR', fr: 'FR · EN' },
+    label: {
+      en: 'working languages: French (native) and English (fluent)',
+      fr: 'langues de travail : français (natif) et anglais (courant)',
+    },
     big: false,
   },
 ];

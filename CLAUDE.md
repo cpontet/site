@@ -13,16 +13,16 @@ Fully remote, based in Luxembourg, working for EU institutions, public sector an
 
 ## Stack
 
-| Concern       | Choice                                                              |
-| ------------- | ------------------------------------------------------------------- |
-| Framework     | SvelteKit 3 + Svelte 5 (runes only: `$state`, `$derived`, `$props`) |
-| Language      | TypeScript (strict)                                                 |
-| Styling       | Tailwind CSS 4 (`@tailwindcss/vite`), design tokens in `src/app.css` |
-| UI kit        | shadcn-svelte (bits-ui) — only add components actually used         |
-| Blog          | Markdown via mdsvex, syntax highlighting with Shiki                 |
-| Hosting       | Cloudflare Workers static assets, `@sveltejs/adapter-cloudflare`    |
-| Package mgr   | bun (`bun.lock` committed); never npm/pnpm/yarn                     |
-| Lint / format | Biome (`biome.json`), no ESLint or Prettier                         |
+| Concern       | Choice                                                                  |
+| ------------- | ----------------------------------------------------------------------- |
+| Framework     | SvelteKit 3 + Svelte 5 (runes only: `$state`, `$derived`, `$props`)     |
+| Language      | TypeScript (strict)                                                     |
+| Styling       | Tailwind CSS 4 (`@tailwindcss/vite`), tokens in `src/routes/layout.css` |
+| UI kit        | shadcn-svelte (bits-ui) — only add components actually used             |
+| Blog          | Markdown via mdsvex, syntax highlighting with Shiki                     |
+| Hosting       | Cloudflare Workers static assets, `@sveltejs/adapter-cloudflare`        |
+| Package mgr   | bun (`bun.lock` committed); never npm/pnpm/yarn                         |
+| Lint / format | Biome (`biome.json`), no ESLint or Prettier                             |
 
 The site is prerendered (`export const prerender = true` in the root layout) with one
 exception: the **contact form**, handled at runtime by the Worker. No database or CMS.
@@ -61,38 +61,59 @@ bunx shadcn-svelte@latest add <component>   # add a UI component
 - Biome handles `.ts`, `.js`, `.json`, `.css` fully; its Svelte support covers the
   `<script>` and `<style>` blocks only, so `svelte-check` remains the safety net for markup.
 - Biome config: tabs off, 2-space indent, single quotes, line width 100;
-  ignore `.svelte-kit/`, `build/`, `src/lib/components/ui/` (generated).
+  ignore `.svelte-kit/`, `build/`, `src/lib/components/ui/` (generated) and all `*.md`
+  (Biome's Markdown formatter is experimental and breaks blog front matter).
+- A Claude Code Stop hook (`.claude/hooks/biome-on-stop.sh`) runs `biome check --write` after
+  every turn and reports unfixable errors back to Claude.
+- `bun run check` deletes stale build output first: `worker-configuration.d.ts` imports the built
+  worker for typing, which would otherwise drag compiled files into svelte-check.
+- After editing `wrangler.jsonc`, run `bun run gen` (types are hashed against that file).
 
 ## Project layout
 
 ```
 src/
-  app.css                    # Tailwind + design tokens (colors, fonts, radii)
+  app.html                   # inline pre-paint theme script, <html lang="%lang%">
+  hooks.server.ts            # fills %lang% from the URL
+  params.ts                  # SvelteKit 3 param matchers (defineParams): lang = "fr"
   lib/
+    assets/                  # portrait.webp (720px, transparent), favicon
     components/ui/           # shadcn-svelte generated components (don't hand-edit heavily)
-    components/              # site components (Header, Footer, ExperienceItem, PostCard…)
-    content/
-      profile.ts             # positioning, services, skills — typed data, both languages
-      experience.ts          # selected missions, typed, both languages
-    i18n/                    # UI strings: en.ts, fr.ts
-    blog.ts                  # loads posts via import.meta.glob, sorts, filters by lang
+    components/              # SiteHeader, SiteFooter, ThemeToggle, …
+    content/                 # (to come) profile.ts, experience.ts — typed data, both languages
+    i18n.ts                  # Lang type, t(), localize(), switchLang()
+    i18n/en.ts, i18n/fr.ts   # UI strings (fr is typed against en)
+    blog.ts                  # loads posts via import.meta.glob, reading time, drafts
   content/blog/
     en/<slug>.md             # English posts
     fr/<slug>.md             # French posts
   routes/
-    [[lang=lang]]/           # optional lang segment: "/" = en, "/fr" = fr
+    layout.css               # Tailwind + design tokens (light/dark), shadcn variable mapping
+    +layout.svelte           # imports layout.css
+    [[lang=lang]]/           # optional lang segment: "/" = en, "/fr" = fr; prerender = true
+      +layout.ts/.svelte     # lang + dict, header/footer, hreflang links
       +page.svelte           # home
       about/                 # profile + experience timeline
-      services/              # offers
       blog/                  # index (topic + language filters) + [slug]
-      contact/               # form action (the only non-prerendered route)
+      rss.xml/               # RSS per language
+      contact/               # (to come) form action — the only non-prerendered route
       legal/                 # legal notice & privacy (placeholders: RCS, VAT, permit, address)
-    +error.svelte            # playful 404 / error page
+    +error.svelte            # (to come) playful 404 / error page
 static/
-  images/                    # optimized photos (webp/avif)
-  cv/                        # public PDF CVs
-resources/                   # SOURCE material only (docx CVs, bio, raw photos) — never served
+  cv/                        # public PDF CV (missing: build only warns until added)
+resources/                   # SOURCE material only (docx CVs, bio, raw photos) — gitignored, never served
 ```
+
+### SvelteKit 3 notes (differs from SvelteKit 2 tutorials)
+
+- Config lives in `vite.config.ts` inside `sveltekit({...})`; there is no `svelte.config.js`.
+- Import app code through `#lib/...` (package.json `imports`), **with the `.js` extension**
+  (`#lib/i18n.js`, `#lib/components/X.svelte`). Folder `index.ts` files are not resolved.
+- Param matchers: a single `src/params.ts` exporting `params = defineParams({...})`
+  from `@sveltejs/kit/params`.
+- Hook types come from `@sveltejs/kit/hooks` (`Handle`), not `@sveltejs/kit`.
+- shadcn-svelte init is interactive (preset picker); components.json already exists, so use
+  `bunx shadcn-svelte@latest add <component>` from now on.
 
 ## Content rules
 
@@ -125,7 +146,7 @@ date: 2026-11-02
 lang: en
 tags: [sovereign-cloud, architecture]
 draft: false
-translationOf: fr/migrer-vers-un-cloud-souverain   # optional
+translationOf: fr/migrer-vers-un-cloud-souverain # optional
 ---
 ```
 
@@ -138,7 +159,7 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
   - v2 playful / EventStorming colours: kept for reference only, do not implement its sticky style.
   - **v3 playful, #play14 orange: the chosen design.** Pages: Home (light + dark), About,
     Blog index, Blog post, Legal notice & privacy, 404, and a Style guide artboard (light/dark
-    tokens and components) that is the source of truth for `src/app.css`.
+    tokens and components) that is the source of truth for `src/routes/layout.css`.
 - Fonts (self-host via `@fontsource`):
   - Headings: **Bricolage Grotesque** 700–800, tight tracking.
   - Body: **Atkinson Hyperlegible** 400/700, 18px base — readability is a hard requirement.
@@ -154,8 +175,8 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
   in the hero; gentle hover lift, disabled under `prefers-reduced-motion`.
 - Dark theme (required): follows `prefers-color-scheme` by default, with a sun/moon toggle in
   the header that overrides it (stored in `localStorage`, applied by an inline script in
-  `app.html` before paint to avoid a flash). Implement as CSS variables swapped on
-  `[data-theme="dark"]`; components never branch on theme.
+  `app.html` before paint to avoid a flash). Implemented as CSS variables swapped on the
+  `.dark` class on `<html>` (shadcn convention); components never branch on theme.
   Dark tokens: bg `#14162B`, surface `#1D2040`, raised `#262A50`, border `#343A66`,
   input border `#5A608F`, text `#F3F3F8`, muted `#B4B7CC`, orange `#FF5200` (ink text on it),
   orange text `#FF8F5C`; tints become deep tones (peach `#3A2618`, sky `#1C2A4A`,

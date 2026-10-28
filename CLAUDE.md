@@ -115,6 +115,9 @@ resources/                   # SOURCE material only (docx CVs, bio, raw photos) 
 - Param matchers: a single `src/params.ts` exporting `params = defineParams({...})`
   from `@sveltejs/kit/params`.
 - Hook types come from `@sveltejs/kit/hooks` (`Handle`), not `@sveltejs/kit`.
+- The Cloudflare adapter does **not** pass `platform` to requests: read bindings and secrets with
+  `import { env } from 'cloudflare:workers'` (works in dev too). Secret types are declared on
+  `Cloudflare.Env` in `src/app.d.ts`. Never fall back to test credentials outside `dev`.
 - shadcn-svelte init is interactive (preset picker); components.json already exists, so use
   `bunx shadcn-svelte@latest add <component>` from now on.
 

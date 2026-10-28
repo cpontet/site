@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn-svelte/tailwind.css";
+@import "@fontsource-variable/bricolage-grotesque/opsz.css";
+@import "@fontsource/atkinson-hyperlegible/400.css";
+@import "@fontsource/atkinson-hyperlegible/400-italic.css";
+@import "@fontsource/atkinson-hyperlegible/700.css";
+
+@custom-variant dark (&:is(.dark *));
+@plugin "@tailwindcss/typography";
+
+/*
+ * Design tokens — source of truth: "v3 · Style guide" artboard
+ * (https://claude.ai/artifact/AZKNx2AnSkyyRFMCCKUtKt).
+ * shadcn-svelte variables are mapped onto the site palette so generated
+ * components inherit it. Components never branch on theme.
+ */
+:root {
+  /* #play14 palette (decor and accents only) */
+  --play-red: #d80000;
+  --play-orange: #ff5200;
+  --play-yellow: #ffc900;
+  --play-green: #92c900;
+  --play-blue: #0098dd;
+  --play-gray: #393939;
+
+  --background: #ffffff;
+  --foreground: #1f2340;
+  --surface: #f6f6f9;
+  --raised: #f2f2f6;
+  --muted-foreground: #4b4f66;
+  --border: #e4e4ec;
+  --input: #9a9db0;
+
+  /* orange: fill with ink text on top; orange-text: AA-safe for small text */
+  --orange: #ff5200;
+  --orange-foreground: #1f2340;
+  --orange-text: #c43f00;
+
+  /* soft tints for cards and tags */
+  --tint-peach: #ffe6d9;
+  --tint-sky: #e4eeff;
+  --tint-mint: #e2f4ea;
+  --tint-lilac: #eee7fb;
+  --tint-sun: #fff3c9;
+  --tint-rose: #ffe1e8;
+
+  /* shadcn mapping */
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary: var(--foreground);
+  --primary-foreground: #ffffff;
+  --secondary: var(--raised);
+  --secondary-foreground: var(--foreground);
+  --muted: var(--surface);
+  --accent: var(--orange);
+  --accent-foreground: var(--orange-foreground);
+  --destructive: #b91c1c;
+  --ring: var(--orange);
+  --radius: 1.5rem;
+}
+
+.dark {
+  --background: #14162b;
+  --foreground: #f3f3f8;
+  --surface: #1d2040;
+  --raised: #262a50;
+  --muted-foreground: #b4b7cc;
+  --border: #343a66;
+  --input: #5a608f;
+
+  --orange: #ff5200;
+  --orange-foreground: #14162b;
+  --orange-text: #ff8f5c;
+
+  --tint-peach: #3a2618;
+  --tint-sky: #1c2a4a;
+  --tint-mint: #173328;
+  --tint-lilac: #2a2148;
+  --tint-sun: #3a3216;
+  --tint-rose: #3a1d2a;
+
+  --card: var(--surface);
+  --popover: var(--surface);
+  --primary: var(--foreground);
+  --primary-foreground: var(--background);
+  --destructive: #f87171;
+}
+
+@theme inline {
+  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-orange: var(--orange);
+  --color-orange-foreground: var(--orange-foreground);
+  --color-orange-text: var(--orange-text);
+  --color-tint-peach: var(--tint-peach);
+  --color-tint-sky: var(--tint-sky);
+  --color-tint-mint: var(--tint-mint);
+  --color-tint-lilac: var(--tint-lilac);
+  --color-tint-sun: var(--tint-sun);
+  --color-tint-rose: var(--tint-rose);
+  --color-play-red: var(--play-red);
+  --color-play-orange: var(--play-orange);
+  --color-play-yellow: var(--play-yellow);
+  --color-play-green: var(--play-green);
+  --color-play-blue: var(--play-blue);
+
+  --radius-sm: calc(var(--radius) * 0.35);
+  --radius-md: calc(var(--radius) * 0.6);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.35);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply font-sans;
+    font-size: 112.5%; /* 18px body */
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+  :focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

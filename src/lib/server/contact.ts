@@ -33,17 +33,24 @@ export function validateContact(input: ContactInput): ContactField[] {
   return errors;
 }
 
-// Cloudflare's documented test secret: always passes. Used when no secret is configured (dev).
+// Cloudflare's documented test secret: always passes. Only ever used in local dev.
 const TEST_SECRET = '1x0000000000000000000000000000000AA';
 
 export async function verifyTurnstile(
   token: string,
   secret: string | undefined,
   ip: string | null,
+  dev: boolean,
 ): Promise<boolean> {
   if (!token) return false;
+  // Fail closed: without a configured secret, production rejects every submission.
+  const key = secret || (dev ? TEST_SECRET : undefined);
+  if (!key) {
+    console.error('[contact] TURNSTILE_SECRET_KEY secret missing');
+    return false;
+  }
   const body = new FormData();
-  body.set('secret', secret || TEST_SECRET);
+  body.set('secret', key);
   body.set('response', token);
   if (ip) body.set('remoteip', ip);
   try {

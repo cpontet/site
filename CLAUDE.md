@@ -103,6 +103,8 @@ src/
     +error.svelte            # playful 404 / error page
     sitemap.xml/             # sitemap with hreflang alternates
 static/
+  favicon.svg                # icon source (brand blue disc + #play14 yellow dot); `bun run icons`
+                             # renders favicon.ico, apple-touch-icon.png, icon-192/512.png
   cv/                        # public PDF CV (missing: build only warns until added)
 cv/cv.html                   # source of static/cv/cedric-pontet-cv.pdf (`bun run cv`); public: no birth date
 resources/                   # SOURCE material only (docx CVs, bio, raw photos) — gitignored, never served

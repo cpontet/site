@@ -13,7 +13,8 @@
     "gen": "wrangler types",
     "lint": "biome check .",
     "format": "biome check --write .",
-    "cv": "bun scripts/build-cv.ts"
+    "cv": "bun scripts/build-cv.ts",
+    "icons": "bun scripts/build-icons.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.3",

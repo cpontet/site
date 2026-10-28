@@ -63,6 +63,11 @@ bun run cv   # renders cv/cv.html to A4 PDF with a local Playwright Chromium
 Edit the HTML, run the command, and commit both files. If no Chromium is installed yet,
 run `bunx playwright-core install chromium` once.
 
+## Updating the favicon
+
+`static/favicon.svg` is the source. After editing it, run `bun run icons` to regenerate
+`favicon.ico`, `apple-touch-icon.png` and the `icon-192/512.png` manifest icons.
+
 ## Project structure
 
 ```

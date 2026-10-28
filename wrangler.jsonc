@@ -12,11 +12,9 @@
   },
   // Contact form: Email Routing must be enabled on cedricpontet.com and CONTACT_TO verified there.
   "send_email": [{ "name": "SEND_EMAIL" }],
-  "vars": {
-    // TODO(cedric): verified destination inbox for contact form messages.
-    "CONTACT_TO": ""
-  },
-  // TURNSTILE_SECRET_KEY is a secret: `bunx wrangler secret put TURNSTILE_SECRET_KEY`.
+  // Secrets (never in this public repo), set with `bunx wrangler secret put <NAME>`:
+  //   CONTACT_TO            verified Email Routing destination for contact form messages
+  //   TURNSTILE_SECRET_KEY  Turnstile widget secret
   "observability": { "enabled": true },
   // Apex domain served by this Worker. www → apex is a Cloudflare Redirect Rule (see README).
   "routes": [{ "pattern": "cedricpontet.com", "custom_domain": true }],

@@ -1,0 +1,25 @@
+- Content to provide (placeholders live on the site)
+  - Availability date: "Available for missions from [MONTH YEAR]" (src/lib/i18n/en.ts, fr.ts)
+  - Legal notice: legal form, RCS number, LU VAT number, business permit number,
+    email retention period (src/routes/[[lang=lang]]/legal/+page.svelte)
+  - Confirm street spelling: "Selentiny" vs "Salentiny"
+- SEO
+  - Open Graph tags + share image (LinkedIn previews)
+  - JSON-LD: Person on home/about, BlogPosting on posts
+- Cloudflare Web Analytics (cookieless): enable in dashboard or add the beacon
+- Blog articles (the two current posts are drafts, so the blog is empty in production)
+  - Agentic AI SDLC / Software Factory
+  - EventStorming video
+  - EU Sovereignty Framework SEAL
+  - DDD + AI
+  - DDD Course
+- Accessibility review (contrast, keyboard, landmarks, screen reader; EN/FR, light/dark)
+- Competencies
+  - GitLab
+  - FinOps
+  - Clever Cloud
+  - Claude Code
+  - MCP
+- Nice to have
+  - French version of the PDF CV
+  - Compact mobile menu

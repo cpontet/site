@@ -60,7 +60,10 @@ export const services: Service[] = [
     id: 'ddd',
     icon: 'blocks',
     tint: 'sun',
-    title: { en: 'DDD & EventStorming', fr: 'DDD & EventStorming' },
+    title: {
+      en: 'Domain-Driven Design & EventStorming',
+      fr: 'Domain-Driven Design & EventStorming',
+    },
     body: {
       en: 'Explore the business with the people who know it and turn it into boundaries, models and event-driven architectures.',
       fr: 'Explorer le métier avec ceux qui le connaissent et le traduire en frontières, modèles et architectures orientées événements.',

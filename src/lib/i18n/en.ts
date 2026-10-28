@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: 'Cédric Pontet — Freelance CTO & cloud architect',
     description:
-      'Freelance CTO and cloud architect in Luxembourg. Sovereign cloud, agentic software delivery, DDD & EventStorming, and facilitation.',
+      'Freelance CTO and cloud architect in Luxembourg. Sovereign cloud, agentic software delivery, Domain-Driven Design & EventStorming, and facilitation.',
   },
   nav: {
     services: 'Services',
@@ -80,7 +80,7 @@ export const en = {
       'Cloud architecture',
       'Sovereign cloud',
       'Agentic software factory',
-      'DDD & EventStorming',
+      'Domain-Driven Design & EventStorming',
       'Workshop or talk',
       'Something else',
     ],

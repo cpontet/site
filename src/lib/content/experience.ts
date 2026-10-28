@@ -53,8 +53,8 @@ export const experience: ExperienceItem[] = [
     title: { en: 'Architect, developer & coach', fr: 'Architecte, développeur & coach' },
     org: 'POST Luxembourg, Dennemeyer, Aperam, Deloitte, ING, BGL BNP Paribas, BIL, Foyer, TadaWeb',
     body: {
-      en: 'DDD/CQRS architectures, .NET systems and agile transformations.',
-      fr: 'Architectures DDD/CQRS, systèmes .NET et transformations agiles.',
+      en: 'Domain-Driven Design and CQRS architectures, .NET systems and agile transformations.',
+      fr: 'Architectures Domain-Driven Design et CQRS, systèmes .NET et transformations agiles.',
     },
   },
   {
@@ -89,10 +89,13 @@ export const expertise: Expertise[] = [
   },
   {
     tint: 'sun',
-    title: { en: 'DDD & EventStorming', fr: 'DDD & EventStorming' },
+    title: {
+      en: 'Domain-Driven Design & EventStorming',
+      fr: 'Domain-Driven Design & EventStorming',
+    },
     body: {
-      en: 'DDD, CQRS and event sourcing since 2008 (POST Luxembourg, Aperam, VitisLife); EventStorming and DDD coaching at BIL, Foyer and TadaWeb. KanDDDinsky speaker.',
-      fr: 'DDD, CQRS et event sourcing depuis 2008 (POST Luxembourg, Aperam, VitisLife) ; EventStorming et coaching DDD chez BIL, Foyer et TadaWeb. Orateur à KanDDDinsky.',
+      en: 'Domain-Driven Design, CQRS and event sourcing since 2008 (POST Luxembourg, Aperam, VitisLife); EventStorming and Domain-Driven Design coaching at BIL, Foyer and TadaWeb. KanDDDinsky speaker.',
+      fr: 'Domain-Driven Design, CQRS et event sourcing depuis 2008 (POST Luxembourg, Aperam, VitisLife) ; EventStorming et coaching Domain-Driven Design chez BIL, Foyer et TadaWeb. Orateur à KanDDDinsky.',
     },
   },
   {

@@ -263,12 +263,12 @@ const pages: Partial<Record<string, ServicePage>> = {
     ],
     proof: [
       {
-        period: { en: '2019 – 2023', fr: '2019 – 2023' },
-        title: { en: 'Agile coach & cloud architect', fr: 'Coach agile & architecte cloud' },
-        org: 'Cargolux',
+        period: { en: '2023 – 2025', fr: '2023 – 2025' },
+        title: { en: 'Trainer, agile & technical coach', fr: 'Formateur, coach agile & technique' },
+        org: 'Banque de Luxembourg',
         body: {
-          en: 'Agile primer training, Azure DevOps rollout, portfolio governance, and coaching of IT Ops and delivery teams during the move to Azure.',
-          fr: 'Formation d’initiation à l’agilité, déploiement d’Azure DevOps, gouvernance du portefeuille, et coaching des équipes IT Ops et delivery pendant la migration vers Azure.',
+          en: 'Technical excellence training (clean code, TDD, BDD, refactoring, technical debt), then agile and technical coaching of several teams.',
+          fr: 'Formation à l’excellence technique (clean code, TDD, BDD, refactoring, dette technique), puis coaching agile et technique de plusieurs équipes.',
         },
       },
       {
@@ -281,12 +281,12 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
       {
-        period: { en: '2023 – 2025', fr: '2023 – 2025' },
-        title: { en: 'Trainer, agile & technical coach', fr: 'Formateur, coach agile & technique' },
-        org: 'Banque de Luxembourg',
+        period: { en: '2014 – 2015', fr: '2014 – 2015' },
+        title: { en: 'Agile coach', fr: 'Coach agile' },
+        org: 'SGBT',
         body: {
-          en: 'Technical excellence training (clean code, TDD, BDD, refactoring, technical debt), then agile and technical coaching of several teams.',
-          fr: 'Formation à l’excellence technique (clean code, TDD, BDD, refactoring, dette technique), puis coaching agile et technique de plusieurs équipes.',
+          en: 'Agile transformation of the IT department: facilitated the transformation initiative, coached project teams and reported to the steering committee.',
+          fr: 'Transformation agile du département informatique : animation de la démarche de transformation, coaching des équipes projet et retours au comité de pilotage.',
         },
       },
     ],

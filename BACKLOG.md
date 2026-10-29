@@ -2,6 +2,9 @@
   - Availability date: "Available for missions from [MONTH YEAR]" (src/lib/i18n/en.ts, fr.ts)
   - Legal notice: legal form, RCS number, LU VAT number, business permit number,
     email retention period (src/routes/[[lang=lang]]/legal/+page.svelte)
+- Service pages (template in CLAUDE.md; CTO & strategic advisory done)
+  - Agile coaching, Cloud architecture, Sovereign cloud, Agentic software factory,
+    DDD & EventStorming, Facilitation & workshops
 - Blog articles
   - EventStorming era journey (strategic DDD, cinema 1960s to 2000s): second video post
   - Sovereignty DAS

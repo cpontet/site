@@ -16,6 +16,7 @@ import {
   tintBg,
 } from '#lib/components/styles.js';
 import { clients, featuredMissions, services, stats, ventures } from '#lib/content/profile.js';
+import { serviceHref, servicesWithPage } from '#lib/content/service-pages.js';
 import { cvPath, localize } from '#lib/i18n.js';
 import { personLd } from '#lib/seo.js';
 import type { PageProps } from './$types';
@@ -131,12 +132,27 @@ const lang = $derived(data.lang);
   </div>
   <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-6">
     {#each services as service (service.id)}
-      <article class="flex flex-col gap-3.5 rounded-lg border-[1.5px] border-border p-[30px]">
+      {@const hasPage = servicesWithPage.includes(service)}
+      <article
+        class={[
+          'relative flex flex-col gap-3.5 rounded-lg border-[1.5px] border-border p-[30px]',
+          hasPage && cardLift,
+        ]}
+      >
         <span class={['flex size-14 items-center justify-center rounded-full', tintBg[service.tint]]}>
           <ServiceIcon name={service.icon} />
         </span>
-        <h3 class="text-2xl leading-tight font-extrabold">{service.title[lang]}</h3>
+        <h3 class="text-2xl leading-tight font-extrabold">
+          {#if hasPage}
+            <a href={serviceHref(service, lang)} class="card-link">{service.title[lang]}</a>
+          {:else}
+            {service.title[lang]}
+          {/if}
+        </h3>
         <p class="text-[17px] text-muted-foreground">{service.body[lang]}</p>
+        {#if hasPage}
+          <p aria-hidden="true" class="mt-auto font-bold text-brand-text">{d.service.learnMore} →</p>
+        {/if}
       </article>
     {/each}
   </div>

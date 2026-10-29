@@ -827,16 +827,16 @@ const pages: Partial<Record<string, ServicePage>> = {
         fr: 'Le métier et l’IT décrivent le même processus avec des mots différents, et les exigences se perdent en route.',
       },
       {
-        en: 'One large system has grown so entangled that every change breaks something elsewhere.',
-        fr: 'Un grand système est devenu si imbriqué que chaque changement casse quelque chose ailleurs.',
-      },
-      {
         en: 'You are splitting a monolith into services and do not know where to draw the boundaries.',
         fr: 'Vous découpez un monolithe en services et ne savez pas où tracer les frontières.',
       },
       {
         en: 'A new project starts, and nobody has the full picture of the domain yet.',
         fr: 'Un nouveau projet démarre, et personne n’a encore une vue complète du domaine.',
+      },
+      {
+        en: 'Your coding agents invent names and business rules, because your domain knowledge is not written anywhere they can read.',
+        fr: 'Vos agents de code inventent des noms et des règles métier, parce que la connaissance du domaine n’est écrite nulle part où ils peuvent la lire.',
       },
     ],
     scope: [
@@ -869,10 +869,10 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
       {
-        title: { en: 'Monolith decomposition', fr: 'Découpage de monolithe' },
+        title: { en: 'Domain knowledge for AI', fr: 'Le domaine au service de l’IA' },
         body: {
-          en: 'Splitting along business boundaries, so each part can change on its own.',
-          fr: 'Découper selon les frontières métier, pour que chaque partie puisse évoluer seule.',
+          en: 'A shared language, bounded contexts and examples written where coding agents can read them, so they use your vocabulary and stay within one context.',
+          fr: 'Un langage commun, des bounded contexts et des exemples écrits là où les agents de code peuvent les lire, pour qu’ils utilisent votre vocabulaire et restent dans un seul contexte.',
         },
       },
       {
@@ -914,6 +914,13 @@ const pages: Partial<Record<string, ServicePage>> = {
               detail: {
                 en: 'State as a history of events',
                 fr: 'L’état comme historique d’événements',
+              },
+            },
+            {
+              name: 'Knowledge graph',
+              detail: {
+                en: 'The domain, queryable by agents',
+                fr: 'Le domaine, interrogeable par les agents',
               },
             },
           ],

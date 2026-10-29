@@ -107,7 +107,7 @@ static/
                              # renders favicon.ico, apple-touch-icon.png, icon-192/512.png
   og/                        # share images (`bun run og`)
   cv/                        # public PDF CV (missing: build only warns until added)
-cv/cv.html                   # source of static/cv/cedric-pontet-cv.pdf (`bun run cv`); public: no birth date
+cv/cv.html, cv/cv.fr.html    # sources of static/cv/cedric-pontet-cv{,-fr}.pdf (`bun run cv`); public: no birth date; keep EN/FR in step
 resources/                   # SOURCE material only (docx CVs, bio, raw photos) — gitignored, never served
 ```
 

@@ -5,7 +5,7 @@ import Seo from '#lib/components/Seo.svelte';
 import { btnPrimary, btnSecondary, eyebrow, h2, tintBg } from '#lib/components/styles.js';
 import { certifications, experience, expertise, talks } from '#lib/content/experience.js';
 import { ventures } from '#lib/content/profile.js';
-import { localize } from '#lib/i18n.js';
+import { cvPath, localize } from '#lib/i18n.js';
 import { personLd } from '#lib/seo.js';
 import type { PageProps } from './$types';
 
@@ -49,7 +49,7 @@ const lang = $derived(data.lang);
     <p class="text-xl">{a.lead}</p>
     <p class="text-muted-foreground">{a.body}</p>
     <div class="flex flex-wrap gap-3.5 pt-1.5">
-      <a href="/cv/cedric-pontet-cv.pdf" class={btnPrimary}>
+      <a href={cvPath(lang)} class={btnPrimary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {a.ctaCv}
       </a>

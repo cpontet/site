@@ -16,7 +16,7 @@ import {
   tintBg,
 } from '#lib/components/styles.js';
 import { clients, featuredMissions, services, stats, ventures } from '#lib/content/profile.js';
-import { localize } from '#lib/i18n.js';
+import { cvPath, localize } from '#lib/i18n.js';
 import { personLd } from '#lib/seo.js';
 import type { PageProps } from './$types';
 
@@ -65,7 +65,7 @@ const lang = $derived(data.lang);
         {d.home.ctaContact}
         <ArrowRight class="size-[18px]" aria-hidden="true" />
       </a>
-      <a href="/cv/cedric-pontet-cv.pdf" class={btnSecondary}>
+      <a href={cvPath(lang)} class={btnSecondary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {d.home.ctaCv}
       </a>

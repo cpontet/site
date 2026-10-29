@@ -21,6 +21,11 @@ export function localize(path: string, lang: Lang): string {
   return path === '/' ? '/fr' : `/fr${path}`;
 }
 
+/** Public PDF CV in the given language. */
+export function cvPath(lang: Lang): string {
+  return lang === 'fr' ? '/cv/cedric-pontet-cv-fr.pdf' : '/cv/cedric-pontet-cv.pdf';
+}
+
 /** Same page in the other language ("/fr/blog" ↔ "/blog"). */
 export function switchLang(pathname: string, to: Lang): string {
   const bare = pathname.replace(/^\/fr(?=\/|$)/, '') || '/';

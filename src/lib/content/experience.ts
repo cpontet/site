@@ -83,8 +83,8 @@ export const expertise: Expertise[] = [
     tint: 'sky',
     title: { en: 'Cloud & sovereign cloud', fr: 'Cloud & cloud souverain' },
     body: {
-      en: 'Azure, AWS, European sovereign cloud, Bicep, FinOps. Target architectures for the EU Publications Office and the European Parliament.',
-      fr: "Azure, AWS, cloud souverain européen, Bicep, FinOps. Architectures cibles pour l'Office des publications de l'UE et le Parlement européen.",
+      en: 'Azure, AWS, Clever Cloud, European sovereign cloud, Bicep, FinOps. Target architectures for the EU Publications Office and the European Parliament.',
+      fr: "Azure, AWS, Clever Cloud, cloud souverain européen, Bicep, FinOps. Architectures cibles pour l'Office des publications de l'UE et le Parlement européen.",
     },
   },
   {
@@ -102,16 +102,16 @@ export const expertise: Expertise[] = [
     tint: 'lilac',
     title: { en: 'Agentic AI', fr: 'IA agentique' },
     body: {
-      en: 'Coding agents, MCP and agentic delivery pipelines, plus AI services in data platforms (knowledge graphs).',
-      fr: "Agents de code, MCP et chaînes de livraison agentiques, ainsi que des services d'IA dans les plateformes de données (graphes de connaissances).",
+      en: 'Coding agents (Claude Code), MCP and agentic delivery pipelines, plus AI services in data platforms (knowledge graphs).',
+      fr: "Agents de code (Claude Code), MCP et chaînes de livraison agentiques, ainsi que des services d'IA dans les plateformes de données (graphes de connaissances).",
     },
   },
   {
     tint: 'mint',
     title: { en: 'Delivery & DevOps', fr: 'Delivery & DevOps' },
     body: {
-      en: 'Azure DevOps, CI/CD, Agile, Kanban, Lean. Agile coaching from team to portfolio level.',
-      fr: "Azure DevOps, CI/CD, Agile, Kanban, Lean. Coaching agile de l'équipe au portefeuille.",
+      en: 'Azure DevOps, GitLab, CI/CD, Agile, Kanban, Lean. Agile coaching from team to portfolio level.',
+      fr: "Azure DevOps, GitLab, CI/CD, Agile, Kanban, Lean. Coaching agile de l'équipe au portefeuille.",
     },
   },
   {

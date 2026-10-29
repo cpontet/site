@@ -54,13 +54,14 @@ Each language has its own RSS feed at `/rss.xml` and `/fr/rss.xml`.
 
 ## Updating the CV
 
-The downloadable CV (`static/cv/cedric-pontet-cv.pdf`) is generated from `cv/cv.html`:
+The downloadable CVs are generated from `cv/cv.html` (English, `static/cv/cedric-pontet-cv.pdf`)
+and `cv/cv.fr.html` (French, `static/cv/cedric-pontet-cv-fr.pdf`):
 
 ```bash
-bun run cv   # renders cv/cv.html to A4 PDF with a local Playwright Chromium
+bun run cv   # renders both to A4 PDF with a local Playwright Chromium
 ```
 
-Edit the HTML, run the command, and commit both files. If no Chromium is installed yet,
+Edit the HTML (keep both languages in step), run the command, and commit the sources and PDFs. If no Chromium is installed yet,
 run `bunx playwright-core install chromium` once.
 
 ## Updating the favicon

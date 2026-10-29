@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Cédric Pontet — CV</title>
+<!--
+  French version of cv.html, source of static/cv/cedric-pontet-cv-fr.pdf. Regenerate with: bun run cv
+  Keep both files in step.
+  Public document: no date of birth, no private contact details.
+-->
+<style>
+@font-face { font-family: "Bricolage"; src: url("../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2") format("woff2"); font-weight: 200 800; }
+@font-face { font-family: "Atkinson"; src: url("../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Atkinson"; src: url("../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Atkinson"; src: url("../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+
+@page { size: A4; margin: 13mm 13mm 14mm; }
+:root {
+  --ink: #1f2340; --muted: #4b4f66; --line: #e4e4ec; --accent: #0098dd; --accent-text: #0076ad;
+  --sky: #e4eeff; --surface: #f6f6f9;
+  --yellow: #ffc900; --green: #92c900; --orange: #ff5200;
+}
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font-family: "Atkinson", system-ui, sans-serif; font-size: 9.4pt; line-height: 1.42; color: var(--ink); }
+h1, h2, h3 { font-family: "Bricolage", system-ui, sans-serif; margin: 0; letter-spacing: -0.02em; }
+a { color: inherit; text-decoration: none; }
+p { margin: 0; }
+ul { margin: 0; padding-left: 1.1em; }
+li { margin: 0.12em 0; }
+
+header { display: flex; gap: 7mm; align-items: center; padding-bottom: 5mm; border-bottom: 1.5px solid var(--line); }
+.portrait { position: relative; width: 31mm; height: 31mm; flex: none; }
+.portrait .disc { position: absolute; inset: 2.5mm; border-radius: 50%; background: var(--accent); overflow: hidden; }
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.portrait .dot { position: absolute; right: 0; top: 0; width: 6mm; height: 6mm; border-radius: 50%; background: var(--yellow); }
+.portrait .ring { position: absolute; left: 0; bottom: 1mm; width: 7mm; height: 7mm; border-radius: 50%; border: 1.6mm solid var(--ink); }
+.who { flex: 1; display: flex; flex-direction: column; gap: 1.6mm; }
+h1 { font-size: 27pt; font-weight: 800; line-height: 1; }
+.headline { font-family: "Bricolage", sans-serif; font-size: 11.5pt; font-weight: 700; color: var(--accent-text); letter-spacing: -0.01em; }
+.contact { display: flex; flex-wrap: wrap; gap: 0.6mm 4.5mm; font-size: 8.8pt; color: var(--muted); }
+.contact b { color: var(--ink); }
+
+.layout { display: grid; grid-template-columns: 1fr 56mm; gap: 8mm; padding-top: 5mm; }
+main { display: flex; flex-direction: column; gap: 4.5mm; min-width: 0; }
+aside { display: flex; flex-direction: column; gap: 4.5mm; }
+
+.eyebrow { font-family: "Atkinson", sans-serif; font-size: 7.6pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 1.6mm; }
+h2.section { font-size: 13pt; font-weight: 800; margin-bottom: 2.2mm; }
+
+.profile p + p { margin-top: 1.6mm; }
+
+.job { break-inside: avoid; display: grid; grid-template-columns: 21mm 1fr; gap: 0 3.5mm; padding: 2.2mm 0; border-top: 1px solid var(--line); }
+.job:first-of-type { border-top: 0; padding-top: 0; }
+.period { font-size: 8.2pt; font-weight: 700; color: var(--muted); padding-top: 0.5mm; }
+.job h3 { font-size: 10.6pt; font-weight: 700; line-height: 1.2; }
+.job .org { font-weight: 700; color: var(--accent-text); }
+.job .meta { font-size: 8.4pt; color: var(--muted); margin: 0.6mm 0 0.8mm; }
+.job ul { color: var(--ink); }
+.tags { font-size: 8pt; color: var(--muted); margin-top: 0.8mm; }
+
+.card { background: var(--surface); border-radius: 3.5mm; padding: 3.6mm 4mm; break-inside: avoid; }
+.card.sky { background: var(--sky); }
+.card h2 { font-size: 10.8pt; font-weight: 800; margin-bottom: 1.6mm; }
+.card dl { margin: 0; display: flex; flex-direction: column; gap: 1.5mm; }
+.card dt { font-weight: 700; font-size: 8.9pt; }
+.card dd { margin: 0; font-size: 8.5pt; color: var(--muted); }
+.card ul { padding-left: 1em; font-size: 8.6pt; }
+.small { font-size: 8.5pt; }
+
+footer { margin-top: 5mm; padding-top: 2.5mm; border-top: 1.5px solid var(--line); font-size: 8pt; color: var(--muted); display: flex; justify-content: space-between; }
+.shapes { display: inline-flex; gap: 1.4mm; align-items: center; }
+.shapes i { display: inline-block; width: 2.4mm; height: 2.4mm; border-radius: 50%; }
+/* French runs ~15% longer than English: slightly tighter type to keep two pages. */
+body { font-size: 9pt; line-height: 1.38; }
+.job { padding: 1.8mm 0; }
+.job .meta { font-size: 8.1pt; }
+.card ul, .card dd { font-size: 8.2pt; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="portrait" aria-hidden="true">
+    <span class="dot"></span><span class="ring"></span>
+    <div class="disc"><img src="../src/lib/assets/portrait.webp" alt=""></div>
+  </div>
+  <div class="who">
+    <h1>Cédric Pontet</h1>
+    <p class="headline">CTO freelance · Architecte cloud &amp; cloud souverain · <span style="white-space: nowrap">Domain-Driven Design · Facilitation</span></p>
+    <p class="contact">
+      <span><b>Luxembourg</b> · à distance dans toute l'UE</span>
+      <a href="mailto:hello@cedricpontet.com">hello@cedricpontet.com</a>
+      <a href="https://cedricpontet.com/fr">cedricpontet.com/fr</a>
+      <a href="https://www.linkedin.com/in/c%C3%A9dric-pontet/">linkedin.com/in/cédric-pontet</a>
+      <a href="https://github.com/cpontet">github.com/cpontet</a>
+    </p>
+  </div>
+</header>
+
+<div class="layout">
+<main>
+
+  <section class="profile">
+    <p class="eyebrow">Profil</p>
+    <p>Ingénieur logiciel depuis 2001, praticien agile depuis 2003, et CTO d'Agile Partner de 2019 à 2026. J'aide les organisations européennes à concevoir des plateformes cloud qu'elles maîtrisent, à migrer leurs charges stratégiques vers un cloud souverain, et à intégrer des agents de code IA dans leur chaîne de livraison avec les bons garde-fous.</p>
+    <p>Curieux et pragmatique, j'associe profondeur technique (architecture, cloud, Domain-Driven Design, DevOps) et facilitation, coaching. Fondateur de Playful Learner, cofondateur de #play14, et orateur à Build Stuff, Voxxed Days, KanDDDinsky, FlowCon et XP Days.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Expérience</p>
+
+    <div class="job">
+      <p class="period">2026 – auj.</p>
+      <div>
+        <h3>CTO freelance &amp; architecte cloud · <span class="org">Indépendant</span></h3>
+        <p class="meta">CTO et conseil stratégique, architecture cloud et cloud souverain, livraison logicielle agentique, Domain-Driven Design, ateliers.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2023 – auj.</p>
+      <div>
+        <h3>Architecte d'entreprise · <span class="org">Office des publications de l'Union européenne</span></h3>
+        <p class="meta">Architecture Competence Center ; membre du Security and Architecture Competence Center inter-directions.</p>
+        <ul>
+          <li><b>Cloud souverain&nbsp;:</b> migration d'actifs stratégiques vers un cloud souverain européen — étude de faisabilité, architecture cible, analyse et refactoring du code source, gouvernance, stratégie de migration des données et des charges, haute disponibilité, continuité et reprise.</li>
+          <li><b>Data Value Chain&nbsp;:</b> architecture cible de la future pile de diffusion, avec des services soutenus par l'IA (graphes de connaissances, stockage distribué, traitement de données, plateforme développeurs).</li>
+          <li><b>BI@PP&nbsp;:</b> architecture et déploiement d'une plateforme BI sur Azure avec Bicep (IaC), conformité et sécurité.</li>
+          <li>Support aux propriétaires de systèmes d'information (EUR-Lex, CELLAR…), gouvernance des données, FinOps, facilitation d'ateliers.</li>
+        </ul>
+        <p class="tags">AWS · Azure · Azure Synapse · Bicep · FinOps</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2019 – 2026</p>
+      <div>
+        <h3>Chief Technology Officer · <span class="org">Agile Partner</span></h3>
+        <ul>
+          <li>Définition de la stratégie technique de l'entreprise et de nouvelles offres de services techniques.</li>
+          <li>Accompagnement de chaque projet client pour sécuriser la valeur métier et la qualité ; promotion de l'excellence technique par la formation et les ateliers.</li>
+          <li>Mise à disposition d'outils et de plateformes pour toute l'entreprise.</li>
+        </ul>
+        <p class="meta">Auparavant : responsable du développement logiciel (2017–2019, direction de la software factory, validation d'architecture, staffing, offres) et delivery manager (2015–2017).</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2023 – 2025</p>
+      <div>
+        <h3>Coach agile &amp; formateur · <span class="org">Banque de Luxembourg</span></h3>
+        <p class="meta">Coaching agile et technique de plusieurs équipes (2024–2025). Programme d'excellence technique (2023) : clean code, TDD/BDD, pair programming, katas, refactoring, dette technique, architecture évolutive, DevSecOps.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2023 – 2024</p>
+      <div>
+        <h3>Architecte de solutions · <span class="org">Université du Luxembourg</span></h3>
+        <p class="meta">Architecture et déploiement d'une application web pour des événements responsables. Azure Container Apps, Bicep, Next.js, Strapi.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2019 – 2023</p>
+      <div>
+        <h3>Architecte cloud &amp; coach agile · <span class="org">Cargolux</span></h3>
+        <p class="meta">Migration de toutes les charges IT vers Azure : bonnes pratiques cloud, organisation Azure DevOps, gouvernance et portefeuille de produits, introduction à l'agilité, formation et coaching IT Ops.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2022 – 2023</p>
+      <div>
+        <h3>Architecte &amp; coach agile · <span class="org">LU-CIX (Luxchat4Gov) · Restena</span></h3>
+        <p class="meta">Fork du client Matrix Element pour le gouvernement luxembourgeois : stratégie de fork, CI/CD (GitLab) et déploiement pour web, iOS, Android, Windows et macOS. Refonte de la plateforme de gestion de domaines my.lu : facilitation, story mapping, CI/CD, authentification Keycloak.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2021 – 2022</p>
+      <div>
+        <h3>Architecture cloud &amp; transformation · <span class="org">Parlement européen · BGL BNP Paribas</span></h3>
+        <p class="meta">Architecture cloud cible pour le Parlement européen (Azure, AWS). Inventaire des compétences et plan de développement des équipes IT en transition vers une infrastructure cloud-first chez BGL BNP Paribas.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2019 – 2021</p>
+      <div>
+        <h3>Coach Domain-Driven Design · <span class="org">TadaWeb · BIL · Foyer</span></h3>
+        <p class="meta">Coaching technique sur EventStorming, Domain-Driven Design, CQRS et event sourcing ; communautés de pratique, culture DevOps, coaching agile.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2014 – 2018</p>
+      <div>
+        <h3>Coach agile &amp; architecte · <span class="org">Aperam · Deloitte · ING · SGBT · Editus · POST</span></h3>
+        <p class="meta">Transformations agiles de l'équipe au portefeuille ; architecture cloud Domain-Driven Design et CQRS pour la plateforme de vente e-Aperam ; plateforme de reporting réglementaire pour Deloitte ; gestion de commandes orientée services chez POST Luxembourg.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2005 – 2014</p>
+      <div>
+        <h3>Développeur, architecte &amp; Scrum master · <span class="org">Agile Partner</span></h3>
+        <p class="meta">Dennemeyer (plateforme de propriété intellectuelle DIAMS iQ), POST Luxembourg (application de livraison CQRS/event-sourcing pour les agents postaux, portail, plateforme TFS), VitisLife, intégrations P&amp;T, Paris Notaires Services (plateforme de données immobilières, BI). .NET, C#, TDD, BDD, Kanban.</p>
+      </div>
+    </div>
+
+    <div class="job">
+      <p class="period">2001 – 2005</p>
+      <div>
+        <h3>Développeur &amp; consultant · <span class="org">Arthur Andersen · P&amp;T Luxembourg</span></h3>
+        <p class="meta">Applications métier et intégrations ; déploiement de la caisse WebRiposte dans tous les bureaux de poste luxembourgeois.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<aside>
+  <section class="card sky">
+    <h2>Expertise</h2>
+    <dl>
+      <div><dt>Direction technique</dt><dd>Stratégie, gouvernance, delivery, excellence technique</dd></div>
+      <div><dt>Cloud &amp; cloud souverain</dt><dd>Azure, AWS, Clever Cloud, cloud souverain européen, Bicep, FinOps</dd></div>
+      <div><dt>Domain-Driven Design</dt><dd>EventStorming, CQRS, event sourcing, systèmes distribués</dd></div>
+      <div><dt>IA agentique</dt><dd>Agents de code (Claude Code), MCP, chaînes de livraison agentiques</dd></div>
+      <div><dt>Delivery &amp; DevOps</dt><dd>Azure DevOps, GitLab, CI/CD, Agile, Kanban, Lean</dd></div>
+      <div><dt>Facilitation</dt><dd>Serious games, story mapping, sketchnoting, code katas</dd></div>
+    </dl>
+  </section>
+
+  <section class="card">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Azure Solutions Architect (AZ-305), 2023</li>
+      <li>Azure DevOps Engineer (AZ-400), 2024</li>
+      <li>Azure Administrator (AZ-104), 2022</li>
+      <li>AWS Certified Cloud Practitioner, 2019</li>
+      <li>Clever Cloud Cloud Concepts 101, 2025</li>
+      <li>DevOps Foundation, 2023</li>
+      <li>ITIL 4 Foundation, 2021</li>
+      <li>Certified Scrum Master, 2010</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Conférences</h2>
+    <ul>
+      <li>Voxxed Days Luxembourg, 2016–2025</li>
+      <li>FlowCon Paris, 2025</li>
+      <li>XP Days Benelux, 2022–2023</li>
+      <li>Agile Grenoble, 2022</li>
+      <li>KanDDDinsky, Lean-Kanban France, 2017</li>
+      <li>Build Stuff, 2014</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Communauté</h2>
+    <ul>
+      <li>Fondateur, Playful Learner</li>
+      <li>Cofondateur, #play14 (depuis 2014)</li>
+      <li>Communautés Agile, Domain-Driven Design, EventStorming et sketchnoting</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Langues</h2>
+    <p class="small">Français (langue maternelle) · Anglais (courant)<br>Allemand, espagnol (conversation) · Roumain (notions)</p>
+  </section>
+
+  <section class="card">
+    <h2>Formation</h2>
+    <ul>
+      <li>Ingénierie logicielle, ISIAL, Université Nancy 1 (2001)</li>
+      <li>MIAGe, Université Nancy 2 (2000)</li>
+      <li>Administration des entreprises, IUT Nancy (1997)</li>
+    </ul>
+  </section>
+</aside>
+</div>
+
+<footer>
+  <span>cedricpontet.com/fr · hello@cedricpontet.com</span>
+  <span class="shapes" aria-hidden="true"><i style="background: var(--accent)"></i><i style="background: var(--yellow)"></i><i style="background: var(--green)"></i><i style="background: var(--orange)"></i></span>
+</footer>
+</body>
+</html>

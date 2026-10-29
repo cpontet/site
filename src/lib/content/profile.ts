@@ -9,15 +9,20 @@ export type ServiceIcon = 'cto' | 'route' | 'cloud' | 'shield' | 'bot' | 'blocks
 
 export interface Service {
   id: string;
+  /** URL segment of the service page, `/services/<slug>` (same in both languages). */
+  slug: string;
   icon: ServiceIcon;
   tint: Tint;
   title: L10n;
   body: L10n;
+  /** Contact form topic, when it differs from the title. */
+  topic?: L10n;
 }
 
 export const services: Service[] = [
   {
     id: 'cto',
+    slug: 'cto-strategic-advisory',
     icon: 'cto',
     tint: 'peach',
     title: { en: 'CTO & strategic advisory', fr: 'CTO & conseil stratégique' },
@@ -28,6 +33,7 @@ export const services: Service[] = [
   },
   {
     id: 'agile',
+    slug: 'agile-coaching',
     icon: 'route',
     tint: 'sun',
     title: { en: 'Agile coaching & transformation', fr: 'Coaching agile & transformation' },
@@ -38,6 +44,7 @@ export const services: Service[] = [
   },
   {
     id: 'cloud',
+    slug: 'cloud-architecture',
     icon: 'cloud',
     tint: 'sky',
     title: { en: 'Cloud architecture', fr: 'Architecture cloud' },
@@ -48,6 +55,7 @@ export const services: Service[] = [
   },
   {
     id: 'sovereign',
+    slug: 'sovereign-cloud',
     icon: 'shield',
     tint: 'mint',
     title: { en: 'Sovereign cloud', fr: 'Cloud souverain' },
@@ -58,6 +66,7 @@ export const services: Service[] = [
   },
   {
     id: 'agentic',
+    slug: 'agentic-software-factory',
     icon: 'bot',
     tint: 'lilac',
     title: { en: 'Agentic software factory', fr: 'Software factory agentique' },
@@ -68,6 +77,7 @@ export const services: Service[] = [
   },
   {
     id: 'ddd',
+    slug: 'domain-driven-design-eventstorming',
     icon: 'blocks',
     tint: 'sun',
     title: {
@@ -81,9 +91,11 @@ export const services: Service[] = [
   },
   {
     id: 'facilitation',
+    slug: 'facilitation-workshops',
     icon: 'dice',
     tint: 'rose',
     title: { en: 'Facilitation & workshops', fr: 'Facilitation & ateliers' },
+    topic: { en: 'Workshop or talk', fr: 'Atelier ou conférence' },
     body: {
       en: 'Serious games, story mapping, katas and visual thinking that get business, tech and leadership moving together.',
       fr: 'Serious games, story mapping, katas et pensée visuelle pour faire avancer ensemble métier, tech et direction.',

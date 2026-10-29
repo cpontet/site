@@ -82,7 +82,7 @@ src/
     assets/                  # portrait.webp (720px, transparent), favicon
     components/ui/           # shadcn-svelte generated components (don't hand-edit heavily)
     components/              # SiteHeader, SiteFooter, ThemeToggle, …
-    content/                 # profile.ts, experience.ts — typed bilingual data (L10n)
+    content/                 # profile.ts, experience.ts, service-pages.ts — typed bilingual data (L10n)
     server/contact.ts        # validation, Turnstile check, MIME for send_email
     i18n.ts                  # Lang type, t(), localize(), switchLang()
     i18n/en.ts, i18n/fr.ts   # UI strings (fr is typed against en)
@@ -97,6 +97,7 @@ src/
       +layout.ts/.svelte     # lang + dict, header/footer, hreflang links
       +page.svelte           # home
       about/                 # profile + experience timeline
+      services/[slug]/       # one page per service that has an entry in service-pages.ts
       blog/                  # index (topic filter, page language only) + [slug]
       rss.xml/               # RSS per language
       contact/               # form action — the only non-prerendered route
@@ -146,6 +147,26 @@ resources/                   # SOURCE material only (docx CVs, bio, raw photos) 
 - Tone: calm, precise, senior. First person on the site ("I help…"). No buzzword stacking,
   no superlatives, no emoji in body copy.
 - Pronouns: refer to Cédric as "I" on the site; elsewhere use his name.
+
+### Service pages
+
+Each home page service card links to `/services/<slug>` once the service has an entry in
+`src/lib/content/service-pages.ts` (cards without one stay plain; the sitemap and prerender
+entries follow automatically). Every page uses the same hierarchy, typed by `ServicePage`:
+
+1. Breadcrumb + hero: icon, title, lead (also the meta description), CTAs, "At a glance"
+   (format, duration, where, languages).
+2. When it helps: 3–4 situations in the reader's words.
+3. What I take on: 4–6 scope items.
+4. Ways to work together: 2–3 engagement formats.
+5. Where I've done this: 2–3 real missions (facts from `resources/` only).
+6. Related writing: posts in the page language sharing a tag with `ServicePage.tags`;
+   hidden when there are none. Tag new posts accordingly.
+7. Other ways I can help: the other services.
+8. Contact section with the service preselected as topic.
+
+The service's tint colours the icon disc, "At a glance" and format cards. Canvas artboard:
+"v3 · Service page".
 
 ### Blog front matter
 

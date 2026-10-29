@@ -4,7 +4,7 @@ description: 'Five short videos on the three levels of EventStorming and the not
 date: '2026-10-29'
 lang: en
 tags: [eventstorming, ddd, facilitation]
-draft: true
+draft: false
 ---
 
 EventStorming is a workshop format created by Alberto Brandolini. People who know the business

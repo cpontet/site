@@ -38,7 +38,9 @@ const links = $derived([
       >
         {#each ['en', 'fr'] as const as l (l)}
           <a
-            href={switchLang(page.url.pathname, l)}
+            href={page.data.alternates
+              ? (page.data.alternates[l] ?? localize('/blog', l))
+              : switchLang(page.url.pathname, l)}
             hreflang={l}
             lang={l}
             aria-current={l === lang ? 'true' : undefined}

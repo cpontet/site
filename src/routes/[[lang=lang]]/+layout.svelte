@@ -8,12 +8,19 @@ import type { LayoutProps } from './$types';
 let { data, children }: LayoutProps = $props();
 
 const origin = 'https://cedricpontet.com';
+const alternates = $derived(
+  page.data.alternates ?? {
+    en: switchLang(page.url.pathname, 'en'),
+    fr: switchLang(page.url.pathname, 'fr'),
+  },
+);
 </script>
 
 <svelte:head>
-  <link rel="alternate" hreflang="en" href={origin + switchLang(page.url.pathname, 'en')} />
-  <link rel="alternate" hreflang="fr" href={origin + switchLang(page.url.pathname, 'fr')} />
-  <link rel="alternate" hreflang="x-default" href={origin + switchLang(page.url.pathname, 'en')} />
+  {#each Object.entries(alternates) as [l, href] (l)}
+    <link rel="alternate" hreflang={l} href={origin + href} />
+  {/each}
+  <link rel="alternate" hreflang="x-default" href={origin + (alternates.en ?? alternates.fr)} />
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">

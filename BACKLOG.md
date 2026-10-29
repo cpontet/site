@@ -7,9 +7,10 @@
   - Open Graph tags + share image (LinkedIn previews)
   - JSON-LD: Person on home/about, BlogPosting on posts
 - Cloudflare Web Analytics (cookieless): enable in dashboard or add the beacon
-- Blog articles (the two current posts are drafts, so the blog is empty in production)
+- Blog articles
   - Agentic AI SDLC / Software Factory
-  - EventStorming video
+  - EventStorming era journey (strategic DDD, cinema 1960s to 2000s): second video post
+  - French version of the EventStorming post
   - EU Sovereignty Framework SEAL
   - DDD + AI
   - DDD Course

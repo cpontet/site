@@ -19,7 +19,11 @@ declare global {
 
     // interface Error {}
     // interface Locals {}
-    // interface PageData {}
+    interface PageData {
+      /** Paths of this page per language, when they differ from the "/fr" prefix rule
+       *  (blog posts: a missing language means there is no translation). */
+      alternates?: Partial<Record<import('#lib/i18n.js').Lang, string>>;
+    }
     // interface PageState {}
   }
 }

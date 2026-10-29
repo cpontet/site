@@ -22,6 +22,7 @@ const s = $derived(d.service);
 const lang = $derived(data.lang);
 const service = $derived(data.service);
 const page = $derived(data.page);
+const eco = $derived(page.ecosystem);
 const title = $derived(service.title[lang]);
 // Preselect the matching contact topic when there is one.
 const topic = $derived.by(() => {
@@ -111,47 +112,44 @@ const topic = $derived.by(() => {
   </div>
 </section>
 
-<!-- Ecosystem (optional) -->
-{#if page.ecosystem}
-  {@const eco = page.ecosystem}
-  <section class="px-7 pt-6 pb-12">
-    <div
-      class={[
-        'mx-auto flex max-w-6xl flex-col gap-9 rounded-[2rem] p-[clamp(1.75rem,5vw,3.5rem)]',
-        tintBg[service.tint],
-      ]}
-    >
-      <div class="flex flex-wrap items-end justify-between gap-5">
-        <div class="flex max-w-[680px] flex-col gap-2.5">
-          <p class={eyebrow}>{s.ecosystemEyebrow}</p>
-          <h2 class={h2}>{eco.title[lang]}</h2>
-        </div>
-        <p class="max-w-[420px]">{eco.intro[lang]}</p>
+<!-- Ecosystem -->
+<section class="px-7 pt-6 pb-12">
+  <div
+    class={[
+      'mx-auto flex max-w-6xl flex-col gap-9 rounded-[2rem] p-[clamp(1.75rem,5vw,3.5rem)]',
+      tintBg[service.tint],
+    ]}
+  >
+    <div class="flex flex-wrap items-end justify-between gap-5">
+      <div class="flex max-w-[680px] flex-col gap-2.5">
+        <p class={eyebrow}>{s.ecosystemEyebrow}</p>
+        <h2 class={h2}>{eco.title[lang]}</h2>
       </div>
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-5">
-        {#each eco.groups as group (group.title.en)}
-          <div class="flex flex-col gap-4 rounded-lg bg-background p-6.5">
-            <h3 class="text-[22px] font-extrabold">{group.title[lang]}</h3>
-            <ul class="flex flex-col divide-y divide-border">
-              {#each group.items as item (item.name)}
-                <li class="flex flex-wrap items-baseline justify-between gap-x-4 py-2.5">
-                  <span class="font-bold">{item.name}</span>
-                  <span class="text-[15px] text-muted-foreground">{item.detail[lang]}</span>
-                </li>
-              {/each}
-            </ul>
-          </div>
-        {/each}
-      </div>
-      {#if eco.link}
-        <p class="max-w-[46rem]">
-          <a href={eco.link.href} class={['font-bold', linkUnderline]}>{eco.link.name}</a>
-          {eco.link.text[lang]}
-        </p>
-      {/if}
+      <p class="max-w-[420px]">{eco.intro[lang]}</p>
     </div>
-  </section>
-{/if}
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-5">
+      {#each eco.groups as group (group.title.en)}
+        <div class="flex flex-col gap-4 rounded-lg bg-background p-6.5">
+          <h3 class="text-[22px] font-extrabold">{group.title[lang]}</h3>
+          <ul class="flex flex-col divide-y divide-border">
+            {#each group.items as item (item.name)}
+              <li class="flex flex-wrap items-baseline justify-between gap-x-4 py-2.5">
+                <span class="font-bold">{item.name}</span>
+                <span class="text-[15px] text-muted-foreground">{item.detail[lang]}</span>
+              </li>
+            {/each}
+          </ul>
+        </div>
+      {/each}
+    </div>
+    {#if eco.link}
+      <p class="max-w-[46rem]">
+        <a href={eco.link.href} class={['font-bold', linkUnderline]}>{eco.link.name}</a>
+        {eco.link.text[lang]}
+      </p>
+    {/if}
+  </div>
+</section>
 
 <!-- Ways to work together -->
 <section id="formats" class="mx-auto flex max-w-6xl scroll-mt-6 flex-col gap-9 px-7 pt-12 pb-18">

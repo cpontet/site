@@ -158,8 +158,8 @@ entries follow automatically). Every page uses the same hierarchy, typed by `Ser
    (format, duration, where, languages).
 2. When it helps: 3–4 situations in the reader's words.
 3. What I take on: 4–6 scope items.
-   Optional `ecosystem`: named vendors, tools or practices in 2–3 groups plus an external
-   link, on a tinted panel (used by Sovereign cloud, Agentic software factory, DDD & EventStorming, Facilitation).
+   Then the ecosystem: named methods, tools or vendors in 2 groups, plus an optional external
+   link, on a tinted panel.
 4. Ways to work together: 2–3 engagement formats.
 5. Where I've done this: 2–3 real missions (facts from `resources/` only).
 6. Related writing: posts in the page language sharing a tag with `ServicePage.tags`;

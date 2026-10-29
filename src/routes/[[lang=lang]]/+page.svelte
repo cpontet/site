@@ -109,10 +109,14 @@ const lang = $derived(data.lang);
 <!-- Clients -->
 <section aria-label={d.home.clientsLabel} class="mx-auto max-w-6xl px-7">
   <div class="flex flex-wrap items-center gap-x-8 gap-y-3 rounded-lg bg-surface px-8 py-6">
-    <span class="text-[15px] font-bold text-muted-foreground">{d.home.clientsLabel}</span>
-    {#each clients as client (client)}
-      <span class="font-display font-bold">{client}</span>
-    {/each}
+    <span aria-hidden="true" class="text-[15px] font-bold text-muted-foreground"
+      >{d.home.clientsLabel}</span
+    >
+    <ul class="contents">
+      {#each clients as client (client)}
+        <li class="font-display font-bold">{client}</li>
+      {/each}
+    </ul>
   </div>
 </section>
 
@@ -146,16 +150,17 @@ const lang = $derived(data.lang);
   </div>
   <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-6">
     {#each featuredMissions as mission (mission.client)}
-      <a
-        href={localize('/about', lang)}
-        class={['flex flex-col gap-3.5 rounded-lg p-[30px]', tintBg[mission.tint], cardLift]}
+      <article
+        class={['relative flex flex-col gap-3.5 rounded-lg p-[30px]', tintBg[mission.tint], cardLift]}
       >
-        <p class="text-[15px] font-bold text-muted-foreground">
+        <h3 class="order-2 text-[26px] leading-tight font-extrabold">
+          <a href={localize('/about', lang)} class="card-link">{mission.title[lang]}</a>
+        </h3>
+        <p class="order-1 text-[15px] font-bold text-muted-foreground">
           {mission.client} · {mission.period[lang]}
         </p>
-        <h3 class="text-[26px] leading-tight font-extrabold">{mission.title[lang]}</h3>
-        <p class="text-[17px]">{mission.body[lang]}</p>
-      </a>
+        <p class="order-3 text-[17px]">{mission.body[lang]}</p>
+      </article>
     {/each}
   </div>
 </section>
@@ -181,14 +186,20 @@ const lang = $derived(data.lang);
       </div>
       <div class="grid flex-[1_1_440px] grid-cols-[repeat(auto-fit,minmax(min(210px,100%),1fr))] gap-5">
         {#each [{ name: 'Playful Learner', ...ventures.playfulLearner }, { name: '#play14', ...ventures.play14 }] as venture (venture.name)}
-          <a
-            href={venture.url}
-            class={['flex flex-col gap-2 rounded-lg bg-background p-6.5 text-foreground', cardLift]}
+          <div
+            class={[
+              'relative flex flex-col gap-2 rounded-lg bg-background p-6.5 text-foreground',
+              cardLift,
+            ]}
           >
-            <span class="text-sm font-bold text-brand-text">{venture.role[lang]}</span>
-            <span class="font-display text-[28px] leading-tight font-extrabold">{venture.name}</span>
-            <span class="text-base text-muted-foreground">{venture.body[lang]}</span>
-          </a>
+            <a
+              href={venture.url}
+              class="card-link order-2 font-display text-[28px] leading-tight font-extrabold"
+              >{venture.name}</a
+            >
+            <span class="order-1 text-sm font-bold text-brand-text">{venture.role[lang]}</span>
+            <span class="order-3 text-base text-muted-foreground">{venture.body[lang]}</span>
+          </div>
         {/each}
       </div>
     </div>

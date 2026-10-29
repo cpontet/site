@@ -12,21 +12,24 @@ let {
 }: { post: Post; uiLang: Lang; minRead: string; headingLevel?: 2 | 3 } = $props();
 </script>
 
-<a
-  href={localize(`/blog/${post.slug}`, post.lang)}
-  class={['flex flex-col gap-3 rounded-lg border-[1.5px] border-border p-7', cardLift]}
+<article
+  class={['relative flex flex-col gap-3 rounded-lg border-[1.5px] border-border p-7', cardLift]}
 >
-  <span class="flex flex-wrap gap-2 text-sm font-bold">
-    {#each post.tags as tag (tag)}
-      <span class="rounded-full bg-tint-lilac px-3 py-0.5">{tag}</span>
-    {/each}
-  </span>
-  <svelte:element this={`h${headingLevel}`} lang={post.lang} class="text-2xl font-bold tracking-tight"
-    >{post.title}</svelte:element
+  <svelte:element
+    this={`h${headingLevel}`}
+    lang={post.lang}
+    class="order-2 text-2xl font-bold tracking-tight"
+    ><a href={localize(`/blog/${post.slug}`, post.lang)} class="card-link">{post.title}</a
+    ></svelte:element
   >
-  <p lang={post.lang} class="text-base text-muted-foreground">{post.description}</p>
-  <span class="mt-auto text-[15px] text-muted-foreground">
+  <ul class="order-1 flex flex-wrap gap-2 text-sm font-bold">
+    {#each post.tags as tag (tag)}
+      <li class="rounded-full bg-tint-lilac px-3 py-0.5">{tag}</li>
+    {/each}
+  </ul>
+  <p lang={post.lang} class="order-3 text-base text-muted-foreground">{post.description}</p>
+  <p class="order-4 mt-auto text-[15px] text-muted-foreground">
     <time datetime={post.date}>{formatDate(post.date, uiLang)}</time> · {post.readingMinutes}
     {minRead}
-  </span>
-</a>
+  </p>
+</article>

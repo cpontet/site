@@ -80,32 +80,40 @@ const chip = (on: boolean) => [
     </div>
 
     {#if featured}
-      <a
-        href={localize(`/blog/${featured.slug}`, featured.lang)}
+      <article
         class={[
-          'flex flex-wrap items-center gap-8 rounded-[2rem] bg-tint-mint p-[clamp(1.75rem,4vw,2.75rem)]',
+          'relative flex flex-wrap items-center gap-8 rounded-[2rem] bg-tint-mint p-[clamp(1.75rem,4vw,2.75rem)]',
           cardLift,
         ]}
       >
         <div class="flex min-w-0 flex-[999_1_520px] flex-col gap-3.5">
-          <span class="flex flex-wrap gap-2 text-sm font-bold">
+          <h2 lang={featured.lang} class="order-2 text-[clamp(1.9rem,3.4vw,2.8rem)]">
+            <a
+              href={localize(`/blog/${featured.slug}`, featured.lang)}
+              class="card-link after:rounded-[2rem]">{featured.title}</a
+            >
+          </h2>
+          <div class="order-1 flex flex-wrap gap-2 text-sm font-bold">
             <span class="rounded-full bg-background px-3 py-0.5">{b.latest}</span>
-            {#each featured.tags as tag (tag)}
-              <span class="rounded-full bg-background px-3 py-0.5">{tag}</span>
-            {/each}
-          </span>
-          <h2 lang={featured.lang} class="text-[clamp(1.9rem,3.4vw,2.8rem)]">{featured.title}</h2>
-          <p lang={featured.lang} class="max-w-[44rem] text-[19px]">{featured.description}</p>
-          <span class="text-[15px] font-bold text-muted-foreground">
+            <ul class="contents">
+              {#each featured.tags as tag (tag)}
+                <li class="rounded-full bg-background px-3 py-0.5">{tag}</li>
+              {/each}
+            </ul>
+          </div>
+          <p lang={featured.lang} class="order-3 max-w-[44rem] text-[19px]">{featured.description}</p>
+          <p class="order-4 text-[15px] font-bold text-muted-foreground">
             {formatDate(featured.date, data.lang)} · {featured.readingMinutes}
             {b.minRead}
-          </span>
+          </p>
         </div>
+        <!-- Visual cue only: the title link above covers the whole card. -->
         <span
+          aria-hidden="true"
           class="inline-flex min-h-13 flex-none items-center rounded-full bg-primary px-6.5 font-bold text-primary-foreground"
           >{b.readMore}</span
         >
-      </a>
+      </article>
     {/if}
 
     {#if rest.length > 0}

@@ -196,6 +196,24 @@
   .bg-brand :focus-visible {
     outline-color: var(--brand-foreground);
   }
+  /* Clickable card: only the title is the link (short screen-reader name); its ::after covers
+     the card, which needs `relative`, and carries the focus ring. */
+  .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+  }
+  .card-link:focus-visible {
+    outline: none;
+  }
+  .card-link:focus-visible::after {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+  }
+  .bg-brand .card-link:focus-visible::after {
+    outline-color: var(--brand-foreground);
+  }
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

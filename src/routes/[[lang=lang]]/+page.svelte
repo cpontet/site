@@ -4,6 +4,7 @@ import Download from '@lucide/svelte/icons/download';
 import portrait from '#lib/assets/portrait.webp';
 import ContactSection from '#lib/components/ContactSection.svelte';
 import PostCard from '#lib/components/PostCard.svelte';
+import Seo from '#lib/components/Seo.svelte';
 import ServiceIcon from '#lib/components/ServiceIcon.svelte';
 import {
   btnPrimary,
@@ -16,6 +17,7 @@ import {
 } from '#lib/components/styles.js';
 import { clients, featuredMissions, services, stats, ventures } from '#lib/content/profile.js';
 import { localize } from '#lib/i18n.js';
+import { personLd } from '#lib/seo.js';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
@@ -23,10 +25,12 @@ const d = $derived(data.dict);
 const lang = $derived(data.lang);
 </script>
 
-<svelte:head>
-  <title>{d.meta.title}</title>
-  <meta name="description" content={d.meta.description} />
-</svelte:head>
+<Seo
+  {lang}
+  title={d.meta.title}
+  description={d.meta.description}
+  jsonLd={personLd(lang, portrait)}
+/>
 
 <!-- Hero -->
 <section class="mx-auto flex max-w-6xl flex-wrap items-center gap-12 px-7 pt-12 pb-22">

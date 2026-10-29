@@ -1,7 +1,9 @@
 <script lang="ts">
 import ArrowLeft from '@lucide/svelte/icons/arrow-left';
+import Seo from '#lib/components/Seo.svelte';
 import { formatDate } from '#lib/format.js';
 import { localize } from '#lib/i18n.js';
+import { blogPostingLd } from '#lib/seo.js';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
@@ -11,9 +13,18 @@ const Content = $derived(data.content);
 const translation = $derived(data.post.translationOf?.match(/^(en|fr)\/(.+)$/));
 </script>
 
+<Seo
+  lang={data.lang}
+  title="{data.post.title} — Cédric Pontet"
+  description={data.post.description}
+  type="article"
+  jsonLd={blogPostingLd(data.post)}
+/>
+
 <svelte:head>
-  <title>{data.post.title} — Cédric Pontet</title>
-  <meta name="description" content={data.post.description} />
+  <meta property="article:published_time" content={data.post.date} />
+  <meta property="article:author" content="Cédric Pontet" />
+  {#each data.post.tags as tag (tag)}<meta property="article:tag" content={tag} />{/each}
 </svelte:head>
 
 <article class="mx-auto max-w-6xl px-7 pt-8 pb-26">

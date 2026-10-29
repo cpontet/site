@@ -105,6 +105,7 @@ src/
 static/
   favicon.svg                # icon source (brand blue disc + #play14 yellow dot); `bun run icons`
                              # renders favicon.ico, apple-touch-icon.png, icon-192/512.png
+  og/                        # share images (`bun run og`)
   cv/                        # public PDF CV (missing: build only warns until added)
 cv/cv.html                   # source of static/cv/cedric-pontet-cv.pdf (`bun run cv`); public: no birth date
 resources/                   # SOURCE material only (docx CVs, bio, raw photos) — gitignored, never served
@@ -203,9 +204,10 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 ## SEO
 
 - Per-page `<title>`, meta description, canonical URL, `hreflang` alternates (en/fr/x-default).
-- Open Graph image per page (static for now).
+- Open Graph image per language (static for now): `static/og/default-{en,fr}.png`, rendered by
+  `bun run og` (`scripts/build-og.ts`). All head tags go through `#lib/components/Seo.svelte`.
 - `sitemap.xml` and `rss.xml` (per language) generated as prerendered endpoints.
-- JSON-LD `Person` on home/about, `BlogPosting` on posts.
+- JSON-LD `Person` on home/about, `BlogPosting` on posts (builders in `src/lib/seo.ts`).
 
 ## Deployment
 

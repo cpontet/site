@@ -1,10 +1,12 @@
 <script lang="ts">
 import Download from '@lucide/svelte/icons/download';
 import portrait from '#lib/assets/portrait.webp';
+import Seo from '#lib/components/Seo.svelte';
 import { btnPrimary, btnSecondary, eyebrow, h2, tintBg } from '#lib/components/styles.js';
 import { certifications, experience, expertise, talks } from '#lib/content/experience.js';
 import { ventures } from '#lib/content/profile.js';
 import { localize } from '#lib/i18n.js';
+import { personLd } from '#lib/seo.js';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
@@ -12,10 +14,12 @@ const a = $derived(data.dict.about);
 const lang = $derived(data.lang);
 </script>
 
-<svelte:head>
-  <title>{data.dict.nav.about} — Cédric Pontet</title>
-  <meta name="description" content={a.lead} />
-</svelte:head>
+<Seo
+  {lang}
+  title="{data.dict.nav.about} — Cédric Pontet"
+  description={a.lead}
+  jsonLd={personLd(lang, portrait)}
+/>
 
 <section class="mx-auto flex max-w-6xl flex-wrap items-center gap-14 px-7 pt-12 pb-18">
   <div class="mx-auto w-full max-w-[340px] flex-[1_1_280px]">

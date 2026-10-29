@@ -14,7 +14,8 @@
     "lint": "biome check .",
     "format": "biome check --write .",
     "cv": "bun scripts/build-cv.ts",
-    "icons": "bun scripts/build-icons.ts"
+    "icons": "bun scripts/build-icons.ts",
+    "og": "bun scripts/build-og.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.3",

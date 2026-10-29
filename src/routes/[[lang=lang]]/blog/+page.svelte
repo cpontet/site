@@ -1,6 +1,7 @@
 <script lang="ts">
 import Rss from '@lucide/svelte/icons/rss';
 import PostCard from '#lib/components/PostCard.svelte';
+import Seo from '#lib/components/Seo.svelte';
 import { cardLift, eyebrow } from '#lib/components/styles.js';
 import { formatDate } from '#lib/format.js';
 import { localize } from '#lib/i18n.js';
@@ -21,9 +22,9 @@ const chip = (on: boolean) => [
 ];
 </script>
 
+<Seo lang={data.lang} title="{data.dict.nav.blog} — Cédric Pontet" description={b.lead} />
+
 <svelte:head>
-  <title>{data.dict.nav.blog} — Cédric Pontet</title>
-  <meta name="description" content={b.lead} />
   <link
     rel="alternate"
     type="application/rss+xml"

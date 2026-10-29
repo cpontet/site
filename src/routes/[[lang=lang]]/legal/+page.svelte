@@ -1,4 +1,5 @@
 <script lang="ts">
+import Seo from '#lib/components/Seo.svelte';
 import { eyebrow, linkUnderline } from '#lib/components/styles.js';
 import { CONTACT_EMAIL } from '#lib/config.js';
 import type { PageProps } from './$types';
@@ -19,8 +20,9 @@ const publisher = $derived([
 ]);
 </script>
 
+<Seo lang={data.lang} title="{l.title} — Cédric Pontet" description={l.lead} />
+
 <svelte:head>
-  <title>{l.title} — Cédric Pontet</title>
   <meta name="robots" content="noindex" />
 </svelte:head>
 

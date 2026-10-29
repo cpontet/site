@@ -3,9 +3,6 @@
   - Legal notice: legal form, RCS number, LU VAT number, business permit number,
     email retention period (src/routes/[[lang=lang]]/legal/+page.svelte)
   - Confirm street spelling: "Selentiny" vs "Salentiny"
-- SEO
-  - Open Graph tags + share image (LinkedIn previews)
-  - JSON-LD: Person on home/about, BlogPosting on posts
 - Cloudflare Web Analytics (cookieless): enable in dashboard or add the beacon
 - Blog articles
   - Agentic AI SDLC / Software Factory

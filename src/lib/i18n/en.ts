@@ -142,6 +142,7 @@ export const en = {
     whenTitle: 'Sounds familiar?',
     scopeEyebrow: 'What I do',
     scopeTitle: 'What I take on',
+    ecosystemEyebrow: 'Ecosystem',
     formatsEyebrow: 'Formats',
     formatsTitle: 'Ways to work together',
     proofEyebrow: 'Track record',

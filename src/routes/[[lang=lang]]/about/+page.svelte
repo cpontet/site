@@ -52,6 +52,7 @@ const lang = $derived(data.lang);
       <a href={cvPath(lang)} target="_blank" rel="noopener" class={btnPrimary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {a.ctaCv}
+        <span class="sr-only">{data.dict.nav.newTabPdf}</span>
       </a>
       <a href={localize('/', lang) + '#contact'} class={btnSecondary}>{a.ctaContact}</a>
     </div>
@@ -63,7 +64,7 @@ const lang = $derived(data.lang);
     <p class={eyebrow}>{a.expertiseEyebrow}</p>
     <h2 class={h2}>{a.expertiseTitle}</h2>
   </div>
-  <div class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5">
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-5">
     {#each expertise as item (item.title.en)}
       <div class={['flex flex-col gap-2 rounded-lg p-6.5', tintBg[item.tint]]}>
         <h3 class="text-[22px] font-extrabold">{item.title[lang]}</h3>
@@ -129,7 +130,7 @@ const lang = $derived(data.lang);
 </section>
 
 <section
-  class="mx-auto grid max-w-6xl grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 px-7 pt-22 pb-26"
+  class="mx-auto grid max-w-6xl grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-6 px-7 pt-22 pb-26"
 >
   <div class="flex flex-col gap-3.5 rounded-lg border-[1.5px] border-border p-7">
     <h2 class="text-2xl">{a.certifications}</h2>

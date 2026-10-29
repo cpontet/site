@@ -23,9 +23,14 @@ const alternates = $derived(
   <link rel="alternate" hreflang="x-default" href={origin + (alternates.en ?? alternates.fr)} />
 </svelte:head>
 
+<a
+  href="#main"
+  class="sr-only rounded-full bg-primary px-5 py-2.5 font-bold text-primary-foreground focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50"
+  >{data.dict.nav.skip}</a
+>
 <div class="flex min-h-screen flex-col">
   <SiteHeader lang={data.lang} dict={data.dict} />
-  <main class="flex-1">
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
     {@render children()}
   </main>
   <SiteFooter lang={data.lang} dict={data.dict} />

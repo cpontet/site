@@ -35,7 +35,7 @@
   /* brand: fill with ink text on top; brand-text: AA-safe for small text */
   --brand: #0098dd;
   --brand-foreground: #1f2340;
-  --brand-text: #0076ad;
+  --brand-text: #006c9f;
 
   /* soft tints for cards and tags */
   --tint-peach: #ffe6d9;
@@ -184,10 +184,17 @@
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.05;
+    /* Long words ("EventStorming,") must not overflow narrow screens. */
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   :focus-visible {
     outline: 3px solid var(--brand);
     outline-offset: 2px;
+  }
+  /* On brand-blue panels a blue ring would vanish: use the ink drawn on them instead. */
+  .bg-brand :focus-visible {
+    outline-color: var(--brand-foreground);
   }
   @media (prefers-reduced-motion: reduce) {
     *,

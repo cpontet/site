@@ -5,6 +5,9 @@ import ThemeToggle from './ThemeToggle.svelte';
 
 let { lang, dict }: { lang: Lang; dict: Dictionary } = $props();
 
+// Autonyms, read by screen readers after the visible "EN" / "FR".
+const langNames = { en: 'English', fr: 'Français' };
+
 const links = $derived([
   { href: localize('/', lang) + '#services', label: dict.nav.services },
   { href: localize('/about', lang), label: dict.nav.about },
@@ -44,10 +47,8 @@ const links = $derived([
             hreflang={l}
             lang={l}
             aria-current={l === lang ? 'true' : undefined}
-            class={[
-              'rounded-full px-3 py-1 uppercase',
-              l === lang && 'bg-background shadow-sm',
-            ]}>{l}</a
+            class={['rounded-full px-3 py-1', l === lang && 'bg-background shadow-sm']}
+            >{l.toUpperCase()}<span class="sr-only">{` ${langNames[l]}`}</span></a
           >
         {/each}
       </span>

@@ -9,6 +9,7 @@
   - EU Sovereignty Framework SEAL
   - DDD + AI
   - DDD Course
-- Accessibility review (contrast, keyboard, landmarks, screen reader; EN/FR, light/dark)
+- Accessibility follow-ups (automated axe + 320px reflow checks now run in CI: `bun run a11y`)
+  - Manual screen-reader pass: NVDA (Windows) and VoiceOver (macOS/iOS), EN and FR
 - Nice to have
   - Compact mobile menu

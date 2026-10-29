@@ -52,6 +52,7 @@ bun run build        # prerender to .svelte-kit/cloudflare
 bun run preview      # wrangler preview of the build
 bun run check        # svelte-check + types
 bun run lint         # biome check .
+bun run a11y         # axe-core (light/dark) + 320px reflow on every sitemap page; needs `bun run preview`
 bun run format       # biome check --write .
 bunx wrangler deploy # deploy (normally done by CI on push to main)
 bunx shadcn-svelte@latest add <component>   # add a UI component
@@ -178,7 +179,7 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
   ink text on it, never white — white fails AA),
   ink `#1F2340`, muted text `#4B4F66`, white ground, soft tints for cards
   (peach `#FFE6D9`, sky `#E4EEFF`, mint `#E2F4EA`, lilac `#EEE7FB`, sun `#FFF3C9`, rose `#FFE1E8`),
-  small brand text `#0076AD` (same hue, AA on white).
+  small brand text `#006C9F` (same hue, AA on white and on every light tint).
 - #play14 palette (decor shapes and accents only, never body text):
   red `#D80000`, orange `#FF5200`, yellow `#FFC900`, green `#92C900`, blue `#0098DD`, gray `#393939`.
   Hero shapes: yellow dot, green triangle, orange half-disc, ink ring (no blue: it is the accent).
@@ -216,7 +217,7 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 - `www` → apex is a Cloudflare Redirect Rule, not app code: prerendered assets are served
   before the Worker runs. One-time setup steps are in README.md.
 - CI: `.github/workflows/ci.yml`, GitHub Actions with `oven-sh/setup-bun` →
-  `bun install --frozen-lockfile && bun run lint && bun run check && bun run build && bunx wrangler deploy`
+  `bun install --frozen-lockfile && bun run lint && bun run check && bun run build && bun run a11y && bunx wrangler deploy`
   using `CLOUDFLARE_API_TOKEN` secret.
 
 ## Conventions

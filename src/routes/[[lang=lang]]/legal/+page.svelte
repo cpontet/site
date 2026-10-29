@@ -37,7 +37,7 @@ const publisher = $derived([
     <section class="flex flex-col gap-3.5">
       <h2 class="text-[28px]">{fr ? 'Éditeur' : 'Publisher'}</h2>
       <dl
-        class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-4 rounded-lg bg-surface p-6.5 text-[17px]"
+        class="grid grid-cols-[repeat(auto-fit,minmax(min(240px,100%),1fr))] gap-4 rounded-lg bg-surface p-6.5 text-[17px]"
       >
         {#each publisher as [label, value] (label)}
           <div>

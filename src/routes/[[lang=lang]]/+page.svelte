@@ -68,6 +68,7 @@ const lang = $derived(data.lang);
       <a href={cvPath(lang)} target="_blank" rel="noopener" class={btnSecondary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {d.home.ctaCv}
+        <span class="sr-only">{d.nav.newTabPdf}</span>
       </a>
     </div>
     <p class="text-base text-muted-foreground">{d.home.availability}</p>
@@ -124,7 +125,7 @@ const lang = $derived(data.lang);
     </div>
     <p class="max-w-[380px] text-muted-foreground">{d.home.servicesLead}</p>
   </div>
-  <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-6">
     {#each services as service (service.id)}
       <article class="flex flex-col gap-3.5 rounded-lg border-[1.5px] border-border p-[30px]">
         <span class={['flex size-14 items-center justify-center rounded-full', tintBg[service.tint]]}>
@@ -143,7 +144,7 @@ const lang = $derived(data.lang);
     <p class={eyebrow}>{d.home.workEyebrow}</p>
     <h2 class={h2}>{d.home.workTitle}</h2>
   </div>
-  <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+  <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-6">
     {#each featuredMissions as mission (mission.client)}
       <a
         href={localize('/about', lang)}
@@ -178,7 +179,7 @@ const lang = $derived(data.lang);
         <h2 class={h2}>{d.home.playTitle}</h2>
         <p>{d.home.playBody}</p>
       </div>
-      <div class="grid flex-[1_1_440px] grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-5">
+      <div class="grid flex-[1_1_440px] grid-cols-[repeat(auto-fit,minmax(min(210px,100%),1fr))] gap-5">
         {#each [{ name: 'Playful Learner', ...ventures.playfulLearner }, { name: '#play14', ...ventures.play14 }] as venture (venture.name)}
           <a
             href={venture.url}
@@ -196,7 +197,7 @@ const lang = $derived(data.lang);
 
 <!-- Stats -->
 <section class="mx-auto max-w-6xl px-7 pt-26 pb-12">
-  <dl class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
+  <dl class="grid grid-cols-[repeat(auto-fit,minmax(min(220px,100%),1fr))] gap-6">
     {#each stats as stat (stat.value.en)}
       <div class="flex flex-col gap-1 rounded-lg bg-surface p-6.5">
         <dt
@@ -225,7 +226,7 @@ const lang = $derived(data.lang);
         >{d.blog.allArticles} →</a
       >
     </div>
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-6">
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-6">
       {#each data.latestPosts as post (post.lang + post.slug)}
         <PostCard {post} uiLang={lang} minRead={d.blog.minRead} />
       {/each}

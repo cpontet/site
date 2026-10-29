@@ -4,7 +4,12 @@ import { formatDate } from '#lib/format.js';
 import { type Lang, localize } from '#lib/i18n.js';
 import { cardLift } from './styles.js';
 
-let { post, uiLang, minRead }: { post: Post; uiLang: Lang; minRead: string } = $props();
+let {
+  post,
+  uiLang,
+  minRead,
+  headingLevel = 3,
+}: { post: Post; uiLang: Lang; minRead: string; headingLevel?: 2 | 3 } = $props();
 </script>
 
 <a
@@ -16,7 +21,9 @@ let { post, uiLang, minRead }: { post: Post; uiLang: Lang; minRead: string } = $
       <span class="rounded-full bg-tint-lilac px-3 py-0.5">{tag}</span>
     {/each}
   </span>
-  <h3 lang={post.lang} class="text-2xl font-bold tracking-tight">{post.title}</h3>
+  <svelte:element this={`h${headingLevel}`} lang={post.lang} class="text-2xl font-bold tracking-tight"
+    >{post.title}</svelte:element
+  >
   <p lang={post.lang} class="text-base text-muted-foreground">{post.description}</p>
   <span class="mt-auto text-[15px] text-muted-foreground">
     <time datetime={post.date}>{formatDate(post.date, uiLang)}</time> · {post.readingMinutes}

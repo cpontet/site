@@ -21,6 +21,14 @@ jobs:
       - run: bun run lint
       - run: bun run check
       - run: bun run build
+      - name: Accessibility (axe-core, every page, light + dark)
+        run: |
+          bunx playwright-core install --with-deps --only-shell chromium
+          bun run preview > preview.log 2>&1 &
+          for _ in $(seq 60); do curl -sf http://localhost:4173/ > /dev/null && break; sleep 1; done
+          bun run a11y
+        env:
+          WRANGLER_SEND_METRICS: false
       - uses: actions/upload-artifact@v4
         with:
           name: site

@@ -104,6 +104,8 @@ on every push to `main`.
 2. **Custom domain**: `wrangler.jsonc` attaches `cedricpontet.com` to the Worker on deploy.
    Add a Redirect Rule (Rules → Redirect Rules) from `www.cedricpontet.com/*` to
    `https://cedricpontet.com/${1}` (301), plus a proxied DNS record for `www`.
+   Turn on SSL/TLS → Edge Certificates → **Always Use HTTPS**: without it, `http://www` hits the
+   placeholder origin behind the `www` record and returns 522.
 3. **Contact form**:
    - Enable Email Routing on the domain and verify the inbox that should receive messages,
      then store it as a secret: `bunx wrangler secret put CONTACT_TO` (kept out of the public repo).

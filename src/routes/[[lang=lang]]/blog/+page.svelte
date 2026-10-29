@@ -75,6 +75,8 @@ const chip = (on: boolean) => [
           >
         {/each}
       </div>
+      <!-- Announces the result count when a topic filter changes. -->
+      <p role="status" class="sr-only">{b.count(shown.length)}</p>
     </div>
 
     {#if featured}
@@ -107,9 +109,9 @@ const chip = (on: boolean) => [
     {/if}
 
     {#if rest.length > 0}
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-6">
         {#each rest as post (post.lang + post.slug)}
-          <PostCard {post} uiLang={data.lang} minRead={b.minRead} />
+          <PostCard {post} uiLang={data.lang} minRead={b.minRead} headingLevel={2} />
         {/each}
       </div>
     {/if}

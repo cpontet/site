@@ -1,5 +1,6 @@
 <script lang="ts">
 import ArrowRight from '@lucide/svelte/icons/arrow-right';
+import { tick } from 'svelte';
 import { TURNSTILE_SITE_KEY } from '#lib/config.js';
 import type { ContactField as Field, ContactFormState as FormState } from '#lib/contact.js';
 import type { Dictionary, Lang } from '#lib/i18n.js';
@@ -16,6 +17,7 @@ const c = $derived(dict.contact);
 let formState = $state<FormState | null>(null);
 const current = $derived(formState ?? initial);
 let pending = $state(false);
+let submitButton = $state<HTMLButtonElement>();
 
 const hasError = (field: Field) => current?.errors?.includes(field) ?? false;
 const value = (field: keyof NonNullable<FormState['values']>) => current?.values?.[field] ?? '';
@@ -30,7 +32,12 @@ const labelClass = 'text-base font-bold';
 </svelte:head>
 
 {#if current?.success}
-  <p role="status" class="rounded-lg bg-background p-8 text-lg font-bold text-foreground">
+  <p
+    id="cf-success"
+    role="status"
+    tabindex="-1"
+    class="rounded-lg bg-background p-8 text-lg font-bold text-foreground"
+  >
     {c.success}
   </p>
 {:else}
@@ -43,15 +50,22 @@ const labelClass = 'text-base font-bold';
         pending = false;
         if (result.type === 'success') {
           formState = { success: true };
+          await tick();
+          document.getElementById('cf-success')?.focus();
           return;
         }
         formState =
           result.type === 'failure' ? ((result.data as FormState) ?? null) : { sendFailed: true };
         // Tokens are single-use: re-arm the anti-spam widget for the retry.
         (globalThis as { turnstile?: { reset: () => void } }).turnstile?.reset();
+        // The disabled button dropped focus: move it to the first invalid field, whose error
+        // is read through aria-describedby. Captcha and send errors are announced as alerts.
+        await tick();
+        const field = formState?.errors?.find((e) => e !== 'captcha');
+        (field ? document.getElementById(`cf-${field}`) : submitButton)?.focus();
       };
     }}
-    class="grid min-w-0 flex-[999_1_460px] grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[18px] rounded-lg bg-background p-[30px] text-foreground"
+    class="grid min-w-0 flex-[999_1_460px] grid-cols-[repeat(auto-fit,minmax(min(220px,100%),1fr))] gap-[18px] rounded-lg bg-background p-[30px] text-foreground"
     novalidate
   >
     <div class="flex flex-col gap-1.5">
@@ -131,13 +145,14 @@ const labelClass = 'text-base font-bold';
 
     <div class="col-span-full">
       <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-language={lang}></div>
-      {#if hasError('captcha')}<p class="text-sm text-destructive">{c.errors.captcha}</p>{/if}
+      {#if hasError('captcha')}<p role="alert" class="text-sm text-destructive">{c.errors.captcha}</p>{/if}
       {#if current?.sendFailed}<p role="alert" class="text-sm text-destructive">{c.failure}</p>{/if}
     </div>
 
     <div class="col-span-full flex flex-wrap items-center justify-between gap-4">
       <p class="max-w-[400px] text-sm text-muted-foreground">{c.privacy}</p>
       <button
+        bind:this={submitButton}
         type="submit"
         disabled={pending}
         class="inline-flex min-h-13 cursor-pointer items-center gap-2.5 rounded-full bg-brand px-7 font-bold text-brand-foreground transition-transform hover:-translate-y-0.5 disabled:opacity-70"

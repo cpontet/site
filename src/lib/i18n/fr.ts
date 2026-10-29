@@ -79,7 +79,8 @@ export const fr: typeof en = {
     topic: 'Sujet',
     message: 'Message',
     topics: [
-      'CTO à temps partagé',
+      'CTO & conseil stratégique',
+      'Coaching agile & transformation',
       'Architecture cloud',
       'Cloud souverain',
       'Software factory agentique',

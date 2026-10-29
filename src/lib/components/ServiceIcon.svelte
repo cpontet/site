@@ -3,6 +3,7 @@ import Blocks from '@lucide/svelte/icons/blocks';
 import Bot from '@lucide/svelte/icons/bot';
 import Cloud from '@lucide/svelte/icons/cloud';
 import Dices from '@lucide/svelte/icons/dices';
+import Route from '@lucide/svelte/icons/route';
 import ShieldCheck from '@lucide/svelte/icons/shield-check';
 import UserRound from '@lucide/svelte/icons/user-round';
 import type { ServiceIcon } from '#lib/content/profile.js';
@@ -11,6 +12,7 @@ let { name }: { name: ServiceIcon } = $props();
 
 const icons = {
   cto: UserRound,
+  route: Route,
   cloud: Cloud,
   shield: ShieldCheck,
   bot: Bot,

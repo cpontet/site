@@ -5,7 +5,7 @@ export type L10n = Record<Lang, string>;
 
 export type Tint = 'peach' | 'sky' | 'mint' | 'lilac' | 'sun' | 'rose';
 
-export type ServiceIcon = 'cto' | 'cloud' | 'shield' | 'bot' | 'blocks' | 'dice';
+export type ServiceIcon = 'cto' | 'route' | 'cloud' | 'shield' | 'bot' | 'blocks' | 'dice';
 
 export interface Service {
   id: string;
@@ -20,10 +20,20 @@ export const services: Service[] = [
     id: 'cto',
     icon: 'cto',
     tint: 'peach',
-    title: { en: 'Fractional CTO', fr: 'CTO à temps partagé' },
+    title: { en: 'CTO & strategic advisory', fr: 'CTO & conseil stratégique' },
     body: {
-      en: 'Tech strategy, architecture governance and team practices, without a full-time hire.',
-      fr: "Stratégie technique, gouvernance d'architecture et pratiques d'équipe, sans recrutement à temps plein.",
+      en: 'Tech strategy, architecture governance and technical leadership, without a full-time hire.',
+      fr: "Stratégie technique, gouvernance d'architecture et leadership technique, sans recrutement à temps plein.",
+    },
+  },
+  {
+    id: 'agile',
+    icon: 'route',
+    tint: 'sun',
+    title: { en: 'Agile coaching & transformation', fr: 'Coaching agile & transformation' },
+    body: {
+      en: 'Agile transformation, process improvement, change management and leadership coaching that last beyond the engagement.',
+      fr: 'Transformation agile, amélioration des processus, conduite du changement et coaching de dirigeants, qui durent au-delà de la mission.',
     },
   },
   {

@@ -76,7 +76,8 @@ export const en = {
     topic: 'Topic',
     message: 'Message',
     topics: [
-      'Fractional CTO',
+      'CTO & strategic advisory',
+      'Agile coaching & transformation',
       'Cloud architecture',
       'Sovereign cloud',
       'Agentic software factory',

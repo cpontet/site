@@ -808,6 +808,208 @@ const pages: Partial<Record<string, ServicePage>> = {
     ],
     tags: ['agentic-ai', 'software-factory', 'coding-agents', 'ai-native-sdlc'],
   },
+  ddd: {
+    lead: {
+      en: 'Explore the business with the people who know it, and turn what you learn into clear boundaries, models and event-driven architectures.',
+      fr: 'Explorer le métier avec ceux qui le connaissent, et traduire ce que l’on apprend en frontières claires, en modèles et en architectures orientées événements.',
+    },
+    format: {
+      en: 'Workshops, design coaching, architecture',
+      fr: 'Ateliers, coaching de conception, architecture',
+    },
+    duration: {
+      en: 'From a single workshop to several months',
+      fr: 'D’un seul atelier à plusieurs mois',
+    },
+    situations: [
+      {
+        en: 'Business and IT describe the same process in different words, and requirements get lost in translation.',
+        fr: 'Le métier et l’IT décrivent le même processus avec des mots différents, et les exigences se perdent en route.',
+      },
+      {
+        en: 'One large system has grown so entangled that every change breaks something elsewhere.',
+        fr: 'Un grand système est devenu si imbriqué que chaque changement casse quelque chose ailleurs.',
+      },
+      {
+        en: 'You are splitting a monolith into services and do not know where to draw the boundaries.',
+        fr: 'Vous découpez un monolithe en services et ne savez pas où tracer les frontières.',
+      },
+      {
+        en: 'A new project starts, and nobody has the full picture of the domain yet.',
+        fr: 'Un nouveau projet démarre, et personne n’a encore une vue complète du domaine.',
+      },
+    ],
+    scope: [
+      {
+        title: { en: 'EventStorming workshops', fr: 'Ateliers EventStorming' },
+        body: {
+          en: 'Big Picture, process modelling and software design, with business and tech at the same wall.',
+          fr: 'Big Picture, modélisation des processus et conception logicielle, avec le métier et la tech devant le même mur.',
+        },
+      },
+      {
+        title: { en: 'Bounded contexts', fr: 'Bounded contexts' },
+        body: {
+          en: 'Where to draw the boundaries between models, teams and systems, and how they relate.',
+          fr: 'Où tracer les frontières entre modèles, équipes et systèmes, et comment ils interagissent.',
+        },
+      },
+      {
+        title: { en: 'Domain modelling', fr: 'Modélisation du domaine' },
+        body: {
+          en: 'Aggregates, invariants and a shared language that shows up in the code.',
+          fr: 'Agrégats, invariants et un langage commun qui se retrouve dans le code.',
+        },
+      },
+      {
+        title: { en: 'CQRS and event sourcing', fr: 'CQRS et event sourcing' },
+        body: {
+          en: 'Architectures that keep the history of what happened, when the domain calls for it.',
+          fr: 'Des architectures qui gardent l’historique de ce qui s’est passé, quand le domaine le justifie.',
+        },
+      },
+      {
+        title: { en: 'Monolith decomposition', fr: 'Découpage de monolithe' },
+        body: {
+          en: 'Splitting along business boundaries, so each part can change on its own.',
+          fr: 'Découper selon les frontières métier, pour que chaque partie puisse évoluer seule.',
+        },
+      },
+      {
+        title: { en: 'Team coaching', fr: 'Coaching d’équipe' },
+        body: {
+          en: 'Helping developers apply Domain-Driven Design in their own code, through pairing, katas and reviews.',
+          fr: 'Aider les développeurs à appliquer le Domain-Driven Design dans leur propre code, par le pairing, les katas et les revues.',
+        },
+      },
+    ],
+    ecosystem: {
+      title: { en: 'Methods and community', fr: 'Méthodes et communauté' },
+      intro: {
+        en: 'I have practised Domain-Driven Design since 2008, and learned much of it from the people who shaped it.',
+        fr: 'Je pratique le Domain-Driven Design depuis 2008, et j’en ai appris une grande partie auprès de ceux qui l’ont façonné.',
+      },
+      groups: [
+        {
+          title: { en: 'Methods I use', fr: 'Méthodes que j’utilise' },
+          items: [
+            {
+              name: 'EventStorming',
+              detail: { en: 'From the big picture to code', fr: 'Du big picture au code' },
+            },
+            {
+              name: 'Context mapping',
+              detail: { en: 'Relations between contexts', fr: 'Relations entre contextes' },
+            },
+            {
+              name: 'Specification by example',
+              detail: { en: 'Rules agreed with examples', fr: 'Des règles validées par l’exemple' },
+            },
+            {
+              name: 'CQRS',
+              detail: { en: 'Separate reads and writes', fr: 'Lectures et écritures séparées' },
+            },
+            {
+              name: 'Event sourcing',
+              detail: {
+                en: 'State as a history of events',
+                fr: 'L’état comme historique d’événements',
+              },
+            },
+          ],
+        },
+        {
+          title: { en: 'Where I learned and shared', fr: 'Où j’ai appris et partagé' },
+          items: [
+            {
+              name: 'Greg Young',
+              detail: {
+                en: 'CQRS & DDD workshops · 2013, 2014',
+                fr: 'Ateliers CQRS & DDD · 2013, 2014',
+              },
+            },
+            {
+              name: 'DDD Exchange',
+              detail: { en: 'Skills Matter · 2014, 2015', fr: 'Skills Matter · 2014, 2015' },
+            },
+            { name: 'KanDDDinsky', detail: { en: 'Speaker · 2017', fr: 'Orateur · 2017' } },
+            {
+              name: 'EventStorming Summit',
+              detail: { en: 'Avanscoperta · 2018', fr: 'Avanscoperta · 2018' },
+            },
+            {
+              name: 'Domain Modeling Made Functional',
+              detail: { en: 'Avanscoperta · 2020', fr: 'Avanscoperta · 2020' },
+            },
+          ],
+        },
+      ],
+      link: {
+        href: 'https://www.eventstorming.com',
+        name: 'EventStorming',
+        text: {
+          en: 'was created by Alberto Brandolini. His site has the book and the reference material.',
+          fr: 'a été créé par Alberto Brandolini. Son site rassemble le livre et les ressources de référence.',
+        },
+      },
+    },
+    formats: [
+      {
+        label: { en: 'A day or two', fr: 'Un ou deux jours' },
+        title: { en: 'Workshop', fr: 'Atelier' },
+        body: {
+          en: 'A Big Picture EventStorming that puts the whole domain on one wall, with a written summary of hotspots and next steps.',
+          fr: 'Un EventStorming Big Picture qui met tout le domaine sur un seul mur, avec une synthèse écrite des points chauds et des prochaines étapes.',
+        },
+      },
+      {
+        label: { en: 'Part-time, over months', fr: 'Temps partiel, sur plusieurs mois' },
+        title: { en: 'Design coaching', fr: 'Coaching de conception' },
+        body: {
+          en: 'Regular sessions with your team, from process modelling down to the code.',
+          fr: 'Des sessions régulières avec votre équipe, de la modélisation des processus jusqu’au code.',
+        },
+      },
+      {
+        label: { en: 'Several months', fr: 'Plusieurs mois' },
+        title: { en: 'Architecture', fr: 'Architecture' },
+        body: {
+          en: 'Boundaries, target architecture and the first services, designed and built with your team.',
+          fr: 'Frontières, architecture cible et premiers services, conçus et construits avec votre équipe.',
+        },
+      },
+    ],
+    proof: [
+      {
+        period: { en: '2019 – 2021', fr: '2019 – 2021' },
+        title: { en: 'Agile coach & architect', fr: 'Coach agile & architecte' },
+        org: 'TadaWeb',
+        body: {
+          en: 'Technical coaching on EventStorming, Domain-Driven Design, CQRS and event sourcing, alongside agile coaching and training.',
+          fr: 'Coaching technique sur l’EventStorming, le Domain-Driven Design, CQRS et l’event sourcing, en parallèle du coaching et de la formation agile.',
+        },
+      },
+      {
+        period: { en: '2019', fr: '2019' },
+        title: { en: 'Agile coach & architect', fr: 'Coach agile & architecte' },
+        org: 'Banque Internationale à Luxembourg, Foyer',
+        body: {
+          en: 'Domain-Driven Design, CQRS and event sourcing consulting, EventStorming workshops, and a technical community of practice at Foyer.',
+          fr: 'Conseil en Domain-Driven Design, CQRS et event sourcing, ateliers EventStorming, et une communauté de pratique technique chez Foyer.',
+        },
+      },
+      {
+        period: { en: '2013 – 2015', fr: '2013 – 2015' },
+        title: { en: 'Agile coach & architect', fr: 'Coach agile & architecte' },
+        org: 'POST Luxembourg',
+        body: {
+          en: 'CQRS and event sourcing at the core of the mobile app postal agents use on their rounds, then the routing module of a new order management system, built by several Scrum teams in parallel.',
+          fr: 'CQRS et event sourcing au cœur de l’application mobile des facteurs pendant leur tournée, puis le module de routage d’un nouveau système de gestion des commandes, construit par plusieurs équipes Scrum en parallèle.',
+        },
+      },
+    ],
+    tags: ['ddd', 'eventstorming', 'cqrs', 'event-sourcing', 'domain-modelling'],
+  },
 };
 
 export function getServicePage(service: Service): ServicePage | undefined {

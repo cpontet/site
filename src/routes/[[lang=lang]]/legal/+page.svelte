@@ -12,7 +12,7 @@ const fr = $derived(data.lang === 'fr');
 const publisher = $derived([
   [fr ? 'Nom' : 'Name', 'Cédric Pontet'],
   [fr ? 'Forme juridique' : 'Legal form', '[LEGAL FORM]'],
-  [fr ? 'Adresse' : 'Address', '46 boulevard Jules Selentiny\nL-2511 Luxembourg'],
+  [fr ? 'Adresse' : 'Address', '46 boulevard Jules Salentiny\nL-2511 Luxembourg'],
   ['RCS Luxembourg', '[RCS NUMBER]'],
   [fr ? 'Numéro de TVA' : 'VAT number', '[LU VAT NUMBER]'],
   [fr ? "Autorisation d'établissement" : 'Business permit', '[PERMIT NUMBER]'],

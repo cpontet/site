@@ -14,6 +14,7 @@ import {
 } from '#lib/components/styles.js';
 import { serviceHref } from '#lib/content/service-pages.js';
 import { localize } from '#lib/i18n.js';
+import { serviceLd } from '#lib/seo.js';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
@@ -31,7 +32,12 @@ const topic = $derived.by(() => {
 });
 </script>
 
-<Seo {lang} title="{title} — Cédric Pontet" description={page.lead[lang]} />
+<Seo
+  {lang}
+  title="{title} — Cédric Pontet"
+  description={page.lead[lang]}
+  jsonLd={serviceLd(service, page.lead[lang], lang)}
+/>
 
 <!-- Hero -->
 <section class="mx-auto flex max-w-6xl flex-col gap-7 px-7 pt-6 pb-18">

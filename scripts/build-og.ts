@@ -21,12 +21,12 @@ const variants = [
   {
     file: 'static/og/default-en.png',
     role: ['Freelance CTO &', 'cloud architect'],
-    topics: ['Sovereign cloud', 'Agentic AI', 'DDD & EventStorming', 'Facilitation'],
+    topics: ['Sovereignty & resilience', 'Agentic AI', 'DDD & EventStorming', 'Facilitation'],
   },
   {
     file: 'static/og/default-fr.png',
     role: ['CTO freelance &', 'architecte cloud'],
-    topics: ['Cloud souverain', 'IA agentique', 'DDD & EventStorming', 'Facilitation'],
+    topics: ['Souveraineté & résilience', 'IA agentique', 'DDD & EventStorming', 'Facilitation'],
   },
 ];
 

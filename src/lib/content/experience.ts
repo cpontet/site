@@ -21,8 +21,8 @@ export const experience: ExperienceItem[] = [
     title: { en: 'Enterprise architect', fr: "Architecte d'entreprise" },
     org: 'EU Publications Office',
     body: {
-      en: 'Sovereign cloud migration of strategic assets, Data Value Chain target architecture with AI and knowledge-graph services, BI@PP on Azure with Bicep. Workshop facilitation and FinOps.',
-      fr: "Migration d'actifs stratégiques vers un cloud souverain, architecture cible de la Data Value Chain avec services d'IA et de graphes de connaissances, BI@PP sur Azure avec Bicep. Facilitation d'ateliers et FinOps.",
+      en: 'Sovereign cloud migration of strategic assets, an agentic software factory for the rewrite of a large public web platform, Data Value Chain target architecture with AI and knowledge-graph services, BI@PP on Azure with Bicep. Workshop facilitation and FinOps.',
+      fr: "Migration d'actifs stratégiques vers un cloud souverain, software factory agentique pour la refonte d'une grande plateforme web publique, architecture cible de la Data Value Chain avec services d'IA et de graphes de connaissances, BI@PP sur Azure avec Bicep. Facilitation d'ateliers et FinOps.",
     },
   },
   {
@@ -30,8 +30,8 @@ export const experience: ExperienceItem[] = [
     title: { en: 'CTO', fr: 'CTO' },
     org: 'Agile Partner',
     body: {
-      en: 'Technical strategy, technical excellence and new service offers. Before that, head of the software factory (2017–2019) and delivery manager (2015–2017).',
-      fr: 'Stratégie technique, excellence technique et nouvelles offres de services. Auparavant, responsable de la software factory (2017–2019) et delivery manager (2015–2017).',
+      en: 'Technical strategy, technical excellence and new service offers. Member of the AI task force. Before that, head of the software factory (2017–2019) and delivery manager (2015–2017).',
+      fr: 'Stratégie technique, excellence technique et nouvelles offres de services. Membre de la task force IA. Auparavant, responsable de la software factory (2017–2019) et delivery manager (2015–2017).',
     },
   },
   {
@@ -81,7 +81,7 @@ export const expertise: Expertise[] = [
   },
   {
     tint: 'sky',
-    title: { en: 'Cloud & sovereign cloud', fr: 'Cloud & cloud souverain' },
+    title: { en: 'Cloud, sovereignty & resilience', fr: 'Cloud, souveraineté & résilience' },
     body: {
       en: 'Azure, AWS, Clever Cloud, European sovereign cloud, Bicep, FinOps. Target architectures for the EU Publications Office and the European Parliament.',
       fr: "Azure, AWS, Clever Cloud, cloud souverain européen, Bicep, FinOps. Architectures cibles pour l'Office des publications de l'UE et le Parlement européen.",

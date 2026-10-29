@@ -1,7 +1,7 @@
 # cedricpontet.com
 
 Personal / freelance website of Cédric Pontet — freelance CTO, cloud architect,
-sovereign cloud specialist and agentic AI (coding agents, software factory) consultant.
+sovereignty & resilience specialist and agentic AI (coding agents, software factory) consultant.
 Fully remote, based in Luxembourg, working for EU institutions, public sector and private clients.
 
 ## Goals
@@ -135,7 +135,7 @@ resources/                   # SOURCE material only (docx CVs, bio, raw photos) 
   certifications, dates or results. If something is missing, leave a `TODO(cedric):` comment.
 - `resources/` contains personal data (date of birth, full CVs). Never publish birth date,
   and never copy docx files into `static/`.
-- Positioning order: Freelance CTO · Cloud & Sovereign Cloud Architect · **DDD & EventStorming**
+- Positioning order: Freelance CTO · Cloud Architect, Sovereignty & Resilience · **DDD & EventStorming**
   · Agentic AI / Software Factory · Facilitator.
   DDD & EventStorming is a strong expertise (since 2008: DDD/CQRS/event sourcing architectures,
   EventStorming facilitation, KanDDDinsky speaker, Greg Young workshops, EventStorming Summit).
@@ -231,7 +231,8 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 - Open Graph image per language (static for now): `static/og/default-{en,fr}.png`, rendered by
   `bun run og` (`scripts/build-og.ts`). All head tags go through `#lib/components/Seo.svelte`.
 - `sitemap.xml` and `rss.xml` (per language) generated as prerendered endpoints.
-- JSON-LD `Person` on home/about, `BlogPosting` on posts (builders in `src/lib/seo.ts`).
+- JSON-LD `Person` on home/about, `Service` on service pages, `BlogPosting` on posts
+  (builders in `src/lib/seo.ts`).
 
 ## Deployment
 

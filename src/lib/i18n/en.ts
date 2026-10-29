@@ -2,7 +2,7 @@ export const en = {
   meta: {
     title: 'Cédric Pontet — Freelance CTO & cloud architect',
     description:
-      'Freelance CTO and cloud architect in Luxembourg. Sovereign cloud, agentic software delivery, Domain-Driven Design & EventStorming, and facilitation.',
+      'Freelance CTO and cloud architect in Luxembourg. Sovereignty and resilience, agentic software delivery, Domain-Driven Design & EventStorming, and facilitation.',
   },
   nav: {
     services: 'Services',
@@ -26,7 +26,7 @@ export const en = {
     badge: 'Freelance · Remote · Luxembourg & EU',
     titleStart: 'Serious technology, built by teams that enjoy',
     titleHighlight: 'the work',
-    lead: "I'm Cédric, a freelance CTO and cloud architect with 25 years in software. I help European organisations with sovereign cloud, agentic software delivery and clear domain design, and I facilitate the workshops that get everyone on board.",
+    lead: "I'm Cédric, a freelance CTO and cloud architect with 25 years in software. I help European organisations with sovereignty and resilience, agentic software delivery and clear domain design, and I facilitate the workshops that get everyone on board.",
     ctaContact: 'Start a conversation',
     ctaCv: 'Download CV',
     availability: 'Available for missions from [MONTH YEAR]',

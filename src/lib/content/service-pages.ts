@@ -5,8 +5,8 @@ import { type L10n, type Service, services } from './profile.js';
 
 /**
  * Detail page of a service. Every page follows the same hierarchy, in this order:
- * hero (lead + at a glance) → when it helps → what I take on → ways to work together
- * → where I've done this → related writing → other services → contact.
+ * hero (lead + at a glance) → when it helps → what I take on → [ecosystem] → ways to work
+ * together → where I've done this → related writing → other services → contact.
  */
 export interface ServicePage {
   /** Hero lead, also the meta description. */
@@ -18,6 +18,13 @@ export interface ServicePage {
   situations: L10n[];
   /** "What I take on": 4–6 items. */
   scope: { title: L10n; body: L10n }[];
+  /** Optional: named tools, vendors or practices the service builds on, in 2–3 groups. */
+  ecosystem?: {
+    title: L10n;
+    intro: L10n;
+    groups: { title: L10n; items: { name: string; detail: L10n }[] }[];
+    link?: { href: string; name: string; text: L10n };
+  };
   /** "Ways to work together": 2–3 engagement formats. */
   formats: { label: L10n; title: L10n; body: L10n }[];
   /** "Where I've done this": 2–3 real missions (source: resources/ CVs). */
@@ -423,6 +430,193 @@ const pages: Partial<Record<string, ServicePage>> = {
       },
     ],
     tags: ['cloud', 'cloud-architecture', 'azure', 'aws', 'finops', 'infrastructure-as-code'],
+  },
+  sovereign: {
+    lead: {
+      en: 'Keep control of your applications and your data, with European providers, open-source building blocks and an architecture that can move when it has to.',
+      fr: 'Gardez la maîtrise de vos applications et de vos données, avec des fournisseurs européens, des briques open source et une architecture capable de changer d’hébergeur quand il le faut.',
+    },
+    format: {
+      en: 'Sovereignty assessment, feasibility study, migration',
+      fr: 'Évaluation de souveraineté, étude de faisabilité, migration',
+    },
+    duration: {
+      en: 'From a feasibility study to a full migration',
+      fr: 'De l’étude de faisabilité à la migration complète',
+    },
+    situations: [
+      {
+        en: 'Your data sits with a provider subject to non-EU laws with cross-border reach, such as the US CLOUD Act.',
+        fr: 'Vos données sont chez un fournisseur soumis à des lois non européennes à portée extraterritoriale, comme le CLOUD Act américain.',
+      },
+      {
+        en: 'A tender or a regulator now asks about sovereignty, under NIS2, DORA or the EU Cloud Sovereignty Framework.',
+        fr: 'Un appel d’offres ou un régulateur vous interroge désormais sur la souveraineté, au titre de NIS2, de DORA ou du cadre européen de souveraineté du cloud.',
+      },
+      {
+        en: 'Your applications rely on one provider’s proprietary services, and leaving would mean rewriting them.',
+        fr: 'Vos applications reposent sur les services propriétaires d’un seul fournisseur, et en partir voudrait dire les réécrire.',
+      },
+      {
+        en: 'A price or licence change from a single vendor has shown how exposed you are.',
+        fr: 'Un changement de prix ou de licence chez un seul éditeur a montré à quel point vous êtes exposé.',
+      },
+    ],
+    scope: [
+      {
+        title: { en: 'Sovereignty assessment', fr: 'Évaluation de souveraineté' },
+        body: {
+          en: 'Classify each workload by the level it really needs, using the assurance levels of the EU Cloud Sovereignty Framework, instead of one rule for everything.',
+          fr: 'Classer chaque application selon le niveau dont elle a réellement besoin, avec les niveaux d’assurance du cadre européen de souveraineté du cloud, plutôt qu’une règle unique.',
+        },
+      },
+      {
+        title: { en: 'Feasibility study', fr: 'Étude de faisabilité' },
+        body: {
+          en: 'Which European providers fit, which services they offer, and what each workload needs in order to move.',
+          fr: 'Quels fournisseurs européens conviennent, quels services ils proposent, et ce qu’il faut à chaque application pour migrer.',
+        },
+      },
+      {
+        title: { en: 'Application portability', fr: 'Portabilité des applications' },
+        body: {
+          en: 'Containers, open standards and Infrastructure as Code, so a workload can run on more than one provider.',
+          fr: 'Conteneurs, standards ouverts et Infrastructure as Code, pour qu’une application puisse tourner chez plus d’un fournisseur.',
+        },
+      },
+      {
+        title: { en: 'Open-source building blocks', fr: 'Briques open source' },
+        body: {
+          en: 'Proprietary managed services replaced by open-source equivalents that your team can run anywhere.',
+          fr: 'Des services managés propriétaires remplacés par des équivalents open source que votre équipe peut exploiter partout.',
+        },
+      },
+      {
+        title: {
+          en: 'Data and workload migration',
+          fr: 'Migration des données et des applications',
+        },
+        body: {
+          en: 'Source code analysis and refactoring, a data migration strategy and a cut-over plan per workload.',
+          fr: 'Analyse et refactoring du code source, stratégie de migration des données et plan de bascule par application.',
+        },
+      },
+      {
+        title: { en: 'Continuity and exit', fr: 'Continuité et réversibilité' },
+        body: {
+          en: 'High availability, recovery, encryption keys under your control, and an exit plan that has been tested.',
+          fr: 'Haute disponibilité, reprise, clés de chiffrement sous votre contrôle, et un plan de sortie testé.',
+        },
+      },
+    ],
+    ecosystem: {
+      title: { en: 'European building blocks', fr: 'Des briques européennes' },
+      intro: {
+        en: 'No single sovereign product covers every need. I start from these options and choose per workload, based on the level of sovereignty it requires.',
+        fr: 'Aucun produit souverain ne couvre à lui seul tous les besoins. Je pars de ces options et je choisis application par application, selon le niveau de souveraineté requis.',
+      },
+      groups: [
+        {
+          title: { en: 'European cloud providers', fr: 'Fournisseurs cloud européens' },
+          items: [
+            { name: 'Clever Cloud', detail: { en: 'PaaS · France', fr: 'PaaS · France' } },
+            {
+              name: 'Scaleway',
+              detail: { en: 'IaaS & PaaS · France', fr: 'IaaS & PaaS · France' },
+            },
+            {
+              name: 'OVHcloud',
+              detail: { en: 'IaaS & PaaS · France', fr: 'IaaS & PaaS · France' },
+            },
+            { name: 'Outscale', detail: { en: 'IaaS · France', fr: 'IaaS · France' } },
+            { name: 'IONOS', detail: { en: 'IaaS · Germany', fr: 'IaaS · Allemagne' } },
+            {
+              name: 'STACKIT',
+              detail: { en: 'IaaS & PaaS · Germany', fr: 'IaaS & PaaS · Allemagne' },
+            },
+            {
+              name: 'Infomaniak',
+              detail: { en: 'Cloud & SaaS · Switzerland', fr: 'Cloud & SaaS · Suisse' },
+            },
+          ],
+        },
+        {
+          title: { en: 'Open-source building blocks', fr: 'Briques open source' },
+          items: [
+            { name: 'Kubernetes', detail: { en: 'Containers', fr: 'Conteneurs' } },
+            {
+              name: 'OpenTofu',
+              detail: { en: 'Infrastructure as Code', fr: 'Infrastructure as Code' },
+            },
+            { name: 'PostgreSQL', detail: { en: 'Database', fr: 'Base de données' } },
+            { name: 'Keycloak', detail: { en: 'Identity and access', fr: 'Identités et accès' } },
+            { name: 'Matrix', detail: { en: 'Secure messaging', fr: 'Messagerie sécurisée' } },
+            {
+              name: 'Nextcloud',
+              detail: { en: 'Files and collaboration', fr: 'Fichiers et collaboration' },
+            },
+          ],
+        },
+      ],
+      link: {
+        href: 'https://european-alternatives.eu',
+        name: 'European Alternatives',
+        text: {
+          en: 'lists European alternatives to everyday digital services, from email to analytics. A good place to start for the SaaS tools around your applications.',
+          fr: 'recense des alternatives européennes aux services numériques du quotidien, de l’e-mail à l’analytique. Un bon point de départ pour les outils SaaS autour de vos applications.',
+        },
+      },
+    },
+    formats: [
+      {
+        label: { en: 'A few weeks', fr: 'Quelques semaines' },
+        title: { en: 'Sovereignty assessment', fr: 'Évaluation de souveraineté' },
+        body: {
+          en: 'Your workloads classified by the level they need, the main dependencies and risks, and a roadmap.',
+          fr: 'Vos applications classées selon le niveau requis, les principales dépendances et les risques, et une feuille de route.',
+        },
+      },
+      {
+        label: { en: 'Weeks to months', fr: 'Quelques semaines à quelques mois' },
+        title: {
+          en: 'Feasibility and target architecture',
+          fr: 'Faisabilité et architecture cible',
+        },
+        body: {
+          en: 'Provider comparison, target architecture and migration strategy, ready for a decision or a tender.',
+          fr: 'Comparaison des fournisseurs, architecture cible et stratégie de migration, prêtes pour une décision ou un appel d’offres.',
+        },
+      },
+      {
+        label: { en: 'Several months', fr: 'Plusieurs mois' },
+        title: { en: 'Migration', fr: 'Migration' },
+        body: {
+          en: 'With your teams: refactoring, data and workload migration, high availability and recovery.',
+          fr: 'Avec vos équipes : refactoring, migration des données et des applications, haute disponibilité et reprise.',
+        },
+      },
+    ],
+    proof: [
+      {
+        period: { en: '2023 – now', fr: '2023 – auj.' },
+        title: { en: 'Enterprise architect', fr: 'Architecte d’entreprise' },
+        org: 'EU Publications Office',
+        body: {
+          en: 'Migration of strategic assets to a European sovereign cloud: feasibility study, target architecture, source code analysis and refactoring, governance, data and workload migration, high availability, continuity and recovery.',
+          fr: 'Migration d’actifs stratégiques vers un cloud souverain européen : étude de faisabilité, architecture cible, analyse et refactoring du code source, gouvernance, migration des données et des applications, haute disponibilité, continuité et reprise.',
+        },
+      },
+      {
+        period: { en: '2022 – 2023', fr: '2022 – 2023' },
+        title: { en: 'Agile coach & architect', fr: 'Coach agile & architecte' },
+        org: 'LU-CIX Management G.I.E.',
+        body: {
+          en: 'Luxchat4Gov, secure messaging for Luxembourg government departments: a fork of the open-source Element client for the Matrix protocol, with CI/CD and releases for web, iOS, Android, Windows and macOS.',
+          fr: 'Luxchat4Gov, messagerie sécurisée pour les administrations luxembourgeoises : un fork du client open source Element pour le protocole Matrix, avec CI/CD et publication pour le web, iOS, Android, Windows et macOS.',
+        },
+      },
+    ],
+    tags: ['sovereign-cloud', 'digital-sovereignty', 'open-source', 'portability'],
   },
 };
 

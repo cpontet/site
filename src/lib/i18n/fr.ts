@@ -147,6 +147,7 @@ export const fr: typeof en = {
     whenTitle: 'Cela vous parle ?',
     scopeEyebrow: 'Ce que je fais',
     scopeTitle: 'Ce que je prends en charge',
+    ecosystemEyebrow: 'Écosystème',
     formatsEyebrow: 'Formats',
     formatsTitle: 'Modes de collaboration',
     proofEyebrow: 'Références',

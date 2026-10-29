@@ -341,8 +341,8 @@ const pages: Partial<Record<string, ServicePage>> = {
       {
         title: { en: 'Infrastructure as Code', fr: 'Infrastructure as Code' },
         body: {
-          en: 'Bicep templates and pipelines, so every environment is reproducible and reviewed.',
-          fr: 'Des templates Bicep et des pipelines, pour des environnements reproductibles et revus.',
+          en: 'Bicep, CloudFormation or the AWS CDK, deployed through pipelines, so every environment is reproducible and reviewed.',
+          fr: 'Bicep, CloudFormation ou AWS CDK, déployés par des pipelines, pour des environnements reproductibles et revus.',
         },
       },
       {

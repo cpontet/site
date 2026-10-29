@@ -160,6 +160,138 @@ const pages: Partial<Record<string, ServicePage>> = {
     ],
     tags: ['cto', 'tech-strategy', 'architecture-governance', 'technical-excellence'],
   },
+  agile: {
+    lead: {
+      en: 'Help teams and leaders change how they work, with practices that still hold once I have left.',
+      fr: 'Aider les équipes et leurs responsables à changer leur façon de travailler, avec des pratiques qui tiennent après mon départ.',
+    },
+    format: {
+      en: 'Training, team coaching, transformation support',
+      fr: 'Formation, coaching d’équipe, accompagnement de transformation',
+    },
+    duration: {
+      en: 'From a training session to several months',
+      fr: 'D’une session de formation à plusieurs mois',
+    },
+    situations: [
+      {
+        en: 'Your teams adopted Scrum or Kanban, but delivery has not really changed.',
+        fr: 'Vos équipes ont adopté Scrum ou Kanban, mais la livraison n’a pas vraiment changé.',
+      },
+      {
+        en: 'A first agile attempt stalled, and people are sceptical about trying again.',
+        fr: 'Une première démarche agile s’est enlisée, et les équipes doutent qu’une deuxième fasse mieux.',
+      },
+      {
+        en: 'A move to the cloud or DevOps is changing roles and skills, and people need support.',
+        fr: 'Un passage au cloud ou au DevOps change les rôles et les compétences, et les équipes ont besoin d’être accompagnées.',
+      },
+      {
+        en: 'Leadership lacks a clear view of priorities and flow across the portfolio.',
+        fr: 'La direction manque de visibilité sur les priorités et le flux à l’échelle du portefeuille.',
+      },
+    ],
+    scope: [
+      {
+        title: { en: 'Team coaching', fr: 'Coaching d’équipe' },
+        body: {
+          en: 'Scrum, Kanban and Lean practices fitted to the team, with continuous improvement built in.',
+          fr: 'Des pratiques Scrum, Kanban et Lean adaptées à l’équipe, avec l’amélioration continue intégrée.',
+        },
+      },
+      {
+        title: { en: 'Training', fr: 'Formation' },
+        body: {
+          en: 'Agile primers for everyone involved or affected, from delivery teams to management.',
+          fr: 'Des formations d’initiation pour toutes les personnes concernées, des équipes de livraison à la direction.',
+        },
+      },
+      {
+        title: { en: 'Portfolio and governance', fr: 'Portefeuille et gouvernance' },
+        body: {
+          en: 'Visible priorities and flow from team level up to the product portfolio.',
+          fr: 'Des priorités et un flux visibles, de l’équipe jusqu’au portefeuille de produits.',
+        },
+      },
+      {
+        title: { en: 'Change management', fr: 'Conduite du changement' },
+        body: {
+          en: 'Who is affected, which skills exist, and a development plan built with the people concerned.',
+          fr: 'Qui est concerné, quelles compétences existent, et un plan de développement construit avec les personnes impliquées.',
+        },
+      },
+      {
+        title: { en: 'Technical practices', fr: 'Pratiques techniques' },
+        body: {
+          en: 'TDD, BDD, pair programming and continuous integration, so agility reaches the code.',
+          fr: 'TDD, BDD, pair programming et intégration continue, pour que l’agilité atteigne le code.',
+        },
+      },
+      {
+        title: { en: 'Leadership coaching', fr: 'Coaching de dirigeants' },
+        body: {
+          en: 'Supporting managers as their role shifts towards teams that organise their own work.',
+          fr: 'Accompagner les managers dont le rôle évolue vers des équipes qui organisent leur propre travail.',
+        },
+      },
+    ],
+    formats: [
+      {
+        label: { en: 'A few days', fr: 'Quelques jours' },
+        title: { en: 'Training', fr: 'Formation' },
+        body: {
+          en: 'An agile primer or technical excellence modules, for teams and their management.',
+          fr: 'Une initiation à l’agilité ou des modules d’excellence technique, pour les équipes et leur management.',
+        },
+      },
+      {
+        label: { en: 'Part-time, over months', fr: 'Temps partiel, sur plusieurs mois' },
+        title: { en: 'Team coaching', fr: 'Coaching d’équipe' },
+        body: {
+          en: 'I work with one or several teams on their process, their practices and how they improve.',
+          fr: 'Je travaille avec une ou plusieurs équipes sur leur processus, leurs pratiques et leur façon de s’améliorer.',
+        },
+      },
+      {
+        label: { en: 'Several months', fr: 'Plusieurs mois' },
+        title: { en: 'Transformation support', fr: 'Accompagnement de transformation' },
+        body: {
+          en: 'Alongside the transformation team and the steering committee: coaching across teams and regular feedback to leadership.',
+          fr: 'Aux côtés de l’équipe de transformation et du comité de pilotage : coaching transverse et retours réguliers à la direction.',
+        },
+      },
+    ],
+    proof: [
+      {
+        period: { en: '2019 – 2023', fr: '2019 – 2023' },
+        title: { en: 'Agile coach & cloud architect', fr: 'Coach agile & architecte cloud' },
+        org: 'Cargolux',
+        body: {
+          en: 'Agile primer training, Azure DevOps rollout, portfolio governance, and coaching of IT Ops and delivery teams during the move to Azure.',
+          fr: 'Formation d’initiation à l’agilité, déploiement d’Azure DevOps, gouvernance du portefeuille, et coaching des équipes IT Ops et delivery pendant la migration vers Azure.',
+        },
+      },
+      {
+        period: { en: '2021 – 2022', fr: '2021 – 2022' },
+        title: { en: 'Senior consultant & agile coach', fr: 'Consultant senior & coach agile' },
+        org: 'BGL BNP Paribas',
+        body: {
+          en: 'Change support for a cloud-first infrastructure strategy: affected populations, skills inventory and a skills development plan built with the teams.',
+          fr: 'Accompagnement du changement pour une stratégie d’infrastructure orientée cloud : populations concernées, inventaire des compétences et plan de développement construit avec les équipes.',
+        },
+      },
+      {
+        period: { en: '2023 – 2025', fr: '2023 – 2025' },
+        title: { en: 'Trainer, agile & technical coach', fr: 'Formateur, coach agile & technique' },
+        org: 'Banque de Luxembourg',
+        body: {
+          en: 'Technical excellence training (clean code, TDD, BDD, refactoring, technical debt), then agile and technical coaching of several teams.',
+          fr: 'Formation à l’excellence technique (clean code, TDD, BDD, refactoring, dette technique), puis coaching agile et technique de plusieurs équipes.',
+        },
+      },
+    ],
+    tags: ['agile', 'kanban', 'lean', 'change-management', 'agile-coaching'],
+  },
 };
 
 export function getServicePage(service: Service): ServicePage | undefined {

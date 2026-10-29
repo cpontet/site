@@ -637,8 +637,8 @@ const pages: Partial<Record<string, ServicePage>> = {
         fr: 'Vos développeurs utilisent des agents de code, mais les mises en production ne vont pas plus vite : le travail attend désormais en revue et en test.',
       },
       {
-        en: 'Agent-written code piles up faster than anyone can review it or explain it.',
-        fr: 'Le code écrit par les agents s’accumule plus vite que personne ne peut le relire ou l’expliquer.',
+        en: 'The code agents write runs, but it duplicates logic, ignores your architecture and makes every next change harder.',
+        fr: 'Le code écrit par les agents fonctionne, mais il duplique la logique, ignore votre architecture et rend chaque évolution plus difficile.',
       },
       {
         en: 'Your stories are too vague for an agent, which fills the gaps with plausible defaults.',

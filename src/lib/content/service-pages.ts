@@ -292,6 +292,138 @@ const pages: Partial<Record<string, ServicePage>> = {
     ],
     tags: ['agile', 'kanban', 'lean', 'change-management', 'agile-coaching'],
   },
+  cloud: {
+    lead: {
+      en: 'Cloud architectures on Azure and AWS that your teams can build, run and afford.',
+      fr: 'Des architectures cloud sur Azure et AWS que vos équipes peuvent construire, exploiter et financer.',
+    },
+    format: {
+      en: 'Assessment, target architecture, hands-on delivery',
+      fr: 'Diagnostic, architecture cible, mise en œuvre',
+    },
+    duration: {
+      en: 'From a few days to several months',
+      fr: 'De quelques jours à plusieurs mois',
+    },
+    situations: [
+      {
+        en: 'You are moving to the cloud and need a target architecture before the first migration.',
+        fr: 'Vous passez au cloud et il vous faut une architecture cible avant la première migration.',
+      },
+      {
+        en: 'Your cloud estate grew project by project, without shared foundations or conventions.',
+        fr: 'Votre environnement cloud s’est construit projet par projet, sans socle ni conventions communes.',
+      },
+      {
+        en: 'Infrastructure is set up by hand, so environments drift and nobody dares to touch them.',
+        fr: 'L’infrastructure est configurée à la main, les environnements divergent et personne n’ose y toucher.',
+      },
+      {
+        en: 'The cloud bill keeps growing and nobody can say which workload costs what.',
+        fr: 'La facture cloud augmente et personne ne sait dire quelle application coûte quoi.',
+      },
+    ],
+    scope: [
+      {
+        title: { en: 'Target architecture', fr: 'Architecture cible' },
+        body: {
+          en: 'On Azure, AWS or both, balancing security, governance and operations.',
+          fr: 'Sur Azure, AWS ou les deux, en équilibrant sécurité, gouvernance et exploitation.',
+        },
+      },
+      {
+        title: { en: 'Landing zones', fr: 'Landing zones' },
+        body: {
+          en: 'Identity, networking and policies set up once, so every team starts on the same ground.',
+          fr: 'Identité, réseau et politiques configurés une fois, pour que chaque équipe parte du même socle.',
+        },
+      },
+      {
+        title: { en: 'Infrastructure as Code', fr: 'Infrastructure as Code' },
+        body: {
+          en: 'Bicep templates and pipelines, so every environment is reproducible and reviewed.',
+          fr: 'Des templates Bicep et des pipelines, pour des environnements reproductibles et revus.',
+        },
+      },
+      {
+        title: { en: 'Migration', fr: 'Migration' },
+        body: {
+          en: 'Moving workloads to the cloud and integrating them with the systems that stay put.',
+          fr: 'Migrer les applications vers le cloud et les intégrer aux systèmes qui restent en place.',
+        },
+      },
+      {
+        title: { en: 'FinOps', fr: 'FinOps' },
+        body: {
+          en: 'Costs visible per workload, with budgets and tagging from the first deployment.',
+          fr: 'Des coûts visibles par application, avec budgets et étiquetage dès le premier déploiement.',
+        },
+      },
+      {
+        title: { en: 'Security and compliance', fr: 'Sécurité et conformité' },
+        body: {
+          en: 'Built into the platform design instead of checked after the fact.',
+          fr: 'Intégrées à la conception de la plateforme plutôt que vérifiées après coup.',
+        },
+      },
+    ],
+    formats: [
+      {
+        label: { en: 'A few days', fr: 'Quelques jours' },
+        title: { en: 'Assessment', fr: 'Diagnostic' },
+        body: {
+          en: 'A review of your current cloud set-up, with risks and next steps written down.',
+          fr: 'Une revue de votre environnement cloud actuel, avec les risques et les prochaines étapes par écrit.',
+        },
+      },
+      {
+        label: { en: 'Weeks to months', fr: 'Quelques semaines à quelques mois' },
+        title: { en: 'Target architecture', fr: 'Architecture cible' },
+        body: {
+          en: 'A target architecture and a roadmap that your teams and your management agree on.',
+          fr: 'Une architecture cible et une feuille de route sur lesquelles vos équipes et votre direction s’accordent.',
+        },
+      },
+      {
+        label: { en: 'Several months', fr: 'Plusieurs mois' },
+        title: { en: 'Hands-on delivery', fr: 'Mise en œuvre' },
+        body: {
+          en: 'I design and build with your team: landing zone, Infrastructure as Code, pipelines and the first workloads.',
+          fr: 'Je conçois et je construis avec votre équipe : landing zone, Infrastructure as Code, pipelines et premières applications.',
+        },
+      },
+    ],
+    proof: [
+      {
+        period: { en: '2023 – now', fr: '2023 – auj.' },
+        title: { en: 'Enterprise architect', fr: 'Architecte d’entreprise' },
+        org: 'EU Publications Office',
+        body: {
+          en: 'Architecture and deployment of the BI@PP platform on Azure with Bicep, including its security and compliance. Cloud architecture and FinOps for the architecture competence center.',
+          fr: 'Architecture et déploiement de la plateforme BI@PP sur Azure avec Bicep, y compris sa sécurité et sa conformité. Architecture cloud et FinOps pour le centre de compétence architecture.',
+        },
+      },
+      {
+        period: { en: '2022', fr: '2022' },
+        title: { en: 'Cloud target architecture', fr: 'Architecture cloud cible' },
+        org: 'European Parliament',
+        body: {
+          en: 'A target architecture across Azure and AWS, balancing security, governance and operations.',
+          fr: 'Une architecture cible sur Azure et AWS, équilibrant sécurité, gouvernance et exploitation.',
+        },
+      },
+      {
+        period: { en: '2019 – 2023', fr: '2019 – 2023' },
+        title: { en: 'Cloud architect & agile coach', fr: 'Architecte cloud & coach agile' },
+        org: 'Cargolux',
+        body: {
+          en: 'Moving all IT workloads of an airline to Azure, with integration between existing systems, Azure DevOps for delivery, and training and coaching for IT Ops.',
+          fr: 'Migration de toutes les charges IT d’une compagnie aérienne vers Azure, avec l’intégration des systèmes existants, Azure DevOps pour la livraison, et la formation et le coaching des équipes IT Ops.',
+        },
+      },
+    ],
+    tags: ['cloud', 'cloud-architecture', 'azure', 'aws', 'finops', 'infrastructure-as-code'],
+  },
 };
 
 export function getServicePage(service: Service): ServicePage | undefined {

@@ -1,0 +1,45 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:03.725
+Voici la grammaire : une image qui explique toute la notation.
+
+2
+00:00:03.725 --> 00:00:07.987
+Elle tourne autour des événements métier : quelque chose qui s’est produit dans l’entreprise.
+
+3
+00:00:07.987 --> 00:00:09.625
+Orange, au passé.
+
+4
+00:00:09.625 --> 00:00:12.537
+Un acteur émet une commande : une intention.
+
+5
+00:00:12.537 --> 00:00:13.900
+Bleu, à l’impératif.
+
+6
+00:00:13.900 --> 00:00:18.887
+La commande arrive sur un agrégat, qui protège les règles et génère l’événement.
+
+7
+00:00:18.887 --> 00:00:23.825
+…ou sur un système externe que l’on ne contrôle pas : il produit lui aussi des événements.
+
+8
+00:00:23.825 --> 00:00:28.525
+Les événements alimentent des read models : l’information que les gens lisent à l’écran.
+
+9
+00:00:28.525 --> 00:00:32.750
+Les événements déclenchent aussi des policies : chaque fois que ceci arrive, faire cela.
+
+10
+00:00:32.750 --> 00:00:36.662
+Et une policy invoque une nouvelle commande : la boucle est bouclée.
+
+11
+00:00:36.662 --> 00:00:43.850
+Lisez-la comme une phrase : quand un billet est acheté, la policy de fidélité demande au système d’attribuer des points.

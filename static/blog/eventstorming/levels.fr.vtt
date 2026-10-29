@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:06.512
+EventStorming fonctionne à trois niveaux de résolution : les mêmes événements, vus de plus en plus près.
+
+2
+00:00:06.512 --> 00:00:13.850
+Le Big Picture : tous les événements métier de l’entreprise, ses points chauds, et l’endroit où émergent les bounded contexts.
+
+3
+00:00:13.850 --> 00:00:22.087
+Le Process Modelling ajoute les commandes, les policies, les read models et les systèmes externes : comment le travail circule vraiment.
+
+4
+00:00:22.087 --> 00:00:27.925
+Le Software Design fait apparaître les agrégats et leurs invariants, prêts à devenir du code.
+
+5
+00:00:27.925 --> 00:00:29.937
+Zoomer, sans empiler.
+
+6
+00:00:29.937 --> 00:00:32.850
+Chaque niveau ajoute du détail, jamais du bruit.

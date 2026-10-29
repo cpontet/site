@@ -153,6 +153,16 @@
   --tw-prose-th-borders: var(--border);
   --tw-prose-td-borders: var(--border);
 }
+/* Row labels (codes like "SOV-1") stay on one line; wide tables scroll inside the column. */
+.prose :where(th, td):first-child {
+  white-space: nowrap;
+}
+@media (max-width: 48rem) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+  }
+}
 
 @layer base {
   * {

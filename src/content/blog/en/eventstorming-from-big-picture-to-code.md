@@ -5,6 +5,7 @@ date: '2026-10-29'
 lang: en
 tags: [eventstorming, ddd, facilitation]
 draft: false
+translationOf: fr/eventstorming-du-big-picture-au-code
 ---
 
 EventStorming is a workshop format created by Alberto Brandolini. People who know the business

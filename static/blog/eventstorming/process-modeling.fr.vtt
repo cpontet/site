@@ -1,0 +1,45 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:02.537
+Niveau deux : le Process Modelling.
+
+2
+00:00:02.537 --> 00:00:04.500
+S’assurer de construire la bonne chose.
+
+3
+00:00:04.500 --> 00:00:07.500
+On délimite une fonctionnalité : la commande qui la déclenche…
+
+4
+00:00:07.500 --> 00:00:13.175
+…et l’état final qu’elle doit atteindre : un événement métier, et le read model qu’il laisse.
+
+5
+00:00:13.175 --> 00:00:19.387
+Entre les deux, le flux à découvrir. On le découvre en appliquant la grammaire.
+
+6
+00:00:19.387 --> 00:00:21.300
+On suit les couleurs, dans l’ordre.
+
+7
+00:00:21.300 --> 00:00:27.887
+Une commande s’exécute sur un système et produit un événement métier : bleu, puis rose, puis orange.
+
+8
+00:00:27.887 --> 00:00:35.675
+Puis une policy transforme cet événement en commande suivante : chaque fois que ceci arrive, faire cela. Le lilas entre l’orange et le bleu.
+
+9
+00:00:35.675 --> 00:00:43.112
+Et ça s’enchaîne : commande, système, événement, policy, commande, encore et encore, jusqu’à l’état final.
+
+10
+00:00:43.112 --> 00:00:46.300
+Une chaîne de commandes et d’événements, construite par la grammaire.
+
+11
+00:00:46.300 --> 00:00:48.900
+Pas encore d’agrégat : il arrive au niveau suivant.

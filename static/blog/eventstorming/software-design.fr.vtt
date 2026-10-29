@@ -1,0 +1,45 @@
+WEBVTT
+
+1
+00:00:00.050 --> 00:00:02.325
+Niveau trois : le Software Design.
+
+2
+00:00:02.325 --> 00:00:07.212
+Le Process Modelling nous a donné des commandes et des événements. Mais qui fait respecter les règles ?
+
+3
+00:00:07.212 --> 00:00:13.350
+L’agrégat apparaît : une frontière de cohérence qui décide et émet l’événement.
+
+4
+00:00:13.350 --> 00:00:18.387
+Une commande agit sur un agrégat, ou sur un système externe, pour produire cet événement.
+
+5
+00:00:18.387 --> 00:00:24.550
+Le Software Design, c’est donc le Process Modelling plus l’agrégat : presque une spécification pour le code.
+
+6
+00:00:24.550 --> 00:00:27.362
+Certains comportements couvrent plusieurs agrégats.
+
+7
+00:00:27.362 --> 00:00:31.237
+Un process manager les coordonne : une saga avec un état.
+
+8
+00:00:31.237 --> 00:00:35.012
+Il démarre sur l’événement d’un agrégat, puis envoie une commande au suivant.
+
+9
+00:00:35.012 --> 00:00:40.512
+Celui-ci renvoie son événement, alors il envoie la commande suivante, en faisant avancer son état à chaque tour.
+
+10
+00:00:40.512 --> 00:00:47.337
+…jusqu’à ce que le processus soit terminé : une transaction longue, cohérente entre plusieurs agrégats.
+
+11
+00:00:47.337 --> 00:00:52.712
+Des agrégats avec du comportement, synchronisés par des process managers : le plan du code.

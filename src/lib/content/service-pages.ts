@@ -790,28 +790,19 @@ const pages: Partial<Record<string, ServicePage>> = {
       {
         period: { en: '2026', fr: '2026' },
         title: { en: 'Agentic software factory', fr: 'Software factory agentique' },
-        org: { en: 'Public-sector platform rewrite', fr: 'Refonte d’une plateforme publique' },
-        body: {
-          en: 'Claude Code configured in the repository with 16 subagents, 27 commands and 12 hooks, CI gates and a knowledge graph. From April to October 2026: more than 1,000 merge requests and 34,000 automated tests.',
-          fr: 'Claude Code configuré dans le dépôt avec 16 sous-agents, 27 commandes et 12 hooks, des contrôles CI et un graphe de connaissances. D’avril à octobre 2026 : plus de 1 000 merge requests et 34 000 tests automatisés.',
-        },
-      },
-      {
-        period: { en: '2023 – now', fr: '2023 – auj.' },
-        title: { en: 'Enterprise architect', fr: 'Architecte d’entreprise' },
         org: 'EU Publications Office',
         body: {
-          en: 'Target architecture for the Data Value Chain, the future dissemination stack, with AI and knowledge-graph services.',
-          fr: 'Architecture cible de la Data Value Chain, la future chaîne de diffusion, avec des services d’IA et de graphes de connaissances.',
+          en: 'Rewrite of a large public web platform, organised as an agentic software factory: Claude Code configured in the repository with 16 subagents, 27 commands and 12 hooks, CI gates and a knowledge graph. From April to October 2026: more than 1,000 merge requests and 34,000 automated tests.',
+          fr: 'Refonte d’une grande plateforme web publique, organisée en software factory agentique : Claude Code configuré dans le dépôt avec 16 sous-agents, 27 commandes et 12 hooks, des contrôles CI et un graphe de connaissances. D’avril à octobre 2026 : plus de 1 000 merge requests et 34 000 tests automatisés.',
         },
       },
       {
-        period: { en: '2017 – 2019', fr: '2017 – 2019' },
-        title: { en: 'Head of software development', fr: 'Responsable du développement logiciel' },
+        period: { en: '2019 – 2026', fr: '2019 – 2026' },
+        title: { en: 'CTO', fr: 'CTO' },
         org: 'Agile Partner',
         body: {
-          en: 'Ran the in-house software factory before agents existed: architecture validation, shared tools and practices, retrospectives.',
-          fr: 'Direction de la software factory interne, avant les agents : validation des architectures, outils et pratiques communs, rétrospectives.',
+          en: 'Member of the company’s AI task force, which selects the tools and defines the good practices for working with AI and coding agents.',
+          fr: 'Membre de la task force IA de l’entreprise, qui choisit les outils et définit les bonnes pratiques pour travailler avec l’IA et les agents de code.',
         },
       },
     ],

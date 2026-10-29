@@ -55,10 +55,10 @@ export const services: Service[] = [
   },
   {
     id: 'sovereign',
-    slug: 'sovereign-cloud',
+    slug: 'sovereignty-resilience',
     icon: 'shield',
     tint: 'mint',
-    title: { en: 'Sovereign cloud', fr: 'Cloud souverain' },
+    title: { en: 'Sovereignty & resilience', fr: 'Souveraineté & résilience' },
     body: {
       en: 'Feasibility, target architecture, data and workload migration, continuity and recovery for strategic assets.',
       fr: 'Faisabilité, architecture cible, migration des données et des charges, continuité et reprise pour les actifs stratégiques.',

@@ -81,7 +81,7 @@ export const en = {
       'CTO & strategic advisory',
       'Agile coaching & transformation',
       'Cloud architecture',
-      'Sovereign cloud',
+      'Sovereignty & resilience',
       'Agentic software factory',
       'Domain-Driven Design & EventStorming',
       'Workshop or talk',

@@ -84,7 +84,7 @@ export const fr: typeof en = {
       'CTO & conseil stratégique',
       'Coaching agile & transformation',
       'Architecture cloud',
-      'Cloud souverain',
+      'Souveraineté & résilience',
       'Software factory agentique',
       'Domain-Driven Design & EventStorming',
       'Atelier ou conférence',

@@ -5,7 +5,7 @@ import { type L10n, type Service, services } from './profile.js';
 
 /**
  * Detail page of a service. Every page follows the same hierarchy, in this order:
- * hero (lead + at a glance) → when it helps → what I take on → [ecosystem] → ways to work
+ * hero (lead + at a glance) → when it helps → what I take on → ecosystem → ways to work
  * together → where I've done this → related writing → other services → contact.
  */
 export interface ServicePage {
@@ -18,8 +18,8 @@ export interface ServicePage {
   situations: L10n[];
   /** "What I take on": 4–6 items. */
   scope: { title: L10n; body: L10n }[];
-  /** Optional: named tools, vendors or practices the service builds on, in 2–3 groups. */
-  ecosystem?: {
+  /** Named methods, tools or vendors the service builds on, in 2 groups, plus an optional link. */
+  ecosystem: {
     title: L10n;
     intro: L10n;
     groups: { title: L10n; items: { name: string; detail: L10n }[] }[];
@@ -110,6 +110,68 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
     ],
+    ecosystem: {
+      title: { en: 'The CTO toolbox', fr: 'La boîte à outils du CTO' },
+      intro: {
+        en: 'Seven years as CTO and head of a software factory left me with practices I adapt to each organisation, rather than a framework to install.',
+        fr: 'Sept ans comme CTO et responsable d’une software factory m’ont laissé des pratiques que j’adapte à chaque organisation, plutôt qu’un cadre à installer.',
+      },
+      groups: [
+        {
+          title: { en: 'Governance', fr: 'Gouvernance' },
+          items: [
+            {
+              name: 'Architecture principles',
+              detail: { en: 'Shared, short, enforced', fr: 'Partagés, courts, appliqués' },
+            },
+            {
+              name: 'Decision records',
+              detail: { en: 'Choices with their context', fr: 'Des choix avec leur contexte' },
+            },
+            {
+              name: 'Architecture reviews',
+              detail: { en: 'Before the build, not after', fr: 'Avant de construire, pas après' },
+            },
+            {
+              name: 'FinOps',
+              detail: { en: 'Costs owned by teams', fr: 'Des coûts portés par les équipes' },
+            },
+            {
+              name: 'AI guidelines',
+              detail: {
+                en: 'Tools, rules and a starter harness',
+                fr: 'Outils, règles et harnais de démarrage',
+              },
+            },
+          ],
+        },
+        {
+          title: { en: 'People and practices', fr: 'Personnes et pratiques' },
+          items: [
+            {
+              name: 'Communities of practice',
+              detail: { en: 'Peers who teach peers', fr: 'Des pairs qui forment leurs pairs' },
+            },
+            {
+              name: 'Technical excellence training',
+              detail: { en: 'Clean code, TDD, refactoring', fr: 'Clean code, TDD, refactoring' },
+            },
+            { name: 'Code katas', detail: { en: 'Deliberate practice', fr: 'Pratique délibérée' } },
+            {
+              name: 'Recruitment',
+              detail: { en: 'Technical interviews', fr: 'Entretiens techniques' },
+            },
+            {
+              name: 'Retrospectives',
+              detail: {
+                en: 'At team and company level',
+                fr: 'En équipe et à l’échelle de l’entreprise',
+              },
+            },
+          ],
+        },
+      ],
+    },
     formats: [
       {
         label: { en: 'A few days', fr: 'Quelques jours' },
@@ -242,6 +304,76 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
     ],
+    ecosystem: {
+      title: { en: 'Methods and practices', fr: 'Méthodes et pratiques' },
+      intro: {
+        en: 'I read the Agile Manifesto in 2003 and moved a Scrum project to Kanban in 2008. I choose from these with each team, depending on its work.',
+        fr: 'J’ai lu le Manifeste agile en 2003 et fait passer un projet Scrum à Kanban en 2008. Je choisis parmi ces approches avec chaque équipe, selon son travail.',
+      },
+      groups: [
+        {
+          title: { en: 'Frameworks', fr: 'Cadres' },
+          items: [
+            {
+              name: 'Scrum',
+              detail: { en: 'Certified Scrum Master', fr: 'Certified Scrum Master' },
+            },
+            { name: 'Kanban', detail: { en: 'Flow, since 2008', fr: 'Le flux, depuis 2008' } },
+            {
+              name: 'Lean',
+              detail: {
+                en: 'Less waste, more learning',
+                fr: 'Moins de gaspillage, plus d’apprentissage',
+              },
+            },
+            {
+              name: 'SAFe',
+              detail: {
+                en: 'Portfolio and programme level',
+                fr: 'Niveau portefeuille et programme',
+              },
+            },
+            {
+              name: 'Lean Startup',
+              detail: { en: 'Product experiments', fr: 'Expérimentations produit' },
+            },
+          ],
+        },
+        {
+          title: { en: 'Practices', fr: 'Pratiques' },
+          items: [
+            {
+              name: 'Story mapping',
+              detail: { en: 'The user journey, sliced', fr: 'Le parcours utilisateur, découpé' },
+            },
+            {
+              name: 'Specification by example',
+              detail: { en: 'Rules agreed with examples', fr: 'Des règles validées par l’exemple' },
+            },
+            {
+              name: 'TDD and BDD',
+              detail: { en: 'Tests that drive design', fr: 'Des tests qui guident la conception' },
+            },
+            {
+              name: 'Pair programming',
+              detail: { en: 'Shared code, shared skills', fr: 'Code et compétences partagés' },
+            },
+            {
+              name: 'Retrospectives',
+              detail: { en: 'Continuous improvement', fr: 'Amélioration continue' },
+            },
+          ],
+        },
+      ],
+      link: {
+        href: 'https://agilemanifesto.org',
+        name: 'The Agile Manifesto',
+        text: {
+          en: 'still says it best: four values and twelve principles, written in 2001.',
+          fr: 'reste la meilleure référence : quatre valeurs et douze principes, écrits en 2001.',
+        },
+      },
+    },
     formats: [
       {
         label: { en: 'A few days', fr: 'Quelques jours' },
@@ -374,6 +506,56 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
     ],
+    ecosystem: {
+      title: { en: 'Platforms and tools', fr: 'Plateformes et outils' },
+      intro: {
+        en: 'Certified on Azure and AWS, and familiar with European platforms. The tools follow your context and your team’s skills.',
+        fr: 'Certifié sur Azure et AWS, et à l’aise sur les plateformes européennes. Les outils suivent votre contexte et les compétences de votre équipe.',
+      },
+      groups: [
+        {
+          title: { en: 'Platforms', fr: 'Plateformes' },
+          items: [
+            {
+              name: 'Microsoft Azure',
+              detail: { en: 'AZ-305, AZ-104, AZ-400', fr: 'AZ-305, AZ-104, AZ-400' },
+            },
+            {
+              name: 'Amazon Web Services',
+              detail: { en: 'Cloud Practitioner', fr: 'Cloud Practitioner' },
+            },
+            {
+              name: 'Clever Cloud',
+              detail: { en: 'Cloud Concepts 101', fr: 'Cloud Concepts 101' },
+            },
+            {
+              name: 'Containers',
+              detail: { en: 'Kubernetes, Container Apps', fr: 'Kubernetes, Container Apps' },
+            },
+          ],
+        },
+        {
+          title: { en: 'Tooling', fr: 'Outillage' },
+          items: [
+            {
+              name: 'Terraform / OpenTofu',
+              detail: { en: 'Multi-cloud IaC', fr: 'IaC multi-cloud' },
+            },
+            { name: 'Bicep', detail: { en: 'Azure IaC', fr: 'IaC Azure' } },
+            { name: 'CloudFormation / AWS CDK', detail: { en: 'AWS IaC', fr: 'IaC AWS' } },
+            { name: 'Azure DevOps / GitLab', detail: { en: 'Pipelines', fr: 'Pipelines' } },
+          ],
+        },
+      ],
+      link: {
+        href: 'https://www.finops.org/framework/',
+        name: 'The FinOps Framework',
+        text: {
+          en: 'from the FinOps Foundation is the reference I use to make cloud costs a shared responsibility between finance, product and engineering.',
+          fr: 'de la FinOps Foundation est la référence que j’utilise pour faire des coûts cloud une responsabilité partagée entre finance, produit et ingénierie.',
+        },
+      },
+    },
     formats: [
       {
         label: { en: 'A few days', fr: 'Quelques jours' },
@@ -433,8 +615,8 @@ const pages: Partial<Record<string, ServicePage>> = {
   },
   sovereign: {
     lead: {
-      en: 'Keep control of your applications and your data, with European providers, open-source building blocks and an architecture that can move when it has to.',
-      fr: 'Gardez la maîtrise de vos applications et de vos données, avec des fournisseurs européens, des briques open source et une architecture capable de changer d’hébergeur quand il le faut.',
+      en: 'Keep control of your applications and your data, and keep them running: European providers, open-source building blocks and an architecture that can move when it has to.',
+      fr: 'Gardez la maîtrise de vos applications et de vos données, et assurez leur continuité : fournisseurs européens, briques open source et une architecture capable de changer d’hébergeur quand il le faut.',
     },
     format: {
       en: 'Sovereignty assessment, feasibility study, migration',
@@ -616,7 +798,7 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
     ],
-    tags: ['sovereign-cloud', 'digital-sovereignty', 'open-source', 'portability'],
+    tags: ['sovereign-cloud', 'digital-sovereignty', 'resilience', 'open-source', 'portability'],
   },
   agentic: {
     lead: {

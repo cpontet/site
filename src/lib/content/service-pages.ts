@@ -773,8 +773,8 @@ const pages: Partial<Record<string, ServicePage>> = {
         label: { en: '30 days', fr: '30 jours' },
         title: { en: 'Pilot', fr: 'Pilote' },
         body: {
-          en: 'One team, one product area, one lane of the board. We measure cycle time and rework, and add a gate each time something goes wrong.',
-          fr: 'Une équipe, un périmètre produit, une colonne du tableau. On mesure le temps de cycle et les reprises, et on ajoute un contrôle à chaque problème.',
+          en: 'One team, one product area, one lane of the board, starting from a starter harness of rules, agents and hooks that I adapt to your stack. We measure cycle time and rework, and add a gate each time something goes wrong.',
+          fr: 'Une équipe, un périmètre produit, une colonne du tableau, à partir d’un harnais de démarrage (règles, agents, hooks) que j’adapte à votre stack. On mesure le temps de cycle et les reprises, et on ajoute un contrôle à chaque problème.',
         },
       },
       {

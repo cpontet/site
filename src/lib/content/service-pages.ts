@@ -334,10 +334,10 @@ const pages: Partial<Record<string, ServicePage>> = {
               },
             },
             {
-              name: 'SAFe',
+              name: 'Agile at scale',
               detail: {
-                en: 'Portfolio and programme level',
-                fr: 'Niveau portefeuille et programme',
+                en: 'From teams to the portfolio',
+                fr: 'Des équipes au portefeuille',
               },
             },
             {

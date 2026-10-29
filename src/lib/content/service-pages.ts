@@ -283,7 +283,7 @@ const pages: Partial<Record<string, ServicePage>> = {
       {
         period: { en: '2014 – 2015', fr: '2014 – 2015' },
         title: { en: 'Agile coach', fr: 'Coach agile' },
-        org: 'SGBT',
+        org: 'Société Générale Bank & Trust',
         body: {
           en: 'Agile transformation of the IT department: facilitated the transformation initiative, coached project teams and reported to the steering committee.',
           fr: 'Transformation agile du département informatique : animation de la démarche de transformation, coaching des équipes projet et retours au comité de pilotage.',

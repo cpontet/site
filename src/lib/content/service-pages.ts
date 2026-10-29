@@ -869,10 +869,10 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
       {
-        title: { en: 'Domain knowledge for AI', fr: 'Le domaine au service de l’IA' },
+        title: { en: 'Domain-Driven Design with AI', fr: 'Domain-Driven Design et IA' },
         body: {
-          en: 'A shared language, bounded contexts and examples written where coding agents can read them, so they use your vocabulary and stay within one context.',
-          fr: 'Un langage commun, des bounded contexts et des exemples écrits là où les agents de code peuvent les lire, pour qu’ils utilisent votre vocabulaire et restent dans un seul contexte.',
+          en: 'Agents mine legacy code and documents to prepare the exploration. The language and boundaries you agree on are then written where coding agents can use them.',
+          fr: 'Des agents analysent le code et les documents existants pour préparer l’exploration. Le langage et les frontières convenus sont ensuite écrits là où les agents de code peuvent s’en servir.',
         },
       },
       {

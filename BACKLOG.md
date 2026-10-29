@@ -2,11 +2,9 @@
   - Availability date: "Available for missions from [MONTH YEAR]" (src/lib/i18n/en.ts, fr.ts)
   - Legal notice: legal form, RCS number, LU VAT number, business permit number,
     email retention period (src/routes/[[lang=lang]]/legal/+page.svelte)
-- Cloudflare Web Analytics (cookieless): enable in dashboard or add the beacon
 - Blog articles
-  - Agentic AI SDLC / Software Factory
   - EventStorming era journey (strategic DDD, cinema 1960s to 2000s): second video post
-  - EU Sovereignty Framework SEAL
+  - Sovereignty DAS
   - DDD + AI
   - DDD Course
 - Accessibility follow-ups (automated axe + 320px reflow checks now run in CI: `bun run a11y`)

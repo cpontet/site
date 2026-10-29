@@ -123,9 +123,7 @@ export const fr: typeof en = {
     noMatch:
       'Aucun article ne correspond à ces filtres. Essayez un autre sujet ou une autre langue.',
     allTopics: 'Tous les sujets',
-    allLangs: 'Toutes',
     filterTopic: 'Filtrer par sujet',
-    filterLang: 'Filtrer par langue',
     latest: 'Dernier',
     readOtherLang: 'Read in English',
   },

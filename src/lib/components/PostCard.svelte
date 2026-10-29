@@ -15,7 +15,6 @@ let { post, uiLang, minRead }: { post: Post; uiLang: Lang; minRead: string } = $
     {#each post.tags as tag (tag)}
       <span class="rounded-full bg-tint-lilac px-3 py-0.5">{tag}</span>
     {/each}
-    <span class="rounded-full bg-raised px-3 py-0.5 uppercase">{post.lang}</span>
   </span>
   <h3 lang={post.lang} class="text-2xl font-bold tracking-tight">{post.title}</h3>
   <p lang={post.lang} class="text-base text-muted-foreground">{post.description}</p>

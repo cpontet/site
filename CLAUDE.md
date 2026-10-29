@@ -96,7 +96,7 @@ src/
       +layout.ts/.svelte     # lang + dict, header/footer, hreflang links
       +page.svelte           # home
       about/                 # profile + experience timeline
-      blog/                  # index (topic + language filters) + [slug]
+      blog/                  # index (topic filter, page language only) + [slug]
       rss.xml/               # RSS per language
       contact/               # form action — the only non-prerendered route
       legal/                 # legal notice & privacy (placeholders: RCS, VAT, permit, address)

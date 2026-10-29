@@ -3,30 +3,21 @@ import Rss from '@lucide/svelte/icons/rss';
 import PostCard from '#lib/components/PostCard.svelte';
 import { cardLift, eyebrow } from '#lib/components/styles.js';
 import { formatDate } from '#lib/format.js';
-import { type Lang, langs, localize } from '#lib/i18n.js';
+import { localize } from '#lib/i18n.js';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
 const b = $derived(data.dict.blog);
 
 let topic = $state<string | null>(null);
-let langFilter = $state<Lang | null>(null);
 
 const topics = $derived([...new Set(data.posts.flatMap((p) => p.tags))].sort());
-const shown = $derived(
-  data.posts.filter(
-    (p) => (!topic || p.tags.includes(topic)) && (!langFilter || p.lang === langFilter),
-  ),
-);
+const shown = $derived(data.posts.filter((p) => !topic || p.tags.includes(topic)));
 const [featured, ...rest] = $derived(shown);
 
 const chip = (on: boolean) => [
   'min-h-[42px] cursor-pointer rounded-full px-[18px] text-[15px] font-bold',
   on ? 'bg-primary text-primary-foreground' : 'border-[1.5px] border-border bg-background',
-];
-const seg = (on: boolean) => [
-  'min-h-[38px] cursor-pointer rounded-full px-4 text-[15px] font-bold',
-  on ? 'bg-background shadow-sm' : 'text-muted-foreground',
 ];
 </script>
 
@@ -83,22 +74,6 @@ const seg = (on: boolean) => [
           >
         {/each}
       </div>
-      <div role="group" aria-label={b.filterLang} class="flex rounded-full bg-raised p-1">
-        <button
-          type="button"
-          class={seg(langFilter === null)}
-          aria-pressed={langFilter === null}
-          onclick={() => (langFilter = null)}>{b.allLangs}</button
-        >
-        {#each langs as l (l)}
-          <button
-            type="button"
-            class={seg(langFilter === l)}
-            aria-pressed={langFilter === l}
-            onclick={() => (langFilter = l)}>{l.toUpperCase()}</button
-          >
-        {/each}
-      </div>
     </div>
 
     {#if featured}
@@ -115,7 +90,6 @@ const seg = (on: boolean) => [
             {#each featured.tags as tag (tag)}
               <span class="rounded-full bg-background px-3 py-0.5">{tag}</span>
             {/each}
-            <span class="rounded-full bg-background px-3 py-0.5 uppercase">{featured.lang}</span>
           </span>
           <h2 lang={featured.lang} class="text-[clamp(1.9rem,3.4vw,2.8rem)]">{featured.title}</h2>
           <p lang={featured.lang} class="max-w-[44rem] text-[19px]">{featured.description}</p>

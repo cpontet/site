@@ -801,8 +801,8 @@ const pages: Partial<Record<string, ServicePage>> = {
         title: { en: 'CTO', fr: 'CTO' },
         org: 'Agile Partner',
         body: {
-          en: 'Member of the company’s AI task force, which selects the tools and defines the good practices for working with AI and coding agents.',
-          fr: 'Membre de la task force IA de l’entreprise, qui choisit les outils et définit les bonnes pratiques pour travailler avec l’IA et les agents de code.',
+          en: 'Member of the company’s AI task force: chose the tools, defined good practices and a starter harness for coding agents, and helped colleagues build their skills.',
+          fr: 'Membre de la task force IA de l’entreprise : choix des outils, définition des bonnes pratiques et d’un harnais de démarrage pour les agents de code, et accompagnement de la montée en compétences des collègues.',
         },
       },
     ],

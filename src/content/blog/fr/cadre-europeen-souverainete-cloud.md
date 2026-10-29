@@ -1,7 +1,7 @@
 ---
 title: 'Lire le cadre européen de souveraineté cloud'
 description: 'Comment la Commission européenne traduit la souveraineté cloud en huit objectifs, cinq niveaux d’assurance et un score pondéré.'
-date: '2026-10-29'
+date: '2026-10-22'
 lang: fr
 tags: [sovereign-cloud, architecture, public-sector]
 draft: false

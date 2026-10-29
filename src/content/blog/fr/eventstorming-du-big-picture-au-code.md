@@ -1,7 +1,7 @@
 ---
 title: 'EventStorming, du big picture au code'
 description: 'Cinq courtes vidéos sur les trois niveaux d’EventStorming et la notation qui les relie.'
-date: '2026-10-29'
+date: '2026-10-15'
 lang: fr
 tags: [eventstorming, ddd, facilitation]
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: 'Reading the EU Cloud Sovereignty Framework'
 description: 'How the European Commission turns cloud sovereignty into eight objectives, five assurance levels and a weighted score.'
-date: '2026-10-29'
+date: '2026-10-22'
 lang: en
 tags: [sovereign-cloud, architecture, public-sector]
 draft: false

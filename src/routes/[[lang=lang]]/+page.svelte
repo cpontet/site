@@ -65,7 +65,7 @@ const lang = $derived(data.lang);
         {d.home.ctaContact}
         <ArrowRight class="size-[18px]" aria-hidden="true" />
       </a>
-      <a href={cvPath(lang)} class={btnSecondary}>
+      <a href={cvPath(lang)} target="_blank" rel="noopener" class={btnSecondary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {d.home.ctaCv}
       </a>

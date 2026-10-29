@@ -49,7 +49,7 @@ const lang = $derived(data.lang);
     <p class="text-xl">{a.lead}</p>
     <p class="text-muted-foreground">{a.body}</p>
     <div class="flex flex-wrap gap-3.5 pt-1.5">
-      <a href={cvPath(lang)} class={btnPrimary}>
+      <a href={cvPath(lang)} target="_blank" rel="noopener" class={btnPrimary}>
         <Download class="size-[18px]" aria-hidden="true" />
         {a.ctaCv}
       </a>

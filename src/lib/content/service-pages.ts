@@ -1017,6 +1017,189 @@ const pages: Partial<Record<string, ServicePage>> = {
     ],
     tags: ['ddd', 'eventstorming', 'cqrs', 'event-sourcing', 'domain-modelling'],
   },
+  facilitation: {
+    lead: {
+      en: 'Workshops where business, tech and leadership think together, with serious games, story mapping and visual thinking that people remember.',
+      fr: 'Des ateliers où métier, tech et direction réfléchissent ensemble, avec des serious games, du story mapping et de la pensée visuelle dont on se souvient.',
+    },
+    format: {
+      en: 'Workshops, workshop series, talks',
+      fr: 'Ateliers, cycles d’ateliers, conférences',
+    },
+    duration: {
+      en: 'From a one-hour talk to a series over several weeks',
+      fr: 'D’une conférence d’une heure à un cycle de plusieurs semaines',
+    },
+    situations: [
+      {
+        en: 'Your workshops end with a photo of a whiteboard and no decision.',
+        fr: 'Vos ateliers se terminent par une photo du tableau blanc et aucune décision.',
+      },
+      {
+        en: 'Business, IT and leadership need to agree on priorities, and meetings keep going in circles.',
+        fr: 'Métier, IT et direction doivent s’accorder sur les priorités, et les réunions tournent en rond.',
+      },
+      {
+        en: 'A kick-off or a retrospective needs energy, and a space where people feel safe to speak.',
+        fr: 'Un lancement ou une rétrospective a besoin d’énergie, et d’un cadre où chacun ose parler.',
+      },
+      {
+        en: 'You want a talk or a hands-on session for a conference, a team day or an internal event.',
+        fr: 'Vous cherchez une conférence ou une session pratique pour un événement, une journée d’équipe ou un séminaire.',
+      },
+    ],
+    scope: [
+      {
+        title: { en: 'Workshop design', fr: 'Conception d’ateliers' },
+        body: {
+          en: 'From the goal to the agenda, the exercises and a written outcome people can act on.',
+          fr: 'De l’objectif à l’agenda, aux exercices et à une synthèse écrite sur laquelle agir.',
+        },
+      },
+      {
+        title: { en: 'Serious games', fr: 'Serious games' },
+        body: {
+          en: 'Games that make an abstract topic tangible, and safe to discuss.',
+          fr: 'Des jeux qui rendent un sujet abstrait concret, et permettent d’en parler sans risque.',
+        },
+      },
+      {
+        title: { en: 'Story mapping', fr: 'Story mapping' },
+        body: {
+          en: 'A shared view of the user journey, cut into releases the team can deliver.',
+          fr: 'Une vue partagée du parcours utilisateur, découpée en versions que l’équipe peut livrer.',
+        },
+      },
+      {
+        title: { en: 'Visual thinking', fr: 'Pensée visuelle' },
+        body: {
+          en: 'Sketchnotes and visual summaries that people keep and reuse.',
+          fr: 'Des sketchnotes et des synthèses visuelles que l’on garde et réutilise.',
+        },
+      },
+      {
+        title: { en: 'Code katas', fr: 'Code katas' },
+        body: {
+          en: 'Deliberate practice for developers, in pairs or in groups.',
+          fr: 'De la pratique délibérée pour les développeurs, en binôme ou en groupe.',
+        },
+      },
+      {
+        title: { en: 'Talks', fr: 'Conférences' },
+        body: {
+          en: 'On architecture, agility, AI and learning through play, in English or French.',
+          fr: 'Sur l’architecture, l’agilité, l’IA et l’apprentissage par le jeu, en français ou en anglais.',
+        },
+      },
+    ],
+    ecosystem: {
+      title: { en: 'Playful Learner & #play14', fr: 'Playful Learner & #play14' },
+      intro: {
+        en: 'I founded Playful Learner and co-founded #play14 in 2014, a movement that has gathered thousands of participants across continents. Most of my other work starts with a good workshop.',
+        fr: 'J’ai fondé Playful Learner et cofondé #play14 en 2014, un mouvement qui a réuni des milliers de participants sur plusieurs continents. La plupart de mes missions commencent par un bon atelier.',
+      },
+      groups: [
+        {
+          title: { en: 'Formats I facilitate', fr: 'Formats que j’anime' },
+          items: [
+            {
+              name: 'EventStorming',
+              detail: { en: 'Domain exploration', fr: 'Exploration du domaine' },
+            },
+            {
+              name: 'Story mapping',
+              detail: { en: 'Product discovery', fr: 'Découverte produit' },
+            },
+            {
+              name: 'Serious games',
+              detail: { en: 'Learning through play', fr: 'Apprendre par le jeu' },
+            },
+            {
+              name: 'Retrospectives',
+              detail: { en: 'Continuous improvement', fr: 'Amélioration continue' },
+            },
+            { name: 'Sketchnoting', detail: { en: 'Visual thinking', fr: 'Pensée visuelle' } },
+            { name: 'Code katas', detail: { en: 'Deliberate practice', fr: 'Pratique délibérée' } },
+          ],
+        },
+        {
+          title: { en: 'Where I have spoken', fr: 'Où j’ai pris la parole' },
+          items: [
+            { name: 'Voxxed Days Luxembourg', detail: { en: '2016 – 2025', fr: '2016 – 2025' } },
+            { name: 'FlowCon Paris', detail: { en: '2025', fr: '2025' } },
+            { name: 'XP Days Benelux', detail: { en: '2022, 2023', fr: '2022, 2023' } },
+            { name: 'Agile Grenoble', detail: { en: '2022', fr: '2022' } },
+            { name: 'KanDDDinsky', detail: { en: '2017', fr: '2017' } },
+            { name: 'Build Stuff', detail: { en: '2014', fr: '2014' } },
+          ],
+        },
+      ],
+      link: {
+        href: 'https://playfullearner.com',
+        name: 'Playful Learner',
+        text: {
+          en: 'is where I develop workshops, talks and immersive experiences that combine serious games, facilitation, visual thinking and embodied practices.',
+          fr: 'est l’endroit où je développe des ateliers, des conférences et des expériences immersives qui mêlent serious games, facilitation, pensée visuelle et pratiques corporelles.',
+        },
+      },
+    },
+    formats: [
+      {
+        label: { en: 'A day or less', fr: 'Une journée ou moins' },
+        title: { en: 'Workshop', fr: 'Atelier' },
+        body: {
+          en: 'A kick-off, a retrospective, an EventStorming or a story mapping, designed for your goal, with a written summary.',
+          fr: 'Un lancement, une rétrospective, un EventStorming ou un story mapping, conçu pour votre objectif, avec une synthèse écrite.',
+        },
+      },
+      {
+        label: { en: 'Over several weeks', fr: 'Sur plusieurs semaines' },
+        title: { en: 'Workshop series', fr: 'Cycle d’ateliers' },
+        body: {
+          en: 'A sequence of sessions for a strategy, a transformation or a product discovery.',
+          fr: 'Une suite de sessions pour une stratégie, une transformation ou une découverte produit.',
+        },
+      },
+      {
+        label: { en: 'About an hour', fr: 'Environ une heure' },
+        title: { en: 'Talk', fr: 'Conférence' },
+        body: {
+          en: 'For your conference, team day or internal event, with time for questions.',
+          fr: 'Pour votre conférence, votre journée d’équipe ou votre événement interne, avec du temps pour les questions.',
+        },
+      },
+    ],
+    proof: [
+      {
+        period: { en: '2023 – now', fr: '2023 – auj.' },
+        title: { en: 'Enterprise architect', fr: 'Architecte d’entreprise' },
+        org: 'EU Publications Office',
+        body: {
+          en: 'Workshop facilitation is part of the regular work of the architecture competence center, with information system owners and their teams.',
+          fr: 'La facilitation d’ateliers fait partie du travail régulier du centre de compétence architecture, avec les propriétaires des systèmes d’information et leurs équipes.',
+        },
+      },
+      {
+        period: { en: '2022 – 2023', fr: '2022 – 2023' },
+        title: { en: 'Agile coach & architect', fr: 'Coach agile & architecte' },
+        org: 'Restena',
+        body: {
+          en: 'Facilitation and user story mapping for the redesign of the application that manages .lu domain names.',
+          fr: 'Facilitation et user story mapping pour la refonte de l’application de gestion des noms de domaine .lu.',
+        },
+      },
+      {
+        period: { en: '2014 – now', fr: '2014 – auj.' },
+        title: { en: 'Co-founder', fr: 'Cofondateur' },
+        org: '#play14',
+        body: {
+          en: 'A worldwide movement using play to learn, share and create, with thousands of participants.',
+          fr: 'Un mouvement mondial qui utilise le jeu pour apprendre, partager et créer, avec des milliers de participants.',
+        },
+      },
+    ],
+    tags: ['facilitation', 'serious-games', 'story-mapping', 'visual-thinking', 'play14'],
+  },
 };
 
 export function getServicePage(service: Service): ServicePage | undefined {

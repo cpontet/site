@@ -618,6 +618,205 @@ const pages: Partial<Record<string, ServicePage>> = {
     ],
     tags: ['sovereign-cloud', 'digital-sovereignty', 'open-source', 'portability'],
   },
+  agentic: {
+    lead: {
+      en: 'Coding agents in your delivery process, with the specifications, tests and review gates that let you ship what they write.',
+      fr: 'Des agents de code dans votre chaîne de livraison, avec les spécifications, les tests et les contrôles qui permettent de livrer ce qu’ils écrivent.',
+    },
+    format: {
+      en: 'Assessment, 30-day pilot, factory set-up',
+      fr: 'Diagnostic, pilote de 30 jours, mise en place de la factory',
+    },
+    duration: {
+      en: 'From a few days to several months',
+      fr: 'De quelques jours à plusieurs mois',
+    },
+    situations: [
+      {
+        en: 'Your developers use coding agents, but releases are no faster: the work now waits in review and testing.',
+        fr: 'Vos développeurs utilisent des agents de code, mais les mises en production ne vont pas plus vite : le travail attend désormais en revue et en test.',
+      },
+      {
+        en: 'Agent-written code piles up faster than anyone can review it or explain it.',
+        fr: 'Le code écrit par les agents s’accumule plus vite que personne ne peut le relire ou l’expliquer.',
+      },
+      {
+        en: 'Your stories are too vague for an agent, which fills the gaps with plausible defaults.',
+        fr: 'Vos user stories sont trop floues pour un agent, qui comble les vides avec des choix plausibles.',
+      },
+      {
+        en: 'You want to start, but security, data location and cost need answers first.',
+        fr: 'Vous voulez vous lancer, mais la sécurité, la localisation des données et les coûts demandent d’abord des réponses.',
+      },
+    ],
+    scope: [
+      {
+        title: { en: 'Intent and requirements', fr: 'Intention et exigences' },
+        body: {
+          en: 'Stories with acceptance criteria that can fail and Gherkin examples, refined before anything is generated.',
+          fr: 'Des user stories avec des critères d’acceptation vérifiables et des exemples Gherkin, affinées avant toute génération.',
+        },
+      },
+      {
+        title: { en: 'Factory set-up', fr: 'Mise en place de la factory' },
+        body: {
+          en: 'Rules files, specialised subagents, commands and skills, committed in the repository so everyone works the same way.',
+          fr: 'Fichiers de règles, sous-agents spécialisés, commandes et skills, versionnés dans le dépôt pour que tout le monde travaille de la même façon.',
+        },
+      },
+      {
+        title: { en: 'Guardrails and gates', fr: 'Garde-fous et contrôles' },
+        body: {
+          en: 'Hooks, separate agents for tests and code, contract checks and CI gates that an agent cannot get past.',
+          fr: 'Hooks, agents distincts pour les tests et le code, vérification des contrats et contrôles CI qu’un agent ne peut pas contourner.',
+        },
+      },
+      {
+        title: { en: 'Traceability', fr: 'Traçabilité' },
+        body: {
+          en: 'From story to scenario, test, code and merge request, with CI checking every link.',
+          fr: 'De la user story au scénario, au test, au code et à la merge request, chaque lien vérifié par la CI.',
+        },
+      },
+      {
+        title: { en: 'Hosting, data and cost', fr: 'Hébergement, données et coûts' },
+        body: {
+          en: 'Models in an EU region where required, bounded access to code and secrets, and cost tracked per project.',
+          fr: 'Des modèles dans une région européenne si nécessaire, un accès limité au code et aux secrets, et des coûts suivis par projet.',
+        },
+      },
+      {
+        title: { en: 'Team practices', fr: 'Pratiques d’équipe' },
+        body: {
+          en: 'New roles and review habits, and one rule above the others: you must be able to explain what you merge.',
+          fr: 'De nouveaux rôles et de nouvelles habitudes de revue, et une règle au-dessus des autres : savoir expliquer ce que l’on fusionne.',
+        },
+      },
+    ],
+    ecosystem: {
+      title: { en: 'What a factory is made of', fr: 'De quoi est faite une factory' },
+      intro: {
+        en: 'Agents do the repeatable production work. People own the intent, the judgement and the acceptance. These are the pieces that hold the two together.',
+        fr: 'Les agents font le travail de production répétable. Les personnes gardent l’intention, le jugement et l’acceptation. Voici les pièces qui tiennent l’ensemble.',
+      },
+      groups: [
+        {
+          title: { en: 'Agent tooling', fr: 'Outillage des agents' },
+          items: [
+            { name: 'Claude Code', detail: { en: 'Coding agent', fr: 'Agent de code' } },
+            {
+              name: 'MCP',
+              detail: { en: 'Agents connected to your tools', fr: 'Agents connectés à vos outils' },
+            },
+            {
+              name: 'Subagents',
+              detail: { en: 'One narrow job each', fr: 'Une tâche précise chacun' },
+            },
+            { name: 'Skills', detail: { en: 'Know-how, packaged', fr: 'Savoir-faire packagé' } },
+            {
+              name: 'Hooks',
+              detail: { en: 'Rules enforced while it works', fr: 'Règles appliquées en continu' },
+            },
+          ],
+        },
+        {
+          title: { en: 'Engineering practices', fr: 'Pratiques d’ingénierie' },
+          items: [
+            {
+              name: 'Gherkin scenarios',
+              detail: { en: 'Executable acceptance', fr: 'Acceptation exécutable' },
+            },
+            {
+              name: 'Test-first',
+              detail: {
+                en: 'Tests written by another agent',
+                fr: 'Tests écrits par un autre agent',
+              },
+            },
+            {
+              name: 'Contract-first API',
+              detail: { en: 'One OpenAPI spec, both sides', fr: 'Une spec OpenAPI, deux côtés' },
+            },
+            {
+              name: 'Isolated worktrees',
+              detail: { en: 'One per story', fr: 'Un par user story' },
+            },
+            {
+              name: 'ADRs',
+              detail: {
+                en: 'Decisions owned by people',
+                fr: 'Décisions portées par des personnes',
+              },
+            },
+          ],
+        },
+      ],
+      link: {
+        href: 'https://academy.claude.com/courses/ai-native-sdlc-playbook',
+        name: 'The AI-native SDLC playbook',
+        text: {
+          en: 'from Anthropic describes six stages of an agent-assisted lifecycle, from plan to maintain. I use it as a shared map when a team starts.',
+          fr: 'd’Anthropic décrit six étapes d’un cycle de vie assisté par des agents, de la planification à la maintenance. Je m’en sers comme carte commune quand une équipe démarre.',
+        },
+      },
+    },
+    formats: [
+      {
+        label: { en: 'A few days', fr: 'Quelques jours' },
+        title: { en: 'Assessment', fr: 'Diagnostic' },
+        body: {
+          en: 'Where agents fit in your delivery, what slows you down today, and the guardrails your context requires.',
+          fr: 'Où les agents trouvent leur place dans votre livraison, ce qui vous freine aujourd’hui, et les garde-fous que votre contexte exige.',
+        },
+      },
+      {
+        label: { en: '30 days', fr: '30 jours' },
+        title: { en: 'Pilot', fr: 'Pilote' },
+        body: {
+          en: 'One team, one product area, one lane of the board. We measure cycle time and rework, and add a gate each time something goes wrong.',
+          fr: 'Une équipe, un périmètre produit, une colonne du tableau. On mesure le temps de cycle et les reprises, et on ajoute un contrôle à chaque problème.',
+        },
+      },
+      {
+        label: { en: 'Several months', fr: 'Plusieurs mois' },
+        title: { en: 'Factory set-up', fr: 'Mise en place de la factory' },
+        body: {
+          en: 'Alongside your team, from refinement to CI, until the factory runs without me.',
+          fr: 'Aux côtés de votre équipe, de l’affinage à la CI, jusqu’à ce que la factory tourne sans moi.',
+        },
+      },
+    ],
+    proof: [
+      {
+        period: { en: '2026', fr: '2026' },
+        title: { en: 'Agentic software factory', fr: 'Software factory agentique' },
+        org: { en: 'Public-sector platform rewrite', fr: 'Refonte d’une plateforme publique' },
+        body: {
+          en: 'Claude Code configured in the repository with 16 subagents, 27 commands and 12 hooks, CI gates and a knowledge graph. From April to October 2026: more than 1,000 merge requests and 34,000 automated tests.',
+          fr: 'Claude Code configuré dans le dépôt avec 16 sous-agents, 27 commandes et 12 hooks, des contrôles CI et un graphe de connaissances. D’avril à octobre 2026 : plus de 1 000 merge requests et 34 000 tests automatisés.',
+        },
+      },
+      {
+        period: { en: '2023 – now', fr: '2023 – auj.' },
+        title: { en: 'Enterprise architect', fr: 'Architecte d’entreprise' },
+        org: 'EU Publications Office',
+        body: {
+          en: 'Target architecture for the Data Value Chain, the future dissemination stack, with AI and knowledge-graph services.',
+          fr: 'Architecture cible de la Data Value Chain, la future chaîne de diffusion, avec des services d’IA et de graphes de connaissances.',
+        },
+      },
+      {
+        period: { en: '2017 – 2019', fr: '2017 – 2019' },
+        title: { en: 'Head of software development', fr: 'Responsable du développement logiciel' },
+        org: 'Agile Partner',
+        body: {
+          en: 'Ran the in-house software factory before agents existed: architecture validation, shared tools and practices, retrospectives.',
+          fr: 'Direction de la software factory interne, avant les agents : validation des architectures, outils et pratiques communs, rétrospectives.',
+        },
+      },
+    ],
+    tags: ['agentic-ai', 'software-factory', 'coding-agents', 'ai-native-sdlc'],
+  },
 };
 
 export function getServicePage(service: Service): ServicePage | undefined {

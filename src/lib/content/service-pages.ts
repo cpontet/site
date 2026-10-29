@@ -118,8 +118,15 @@ const pages: Partial<Record<string, ServicePage>> = {
       },
       groups: [
         {
-          title: { en: 'Governance', fr: 'Gouvernance' },
+          title: { en: 'Strategy and governance', fr: 'Stratégie et gouvernance' },
           items: [
+            {
+              name: 'Wardley Mapping',
+              detail: {
+                en: 'Strategy from the value chain',
+                fr: 'La stratégie par la chaîne de valeur',
+              },
+            },
             {
               name: 'Architecture principles',
               detail: { en: 'Shared, short, enforced', fr: 'Partagés, courts, appliqués' },

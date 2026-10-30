@@ -172,7 +172,7 @@ export interface Stat {
 
 export const stats: Stat[] = [
   {
-    value: { en: '25', fr: '25' },
+    value: { en: '25+', fr: '25+' },
     label: { en: 'years in software, since 2001', fr: 'ans dans le logiciel, depuis 2001' },
     big: true,
   },

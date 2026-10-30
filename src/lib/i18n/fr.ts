@@ -28,7 +28,7 @@ export const fr: typeof en = {
     badge: 'Freelance · À distance · Luxembourg & UE',
     titleStart: 'De la technologie sérieuse, construite par des équipes qui aiment',
     titleHighlight: 'leur travail',
-    lead: "Je suis Cédric, CTO freelance et architecte cloud avec 25+ années d'expérience en développement logiciel et coaching. J'aide des organisations européennes sur les sujets de souveraineté et résilience, livraison logicielle agentique et conception de domaines clairs et bornés, et j'anime aussi des ateliers qui embarquent tout le monde.",
+    lead: "Je suis Cédric, CTO freelance et architecte cloud avec plus de 25 ans d'expérience en développement logiciel et en coaching. J'aide des organisations européennes sur les sujets de souveraineté et résilience, livraison logicielle agentique et conception de domaines clairs et bornés. J'anime aussi des ateliers qui embarquent tout le monde.",
     ctaContact: 'Démarrer une conversation',
     ctaCv: 'Télécharger le CV',
     availability: 'Disponible pour des missions à partir de [MOIS ANNÉE]',

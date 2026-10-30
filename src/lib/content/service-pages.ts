@@ -315,7 +315,7 @@ const pages: Partial<Record<string, ServicePage>> = {
       title: { en: 'Methods and practices', fr: 'Méthodes et pratiques' },
       intro: {
         en: 'I read the Agile Manifesto in 2003 and moved a Scrum project to Kanban in 2008. I choose from these with each team, depending on its work.',
-        fr: 'J’ai lu le Manifeste agile en 2003 et fait passer un projet Scrum à Kanban en 2008. Je choisis parmi ces approches avec chaque équipe, selon son travail.',
+        fr: 'J’ai lu le Manifeste Agile en 2003 et fait passer un projet Scrum à Kanban en 2008. Je choisis parmi ces approches avec chaque équipe, selon son travail.',
       },
       groups: [
         {

@@ -7,7 +7,7 @@ Fully remote, based in Luxembourg, working for EU institutions, public sector an
 ## Goals
 
 - Present the profile and positioning (who, what, why hire him).
-- Show experience (25 years, selected missions — not a full CV dump).
+- Show experience (25+ years, selected missions — not a full CV dump).
 - Host a markdown blog (EN and FR).
 - Convert visitors into contacts (email, LinkedIn, downloadable CV).
 

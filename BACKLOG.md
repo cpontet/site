@@ -13,8 +13,8 @@
     - From head of software factory to CTO
     - Technical excellence without a mandate: katas, guilds, standards
     - Wardley Mapping for technical strategy
-  - Agile coaching & transformation (none yet)
-    - Kanban for IT Ops teams moving to the cloud
+  - Agile coaching & transformation
+    - ~~Kanban for IT Ops teams moving to the cloud~~ (published 2026-10-08)
     - Portfolio governance in Azure DevOps for a public institution
   - Cloud architecture (none yet)
     - FinOps from day one (BI@PP on Azure with Bicep)

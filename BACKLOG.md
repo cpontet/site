@@ -4,10 +4,32 @@
     email retention period (src/routes/[[lang=lang]]/legal/+page.svelte)
 - Blog articles
   - EventStorming era journey (strategic DDD, cinema 1960s to 2000s): second video post
-  - Sovereignty DAS
+  - Sovereignty DAS home/cpontet/repos/ap/digital-autonomy-score
   - DDD + AI
-  - DDD Course
+  - DDD Course home/cpontet/repos/perso/ddd/course
+  - Goal: at least one solid post per service (tag it with the service's `tags` in service-pages.ts)
+  - CTO & strategic advisory (none yet)
+    - What a fractional CTO does in the first 90 days
+    - From head of software factory to CTO
+    - Technical excellence without a mandate: katas, guilds, standards
+    - Wardley Mapping for technical strategy
+  - Agile coaching & transformation (none yet)
+    - Kanban for IT Ops teams moving to the cloud
+    - Portfolio governance in Azure DevOps for a public institution
+  - Cloud architecture (none yet)
+    - FinOps from day one (BI@PP on Azure with Bicep)
+    - Moving all IT workloads to Azure: what the plan missed
+    - A landing zone in Bicep: what goes in the first sprint
+  - Facilitation & workshops (only the EventStorming post)
+    - Twelve years of #play14
+    - Story mapping a backlog in a day
+    - Serious games for architecture decisions
+  - Cross-service
+    - Sovereignty is not resilience (Sovereignty + Cloud)
+    - Specs that coding agents can execute (Facilitation + Agentic)
 - Accessibility follow-ups (automated axe + 320px reflow checks now run in CI: `bun run a11y`)
   - Manual screen-reader pass: NVDA (Windows) and VoiceOver (macOS/iOS), EN and FR
 - Nice to have
   - Compact mobile menu
+- Past Talks
+  - home/cpontet/repos/perso/cedricpontet.com/resources/Talks

@@ -28,7 +28,7 @@ export const fr: typeof en = {
     badge: 'Freelance · À distance · Luxembourg & UE',
     titleStart: 'De la technologie sérieuse, construite par des équipes qui aiment',
     titleHighlight: 'leur travail',
-    lead: "Je suis Cédric, CTO freelance et architecte cloud avec 25 ans d'expérience. J'aide les organisations européennes sur la souveraineté et la résilience, la livraison logicielle agentique et la conception de domaines clairs, et j'anime les ateliers qui embarquent tout le monde.",
+    lead: "Je suis Cédric, CTO freelance et architecte cloud avec 25+ années d'expérience en développement logiciel et coaching. J'aide des organisations européennes sur les sujets de souveraineté et résilience, livraison logicielle agentique et conception de domaines clairs et bornés, et j'anime aussi des ateliers qui embarquent tout le monde.",
     ctaContact: 'Démarrer une conversation',
     ctaCv: 'Télécharger le CV',
     availability: 'Disponible pour des missions à partir de [MOIS ANNÉE]',
@@ -50,7 +50,7 @@ export const fr: typeof en = {
   about: {
     eyebrow: 'À propos',
     title: 'Curieux, pragmatique, et toujours proche du code.',
-    lead: "J'ai commencé à écrire du logiciel au Luxembourg en 2001. Deux ans plus tard, j'ai lu le Manifeste agile et j'y ai reconnu mes propres valeurs. Depuis, je navigue entre construire des systèmes et aider les équipes à mieux les construire.",
+    lead: "J'ai commencé à écrire du logiciel au Luxembourg en 2001. Deux ans plus tard, j'ai lu le Manifeste Agile et j'y ai reconnu mes propres valeurs. Depuis, je navigue entre construire des systèmes et aider les équipes à mieux les construire.",
     body: "Pendant vingt ans chez Agile Partner, j'ai été développeur, architecte, coach agile, delivery manager, responsable de la software factory puis CTO, pour des clients de la banque, de la logistique, des télécoms, de l'industrie et des institutions européennes. Aujourd'hui, je travaille en indépendant et à distance.",
     ctaCv: 'Télécharger le CV complet',
     ctaContact: 'Me contacter',

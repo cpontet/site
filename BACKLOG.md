@@ -21,7 +21,7 @@
     - Moving all IT workloads to Azure: what the plan missed
     - A landing zone in Bicep: what goes in the first sprint
   - Facilitation & workshops (only the EventStorming post)
-    - Twelve years of #play14
+    - ~~Twelve years of #play14~~ (published 2026-10-01)
     - Story mapping a backlog in a day
     - Serious games for architecture decisions
   - Cross-service

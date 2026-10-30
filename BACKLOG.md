@@ -8,9 +8,8 @@
   - DDD + AI
   - DDD Course home/cpontet/repos/perso/ddd/course
   - Goal: at least one solid post per service (tag it with the service's `tags` in service-pages.ts)
-  - CTO & strategic advisory (one draft)
-    - What a fractional CTO does in the first 90 days: drafted EN/FR (`draft: true`); to publish,
-      fill the two `TODO(cedric)` (rhythm offered, 2019 example), review the method, set `draft: false`
+  - CTO & strategic advisory
+    - ~~What a fractional CTO does in the first 90 days~~ (published 2026-10-30)
     - From head of software factory to CTO
     - Technical excellence without a mandate: katas, guilds, standards
     - Wardley Mapping for technical strategy

@@ -4,7 +4,7 @@ description: 'Listen and map, decide and write down, then install habits that ru
 date: '2026-10-30'
 lang: en
 tags: [cto, tech-strategy, architecture-governance]
-draft: true
+draft: false
 translationOf: fr/cto-a-temps-partage-premiers-90-jours
 ---
 
@@ -12,15 +12,11 @@ A fractional CTO is a technology leader you hire part-time: a day or two a week,
 months, as a member of your leadership team rather than as an outside auditor. It makes sense
 when you need technical direction but not yet a full-time executive, or while you look for one.
 
-<!-- TODO(cedric): state the usual rhythm you offer (days per week, minimum duration), or confirm "a day or two a week". -->
-
 The risk with any new CTO, part-time or not, is that they arrive with a framework and start
 installing it in the first week. I was CTO of a consulting company for seven years, and head of
 its software factory before that, and I have worked with many client organisations in the public
 and private sectors. In my experience, the changes that last are the ones that start from how
 the organisation already works.
-
-<!-- TODO(cedric): one short, true example from 2019 when you took the CTO role (what you did first, or what you would not do again). -->
 
 So I split the first 90 days into three phases. Each has a clear output, so that you can judge
 the work at each step and stop it if it is not useful.

@@ -4,7 +4,7 @@ description: 'Écouter et cartographier, décider et écrire, puis installer des
 date: '2026-10-30'
 lang: fr
 tags: [cto, tech-strategy, architecture-governance]
-draft: true
+draft: false
 translationOf: en/fractional-cto-first-90-days
 ---
 
@@ -13,16 +13,12 @@ deux jours par semaine, pendant plusieurs mois, comme membre de votre équipe de
 comme auditeur extérieur. C’est pertinent quand vous avez besoin d’une direction technique, mais
 pas encore d’un dirigeant à temps plein, ou pendant que vous en cherchez un.
 
-<!-- TODO(cedric): préciser le rythme habituel proposé (jours par semaine, durée minimale), ou confirmer « un ou deux jours par semaine ». -->
-
 Le risque avec tout nouveau CTO, à temps partagé ou non, est qu’il arrive avec un cadre tout
 prêt et commence à l’installer dès la première semaine. J’ai été CTO d’une société de conseil
 pendant sept ans, et responsable de sa software factory auparavant, et j’ai travaillé avec de
 nombreuses organisations clientes, dans le secteur public comme dans le privé. D’après mon
 expérience, les changements qui durent sont ceux qui partent de la façon dont l’organisation
 fonctionne déjà.
-
-<!-- TODO(cedric): un exemple court et vrai de 2019, quand vous avez pris le rôle de CTO (ce que vous avez fait en premier, ou ce que vous ne referiez pas). -->
 
 Je découpe donc les 90 premiers jours en trois phases. Chacune produit un résultat clair, pour
 que vous puissiez juger le travail à chaque étape, et l’arrêter s’il n’est pas utile.

@@ -14,7 +14,9 @@ let topic = $state<string | null>(null);
 
 const topics = $derived([...new Set(data.posts.flatMap((p) => p.tags))].sort());
 const shown = $derived(data.posts.filter((p) => !topic || p.tags.includes(topic)));
-const [featured, ...rest] = $derived(shown);
+// The post flagged `featured` (if it matches the topic) leads, otherwise the latest one.
+const featured = $derived(shown.find((p) => p.featured) ?? shown[0]);
+const rest = $derived(shown.filter((p) => p !== featured));
 
 const chip = (on: boolean) => [
   'min-h-[42px] cursor-pointer rounded-full px-[18px] text-[15px] font-bold',
@@ -94,7 +96,8 @@ const chip = (on: boolean) => [
             >
           </h2>
           <div class="order-1 flex flex-wrap gap-2 text-sm font-bold">
-            <span class="rounded-full bg-background px-3 py-0.5">{b.latest}</span>
+            <span class="rounded-full bg-background px-3 py-0.5">{featured.featured ? b.featured : b.latest}</span
+            >
             <ul class="contents">
               {#each featured.tags as tag (tag)}
                 <li class="rounded-full bg-background px-3 py-0.5">{tag}</li>

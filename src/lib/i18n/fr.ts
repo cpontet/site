@@ -129,6 +129,7 @@ export const fr: typeof en = {
     filterTopic: 'Filtrer par sujet',
     count: (n: number) => (n === 1 ? '1 article' : `${n} articles`),
     latest: 'Dernier',
+    featured: 'À la une',
     readOtherLang: 'Read in English',
   },
   service: {

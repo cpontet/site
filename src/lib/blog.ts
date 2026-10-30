@@ -8,6 +8,8 @@ export interface PostMeta {
   lang: Lang;
   tags: string[];
   draft?: boolean;
+  /** Highlighted at the top of the blog index instead of the latest post. */
+  featured?: boolean;
   /** "<lang>/<slug>" of the same article in the other language. */
   translationOf?: string;
 }

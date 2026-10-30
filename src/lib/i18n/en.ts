@@ -124,6 +124,7 @@ export const en = {
     filterTopic: 'Filter by topic',
     count: (n: number) => (n === 1 ? '1 article' : `${n} articles`),
     latest: 'Latest',
+    featured: 'Featured',
     readOtherLang: 'Lire en français',
   },
   service: {

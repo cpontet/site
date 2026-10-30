@@ -5,6 +5,7 @@ date: '2026-10-29'
 lang: en
 tags: [agentic-ai, software-factory, delivery, public-sector]
 draft: false
+featured: true
 translationOf: fr/au-coeur-d-une-software-factory-agentique
 ---
 

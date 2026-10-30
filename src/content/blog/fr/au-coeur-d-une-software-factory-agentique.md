@@ -5,6 +5,7 @@ date: '2026-10-29'
 lang: fr
 tags: [agentic-ai, software-factory, delivery, public-sector]
 draft: false
+featured: true
 translationOf: en/agentic-software-factory
 ---
 

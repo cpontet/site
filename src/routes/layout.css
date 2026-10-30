@@ -186,9 +186,9 @@
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.05;
-    /* Long words ("EventStorming,") must not overflow narrow screens. */
+    /* Long words ("EventStorming,") must not overflow narrow screens. No auto-hyphenation:
+       whole words wrap, and only a word wider than the line is broken. */
     overflow-wrap: break-word;
-    hyphens: auto;
   }
   :focus-visible {
     outline: 3px solid var(--brand);

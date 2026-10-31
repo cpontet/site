@@ -24,6 +24,15 @@
     - ~~Twelve years of #play14~~ (published 2026-10-01)
     - Story mapping a backlog in a day
     - Serious games for architecture decisions
+  - AI & Sovereign
+    - Is Tapestry the future of sovereign AI? (draft EN/FR, planned 2026-11-05)
+    - Could MeluXina-AI train a sovereign model? (draft EN/FR, planned 2026-11-12;
+      once both are live, link it from the Tapestry post's "What Europe would have to bring")
+    - EuroStack: the 2025 report (euro-stack.info) vs the industry coalition (eurostack.eu),
+      the seven layers, and what the June 2026 Tech Sovereignty Package left out
+  - Agile
+    - What I believed 14 years ago is not outdated
+      - https://itnation.lu/news/portrait-cedric-pontet-software-architect-at-agile-partner-sa/
   - Cross-service
     - Sovereignty is not resilience (Sovereignty + Cloud)
     - Specs that coding agents can execute (Facilitation + Agentic)
@@ -31,20 +40,3 @@
   - Manual screen-reader pass: NVDA (Windows) and VoiceOver (macOS/iOS), EN and FR
 - Nice to have
   - Compact mobile menu
-- Past Talks
-  - home/cpontet/repos/perso/cedricpontet.com/resources/Talks
-  - https://www.youtube.com/playlist?list=PLVEt-PRnoNgo
-  
-  - https://youtu.be/ste0glkNUiU?si=YlIE-okPUpyWdA6q
-  - https://www.youtube.com/watch?v=x6YetdQYg5o&pp=ygUOY8OpZHJpYyBQb250ZXQ%3D
-  - https://www.youtube.com/watch?v=wdbO60CIMqM&pp=ygUOY8OpZHJpYyBQb250ZXTSBwkJKwwBhyohjO8%3D
-  - https://www.youtube.com/watch?v=FwPGyBjfEn4&pp=ygUOY8OpZHJpYyBQb250ZXQ%3D
-  - https://www.youtube.com/watch?v=vntWNBKBFjg&pp=ygUOY8OpZHJpYyBQb250ZXQ%3D
-  - https://www.youtube.com/watch?v=1k1neo2trkg
-  - https://www.youtube.com/watch?v=wdbO60CIMqM
-- Podcast/Articles
-  - https://open.spotify.com/embed/episode/4wBTRGN1NgxScEK6tbsBtN?utm_source=generator
-  - https://paperjam.lu/article/questions-le-cloud-est-un-accelerateur-dusages-et-de-business
-  - https://www.youtube.com/watch?v=Ntoo-p219BY
-  - https://itnation.lu/news/portrait-cedric-pontet-software-architect-at-agile-partner-sa/
-  - https://www.voxxeddays.com/speaker/cedric-pontet

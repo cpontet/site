@@ -3,6 +3,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { mdsvex } from 'mdsvex';
 import { defineConfig } from 'vite';
+import { rehypeToc } from './src/lib/markdown/rehype-toc.ts';
 
 export default defineConfig({
   plugins: [
@@ -14,7 +15,7 @@ export default defineConfig({
           filename.split(/[/\\]/).includes('node_modules') ? undefined : true,
       },
       adapter: adapter(),
-      preprocess: [mdsvex({ extensions: ['.svx', '.md'] })],
+      preprocess: [mdsvex({ extensions: ['.svx', '.md'], rehypePlugins: [rehypeToc] })],
       extensions: ['.svelte', '.svx', '.md'],
       prerender: {
         // Blog posts are unseen while every article is still a draft.

@@ -88,6 +88,7 @@ src/
     i18n.ts                  # Lang type, t(), localize(), switchLang()
     i18n/en.ts, i18n/fr.ts   # UI strings (fr is typed against en)
     blog.ts                  # loads posts via import.meta.glob, reading time, drafts
+    markdown/rehype-toc.ts   # mdsvex plugin (vite.config.ts): h2 ids + `metadata.toc` for "On this page"
   content/blog/
     en/<slug>.md             # English posts
     fr/<slug>.md             # French posts
@@ -100,7 +101,7 @@ src/
       about/                 # profile + experience timeline
       services/[slug]/       # one page per service that has an entry in service-pages.ts
       talks/                 # talks & media index + [slug] page per talk with a video or slides
-      blog/                  # index (topic filter, page language only) + [slug]
+      blog/                  # index (topic filter, page language only) + [slug] (post page)
       rss.xml/               # RSS per language
       contact/               # form action — the only non-prerendered route
       legal/                 # legal notice & privacy (placeholders: RCS, VAT, permit, address)
@@ -182,6 +183,23 @@ YouTube (youtube-nocookie) until the visitor presses play. After adding a deck o
 `bun run talks` and commit `static/talks/` and `src/lib/content/talk-assets.json`.
 Canvas artboards: "v3 · Talks" and "v3 · Talk page".
 
+### Blog post page
+
+Same hierarchy for every post (canvas artboard: "v3 · Blog post"):
+
+1. Mint hero: back link, title, description, byline; "At a glance" card on the right
+   (date, reading time, language + translation link, tags), #play14 shapes on desktop.
+2. Body (720px) with a sticky right column on desktop:
+   - "On this page", built from the `##` headings, shown when there are at least two;
+   - the related service: the one whose `ServicePage.tags` share the most tags with the post
+     (hidden when none match).
+   The current-section marker is a small progressive-enhancement script: without JS the list still works.
+   On phones the list becomes a collapsed `<details>` above the text.
+3. "Written by" author card (peach), then "Keep reading": 3 posts in the page language,
+   ranked by shared tags, then by date.
+
+Use `##` for the sections of a post: they become the anchors and the "On this page" entries.
+
 ### Blog front matter
 
 ```yaml
@@ -234,7 +252,8 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 - Tokens only: never hardcode hex colors in components; use the CSS variables / Tailwind theme.
 - Accessibility: WCAG AA contrast, visible focus, semantic landmarks, `alt` on every image,
   respects `prefers-reduced-motion`.
-- Performance: no client JS on content pages beyond the theme/lang toggles; images as
+- Performance: no client JS on content pages beyond the theme/lang toggles and the blog post
+  "On this page" marker; images as
   responsive webp/avif with explicit width/height.
 
 ## SEO

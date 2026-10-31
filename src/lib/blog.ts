@@ -1,5 +1,6 @@
 import type { Component } from 'svelte';
 import type { Lang } from './i18n.js';
+import type { TocEntry } from './markdown/rehype-toc.js';
 
 export interface PostMeta {
   title: string;
@@ -12,6 +13,8 @@ export interface PostMeta {
   featured?: boolean;
   /** "<lang>/<slug>" of the same article in the other language. */
   translationOf?: string;
+  /** h2 headings, filled at build time by the rehype-toc plugin (not front matter). */
+  toc?: TocEntry[];
 }
 
 export interface Post extends PostMeta {

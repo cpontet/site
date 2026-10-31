@@ -16,7 +16,8 @@
     "format": "biome check --write .",
     "cv": "bun scripts/build-cv.ts",
     "icons": "bun scripts/build-icons.ts",
-    "og": "bun scripts/build-og.ts"
+    "og": "bun scripts/build-og.ts",
+    "talks": "bun scripts/build-talks.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.3",

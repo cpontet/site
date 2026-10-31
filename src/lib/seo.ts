@@ -1,6 +1,7 @@
 import type { Post } from './blog.js';
 import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL, SITE_ORIGIN } from './config.js';
 import { type Service, services } from './content/profile.js';
+import type { Talk } from './content/talks.js';
 import { type Lang, localize, t } from './i18n.js';
 
 /** Static share image per language, rendered by `bun run og`. */
@@ -63,5 +64,31 @@ export function blogPostingLd(post: Post) {
     keywords: post.tags.join(', '),
     author,
     publisher: author,
+  };
+}
+
+/** schema.org VideoObject for a recorded talk, otherwise a PresentationDigitalDocument. */
+export function talkLd(talk: Talk, lang: Lang) {
+  const url = SITE_ORIGIN + localize(`/talks/${talk.slug}`, lang);
+  const author = { '@type': 'Person', '@id': PERSON_ID, name: 'Cédric Pontet', url: SITE_ORIGIN };
+  const base = {
+    '@context': 'https://schema.org',
+    name: talk.title,
+    description: talk.summary[lang],
+    // Spoken language of the recording, or of the latest delivery.
+    inLanguage: (talk.deliveries.find((d) => d.recorded) ?? talk.deliveries[0]).lang,
+    url,
+    author,
+  };
+  if (!talk.video) return { ...base, '@type': 'PresentationDigitalDocument' };
+  const { id, seconds, uploaded } = talk.video;
+  return {
+    ...base,
+    '@type': 'VideoObject',
+    thumbnailUrl: `${SITE_ORIGIN}/talks/video/${id}-1280.webp`,
+    uploadDate: uploaded,
+    duration: `PT${Math.floor(seconds / 60)}M${seconds % 60}S`,
+    contentUrl: `https://www.youtube.com/watch?v=${id}`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${id}`,
   };
 }

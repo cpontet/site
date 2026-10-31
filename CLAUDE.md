@@ -245,7 +245,7 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
   `.dark` class on `<html>` (shadcn convention); components never branch on theme.
   Dark tokens: bg `#14162B`, surface `#1D2040`, raised `#262A50`, border `#343A66`,
   input border `#5A608F`, text `#F3F3F8`, muted `#B4B7CC`, brand `#0098DD` (dark text on it),
-  brand text `#5CC3F2`; tints become deep tones (peach `#3A2618`, sky `#1C2A4A`,
+  brand text `#5CC3F2`; tints become deep tones (peach `#46201E`, sky `#1C2A4A`,
   mint `#173328`, lilac `#2A2148`, sun `#3A3216`, rose `#3A1D2A`). Dark surfaces step up in
   lightness instead of using shadows. Primary button inverts (light pill, dark text).
 - Focus: 3px brand (blue) outline, 2px offset, on every interactive element in both themes.

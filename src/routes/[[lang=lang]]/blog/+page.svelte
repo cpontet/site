@@ -37,7 +37,7 @@ const chip = (on: boolean) => [
 
 <div class="mx-auto flex max-w-6xl flex-col gap-10 px-7 pt-12 pb-26">
   <section
-    class="relative flex flex-wrap items-end justify-between gap-6 overflow-hidden rounded-[2rem] bg-tint-peach p-[clamp(2rem,5vw,3.5rem)]"
+    class="relative flex flex-wrap items-end justify-between gap-6 overflow-hidden rounded-[2rem] bg-tint-lilac p-[clamp(2rem,5vw,3.5rem)]"
   >
     <span
       aria-hidden="true"

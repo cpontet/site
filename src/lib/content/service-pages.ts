@@ -647,8 +647,8 @@ const pages: Partial<Record<string, ServicePage>> = {
         fr: 'Vos applications reposent sur les services propriétaires d’un seul fournisseur, et en partir voudrait dire les réécrire.',
       },
       {
-        en: 'A price or licence change from a single vendor has shown how exposed you are.',
-        fr: 'Un changement de prix ou de licence chez un seul éditeur a montré à quel point vous êtes exposé.',
+        en: 'You want to use AI on sensitive data, but no one can say where prompts go or who can read them.',
+        fr: 'Vous voulez utiliser l’IA sur des données sensibles, mais personne ne sait dire où vont les prompts ni qui peut les lire.',
       },
     ],
     scope: [
@@ -667,17 +667,17 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
       {
-        title: { en: 'Application portability', fr: 'Portabilité des applications' },
+        title: { en: 'Portability and open source', fr: 'Portabilité et open source' },
         body: {
-          en: 'Containers, open standards and Infrastructure as Code, so a workload can run on more than one provider.',
-          fr: 'Conteneurs, standards ouverts et Infrastructure as Code, pour qu’une application puisse tourner chez plus d’un fournisseur.',
+          en: 'Containers, open standards, Infrastructure as Code and open-source equivalents of proprietary managed services, so a workload can run on more than one provider.',
+          fr: 'Conteneurs, standards ouverts, Infrastructure as Code et équivalents open source des services managés propriétaires, pour qu’une application puisse tourner chez plus d’un fournisseur.',
         },
       },
       {
-        title: { en: 'Open-source building blocks', fr: 'Briques open source' },
+        title: { en: 'Sovereign AI', fr: 'IA souveraine' },
         body: {
-          en: 'Proprietary managed services replaced by open-source equivalents that your team can run anywhere.',
-          fr: 'Des services managés propriétaires remplacés par des équivalents open source que votre équipe peut exploiter partout.',
+          en: 'Where your models run, who can see prompts and data, and which open-weight models or European providers fit each use case.',
+          fr: 'Où tournent vos modèles, qui peut voir les prompts et les données, et quels modèles ouverts ou fournisseurs européens conviennent à chaque usage.',
         },
       },
       {
@@ -805,7 +805,14 @@ const pages: Partial<Record<string, ServicePage>> = {
         },
       },
     ],
-    tags: ['sovereign-cloud', 'digital-sovereignty', 'resilience', 'open-source', 'portability'],
+    tags: [
+      'sovereign-cloud',
+      'digital-sovereignty',
+      'sovereign-ai',
+      'resilience',
+      'open-source',
+      'portability',
+    ],
   },
   agentic: {
     lead: {

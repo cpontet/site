@@ -127,6 +127,8 @@ const lang = $derived(data.lang);
         <p>
           <a
             href={ventures.play14.url}
+            target="_blank"
+            rel="noopener"
             class="font-bold underline decoration-2 underline-offset-4">#play14</a
           >
           {a.facilitationPlay14}

@@ -150,7 +150,7 @@ const topic = $derived.by(() => {
     </div>
     {#if eco.link}
       <p class="max-w-[46rem]">
-        <a href={eco.link.href} class={['font-bold', linkUnderline]}>{eco.link.name}</a>
+        <a href={eco.link.href} target="_blank" rel="noopener" class={['font-bold', linkUnderline]}>{eco.link.name}</a>
         {eco.link.text[lang]}
       </p>
     {/if}

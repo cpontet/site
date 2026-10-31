@@ -15,8 +15,8 @@ const linkClass =
   >
     <span>© {year} Cédric Pontet · {dict.footer.tagline}</span>
     <nav aria-label={dict.nav.footer} class="flex flex-wrap gap-5">
-      <a class={linkClass} href={GITHUB_URL}>GitHub</a>
-      <a class={linkClass} href={LINKEDIN_URL}>LinkedIn</a>
+      <a class={linkClass} href={GITHUB_URL} target="_blank" rel="noopener">GitHub</a>
+      <a class={linkClass} href={LINKEDIN_URL} target="_blank" rel="noopener">LinkedIn</a>
       <a class={linkClass} href={localize('/rss.xml', lang)}>{dict.footer.rss}</a>
       <a class={linkClass} href={localize('/legal', lang)}>{dict.footer.legal}</a>
     </nav>

@@ -36,7 +36,9 @@ const c = $derived(dict.contact);
         >
         <a
           class="underline decoration-brand decoration-2 underline-offset-4"
-          href={LINKEDIN_URL}>LinkedIn</a
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noopener">LinkedIn</a
         >
       </div>
     </div>

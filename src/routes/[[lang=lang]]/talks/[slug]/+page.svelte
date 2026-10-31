@@ -106,6 +106,8 @@ const pdfSize = (bytes: number) =>
       <span>{d.videoNotice}</span>
       <a
         href="https://www.youtube.com/watch?v={talk.video.id}"
+        target="_blank"
+        rel="noopener"
         class={[linkUnderline, 'font-bold text-foreground']}>{d.watchOnYoutube}</a
       >
     </p>

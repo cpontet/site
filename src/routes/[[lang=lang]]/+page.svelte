@@ -210,6 +210,8 @@ const lang = $derived(data.lang);
           >
             <a
               href={venture.url}
+              target="_blank"
+              rel="noopener"
               class="card-link order-2 font-display text-[28px] leading-tight font-extrabold"
               >{venture.name}</a
             >

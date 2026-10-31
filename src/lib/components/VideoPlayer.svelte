@@ -38,6 +38,8 @@ function play(event: MouseEvent) {
   {:else}
     <a
       href="https://www.youtube.com/watch?v={id}"
+      target="_blank"
+      rel="noopener"
       class="group absolute inset-0 block"
       onclick={play}
     >

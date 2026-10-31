@@ -202,7 +202,7 @@ const pill = 'rounded-full px-3 py-0.5';
         <p class={eyebrow}>{d.watchEyebrow}</p>
         <h2 id="watch-h" class={h2}>{d.watchTitle}</h2>
       </div>
-      <a href={youtubePlaylist} class={[linkUnderline, 'text-base font-bold']}>{d.playlist}</a>
+      <a href={youtubePlaylist} target="_blank" rel="noopener" class={[linkUnderline, 'text-base font-bold']}>{d.playlist}</a>
     </div>
     <ul class="grid grid-cols-[repeat(auto-fill,minmax(min(320px,100%),1fr))] gap-x-6 gap-y-8">
       {#each videos as talk (talk.slug)}
@@ -367,7 +367,7 @@ const pill = 'rounded-full px-3 py-0.5';
               {d.mediaKinds[item.kind]} · {item.outlet} · {month(item.date)}
             </p>
             <h3 lang={item.lang} class="font-display text-[21px] leading-tight font-bold">
-              <a href={item.href} class="after:absolute after:inset-0 after:rounded-lg"
+              <a href={item.href} target="_blank" rel="noopener" class="after:absolute after:inset-0 after:rounded-lg"
                 >{item.title}</a
               >
             </h3>

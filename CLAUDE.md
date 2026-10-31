@@ -54,6 +54,7 @@ bun run check        # svelte-check + types
 bun run lint         # biome check .
 bun run a11y         # axe-core (light/dark) + 320px reflow on every sitemap page; needs `bun run preview`
 bun run format       # biome check --write .
+bun run talks        # render slides (PDF + webp) and video posters from resources/Talks
 bunx wrangler deploy # deploy (normally done by CI on push to main)
 bunx shadcn-svelte@latest add <component>   # add a UI component
 ```
@@ -82,7 +83,7 @@ src/
     assets/                  # portrait.webp (720px, transparent), favicon
     components/ui/           # shadcn-svelte generated components (don't hand-edit heavily)
     components/              # SiteHeader, SiteFooter, ThemeToggle, …
-    content/                 # profile.ts, experience.ts, service-pages.ts — typed bilingual data (L10n)
+    content/                 # profile.ts, experience.ts, service-pages.ts, talks.ts — typed bilingual data (L10n)
     server/contact.ts        # validation, Turnstile check, MIME for send_email
     i18n.ts                  # Lang type, t(), localize(), switchLang()
     i18n/en.ts, i18n/fr.ts   # UI strings (fr is typed against en)
@@ -98,6 +99,7 @@ src/
       +page.svelte           # home
       about/                 # profile + experience timeline
       services/[slug]/       # one page per service that has an entry in service-pages.ts
+      talks/                 # talks & media index + [slug] page per talk with a video or slides
       blog/                  # index (topic filter, page language only) + [slug]
       rss.xml/               # RSS per language
       contact/               # form action — the only non-prerendered route
@@ -108,6 +110,7 @@ static/
   favicon.svg                # icon source (brand blue disc + #play14 yellow dot); `bun run icons`
                              # renders favicon.ico, apple-touch-icon.png, icon-192/512.png
   og/                        # share images (`bun run og`)
+  talks/                     # slides (<slug>.pdf, <slug>/<n>.webp) + video posters (`bun run talks`)
   cv/                        # public PDF CV (missing: build only warns until added)
 cv/cv.html, cv/cv.fr.html    # sources of static/cv/cedric-pontet-cv{,-fr}.pdf (`bun run cv`); public: no birth date; keep EN/FR in step
 resources/                   # SOURCE material only (docx CVs, bio, raw photos) — gitignored, never served
@@ -169,6 +172,15 @@ entries follow automatically). Every page uses the same hierarchy, typed by `Ser
 
 The service's tint colours the icon disc, "At a glance" and format cards. Canvas artboard:
 "v3 · Service page".
+
+### Talks
+
+`src/lib/content/talks.ts` lists every talk (one entry per talk, one `deliveries` row per event),
+plus podcasts and press in `media`. Facts come from `resources/Talks` and the CVs. A talk with a
+video or slides gets `/talks/<slug>`. Videos stay on YouTube behind a poster: nothing loads from
+YouTube (youtube-nocookie) until the visitor presses play. After adding a deck or a video, run
+`bun run talks` and commit `static/talks/` and `src/lib/content/talk-assets.json`.
+Canvas artboards: "v3 · Talks" and "v3 · Talk page".
 
 ### Blog front matter
 

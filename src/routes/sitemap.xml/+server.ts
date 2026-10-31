@@ -1,6 +1,7 @@
 import { listPosts } from '#lib/blog.js';
 import { SITE_ORIGIN } from '#lib/config.js';
 import { servicesWithPage } from '#lib/content/service-pages.js';
+import { talksWithPage } from '#lib/content/talks.js';
 import { localize, switchLang } from '#lib/i18n.js';
 
 export const prerender = true;
@@ -9,6 +10,8 @@ const pages = [
   '/',
   '/about',
   ...servicesWithPage.map((s) => `/services/${s.slug}`),
+  '/talks',
+  ...talksWithPage.map((t) => `/talks/${t.slug}`),
   '/blog',
   '/contact',
   '/legal',

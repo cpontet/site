@@ -2,7 +2,14 @@
 import Download from '@lucide/svelte/icons/download';
 import portrait from '#lib/assets/portrait.webp';
 import Seo from '#lib/components/Seo.svelte';
-import { btnPrimary, btnSecondary, eyebrow, h2, tintBg } from '#lib/components/styles.js';
+import {
+  btnPrimary,
+  btnSecondary,
+  eyebrow,
+  h2,
+  linkUnderline,
+  tintBg,
+} from '#lib/components/styles.js';
 import { certifications, experience, expertise, talks } from '#lib/content/experience.js';
 import { ventures } from '#lib/content/profile.js';
 import { cvPath, localize } from '#lib/i18n.js';
@@ -143,6 +150,9 @@ const lang = $derived(data.lang);
     <ul class="flex list-disc flex-col gap-1.5 pl-5 text-base">
       {#each talks as talk (talk)}<li>{talk}</li>{/each}
     </ul>
+    <a href={localize('/talks', lang)} class={[linkUnderline, 'self-start text-base font-bold']}
+      >{a.speakingLink}</a
+    >
     <p class="text-[15px] text-muted-foreground">{a.languages}</p>
   </div>
 </section>

@@ -11,6 +11,7 @@ const langNames = { en: 'English', fr: 'Français' };
 const links = $derived([
   { href: localize('/', lang) + '#services', label: dict.nav.services },
   { href: localize('/about', lang), label: dict.nav.about },
+  { href: localize('/talks', lang), label: dict.nav.talks },
   { href: localize('/blog', lang), label: dict.nav.blog },
 ]);
 </script>
@@ -30,7 +31,10 @@ const links = $derived([
         <a
           href={link.href}
           class="decoration-brand decoration-2 underline-offset-8 hover:text-brand-text aria-[current=page]:underline"
-          aria-current={page.url.pathname === link.href ? 'page' : undefined}>{link.label}</a
+          aria-current={page.url.pathname === link.href ||
+          page.url.pathname.startsWith(`${link.href}/`)
+            ? 'page'
+            : undefined}>{link.label}</a
         >
       {/each}
 

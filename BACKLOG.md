@@ -16,11 +16,11 @@
   - Agile coaching & transformation
     - ~~Kanban for IT Ops teams moving to the cloud~~ (published 2026-10-08)
     - Portfolio governance in Azure DevOps for a public institution
-  - Cloud architecture (none yet)
-    - FinOps from day one (BI@PP on Azure with Bicep)
+  - Cloud architecture
+    - ~~FinOps from day one (BI@PP on Azure with Bicep)~~ (published 2026-10-31)
     - Moving all IT workloads to Azure: what the plan missed
     - A landing zone in Bicep: what goes in the first sprint
-  - Facilitation & workshops (only the EventStorming post)
+  - Facilitation & workshops
     - ~~Twelve years of #play14~~ (published 2026-10-01)
     - Story mapping a backlog in a day
     - Serious games for architecture decisions
@@ -33,3 +33,18 @@
   - Compact mobile menu
 - Past Talks
   - home/cpontet/repos/perso/cedricpontet.com/resources/Talks
+  - https://www.youtube.com/playlist?list=PLVEt-PRnoNgo
+  
+  - https://youtu.be/ste0glkNUiU?si=YlIE-okPUpyWdA6q
+  - https://www.youtube.com/watch?v=x6YetdQYg5o&pp=ygUOY8OpZHJpYyBQb250ZXQ%3D
+  - https://www.youtube.com/watch?v=wdbO60CIMqM&pp=ygUOY8OpZHJpYyBQb250ZXTSBwkJKwwBhyohjO8%3D
+  - https://www.youtube.com/watch?v=FwPGyBjfEn4&pp=ygUOY8OpZHJpYyBQb250ZXQ%3D
+  - https://www.youtube.com/watch?v=vntWNBKBFjg&pp=ygUOY8OpZHJpYyBQb250ZXQ%3D
+  - https://www.youtube.com/watch?v=1k1neo2trkg
+  - https://www.youtube.com/watch?v=wdbO60CIMqM
+- Podcast/Articles
+  - https://open.spotify.com/embed/episode/4wBTRGN1NgxScEK6tbsBtN?utm_source=generator
+  - https://paperjam.lu/article/questions-le-cloud-est-un-accelerateur-dusages-et-de-business
+  - https://www.youtube.com/watch?v=Ntoo-p219BY
+  - https://itnation.lu/news/portrait-cedric-pontet-software-architect-at-agile-partner-sa/
+  - https://www.voxxeddays.com/speaker/cedric-pontet

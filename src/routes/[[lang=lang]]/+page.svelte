@@ -3,6 +3,7 @@ import ArrowRight from '@lucide/svelte/icons/arrow-right';
 import Download from '@lucide/svelte/icons/download';
 import portrait from '#lib/assets/portrait.webp';
 import ContactSection from '#lib/components/ContactSection.svelte';
+import FaqSection from '#lib/components/FaqSection.svelte';
 import PostCard from '#lib/components/PostCard.svelte';
 import Seo from '#lib/components/Seo.svelte';
 import ServiceIcon from '#lib/components/ServiceIcon.svelte';
@@ -262,5 +263,7 @@ const lang = $derived(data.lang);
     </div>
   </section>
 {/if}
+
+<FaqSection {lang} dict={d} />
 
 <ContactSection {lang} dict={d} />

@@ -70,6 +70,11 @@ export const en = {
     speakingLink: 'Talks, videos and slides',
     languages: 'Languages: French (native), English (fluent). Conversational German and Spanish.',
   },
+  faq: {
+    eyebrow: 'Working together',
+    title: 'How we start',
+    questionsTitle: 'Common questions',
+  },
   contact: {
     eyebrow: 'Contact',
     title: "Let's build something good together.",

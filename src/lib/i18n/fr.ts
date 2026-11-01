@@ -73,6 +73,11 @@ export const fr: typeof en = {
     languages:
       'Langues : français (natif), anglais (courant). Allemand et espagnol : niveau conversationnel.',
   },
+  faq: {
+    eyebrow: 'Travailler ensemble',
+    title: 'Comment on démarre',
+    questionsTitle: 'Questions fréquentes',
+  },
   contact: {
     eyebrow: 'Contact',
     title: 'Construisons quelque chose de bien ensemble.',

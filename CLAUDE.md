@@ -83,7 +83,7 @@ src/
     assets/                  # portrait.webp (720px, transparent), favicon
     components/ui/           # shadcn-svelte generated components (don't hand-edit heavily)
     components/              # SiteHeader, SiteFooter, ThemeToggle, …
-    content/                 # profile.ts, experience.ts, service-pages.ts, talks.ts — typed bilingual data (L10n)
+    content/                 # profile.ts, experience.ts, service-pages.ts, talks.ts, faq.ts — typed bilingual data (L10n)
     server/contact.ts        # validation, Turnstile check, MIME for send_email
     i18n.ts                  # Lang type, t(), localize(), switchLang()
     i18n/en.ts, i18n/fr.ts   # UI strings (fr is typed against en)

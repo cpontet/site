@@ -18,7 +18,7 @@ import TableOfContents from '#lib/components/TableOfContents.svelte';
 import { serviceHref } from '#lib/content/service-pages.js';
 import { formatDate } from '#lib/format.js';
 import { localize } from '#lib/i18n.js';
-import { blogPostingLd } from '#lib/seo.js';
+import { blogPostingLd, postOgImage } from '#lib/seo.js';
 import type { PageProps } from './$types';
 
 let { data }: PageProps = $props();
@@ -37,6 +37,7 @@ const translation = $derived(post.translationOf?.match(/^(en|fr)\/(.+)$/));
   title="{post.title} — Cédric Pontet"
   description={post.description}
   type="article"
+  image={{ url: postOgImage(post), alt: post.title }}
   jsonLd={blogPostingLd(post)}
 />
 

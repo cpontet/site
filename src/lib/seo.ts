@@ -1,11 +1,37 @@
 import type { Post } from './blog.js';
 import { CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL, SITE_ORIGIN } from './config.js';
+import ogPosts from './content/og-posts.json';
 import { type Service, services } from './content/profile.js';
 import type { Talk } from './content/talks.js';
 import { type Lang, localize, t } from './i18n.js';
 
 /** Static share image per language, rendered by `bun run og`. */
 export const ogImage = (lang: Lang) => `${SITE_ORIGIN}/og/default-${lang}.png`;
+
+/** FNV-1a of a post title: og-posts.json stores this, so draft titles never reach the client. */
+export function titleHash(title: string): string {
+  let hash = 0x811c9dc5;
+  for (const char of title) {
+    hash ^= char.codePointAt(0) ?? 0;
+    hash = Math.imul(hash, 0x01000193) >>> 0;
+  }
+  return hash.toString(16).padStart(8, '0');
+}
+
+/**
+ * A post's own share image, rendered by `bun run og`. Falls back to the default image (with a
+ * build warning) when the card is missing or was rendered for an older title.
+ */
+export function postOgImage(post: Post): string {
+  const key = `${post.lang}/${post.slug}`;
+  if ((ogPosts as Record<string, string>)[key] === titleHash(post.title)) {
+    return `${SITE_ORIGIN}/og/blog/${key}.png`;
+  }
+  if (import.meta.env.SSR) {
+    console.warn(`Share image missing or stale for blog/${key}: run \`bun run og\``);
+  }
+  return ogImage(post.lang);
+}
 
 const PERSON_ID = `${SITE_ORIGIN}/#person`;
 
@@ -60,7 +86,7 @@ export function blogPostingLd(post: Post) {
     inLanguage: post.lang,
     url,
     mainEntityOfPage: url,
-    image: ogImage(post.lang),
+    image: postOgImage(post),
     keywords: post.tags.join(', '),
     author,
     publisher: author,

@@ -110,7 +110,7 @@ src/
 static/
   favicon.svg                # icon source (brand blue disc + #play14 yellow dot); `bun run icons`
                              # renders favicon.ico, apple-touch-icon.png, icon-192/512.png
-  og/                        # share images (`bun run og`)
+  og/                        # share images: default-{en,fr}.png + blog/<lang>/<slug>.png (`bun run og`)
   talks/                     # slides (<slug>.pdf, <slug>/<n>.webp) + video posters (`bun run talks`)
   cv/                        # public PDF CV (missing: build only warns until added)
 cv/cv.html, cv/cv.fr.html    # sources of static/cv/cedric-pontet-cv{,-fr}.pdf (`bun run cv`); public: no birth date; keep EN/FR in step
@@ -260,8 +260,11 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 ## SEO
 
 - Per-page `<title>`, meta description, canonical URL, `hreflang` alternates (en/fr/x-default).
-- Open Graph image per language (static for now): `static/og/default-{en,fr}.png`, rendered by
-  `bun run og` (`scripts/build-og.ts`). All head tags go through `#lib/components/Seo.svelte`.
+- Open Graph images, rendered by `bun run og` (`scripts/build-og.ts`): `static/og/default-{en,fr}.png`
+  for every page, and one card per blog post in `static/og/blog/<lang>/<slug>.png` (drafts included).
+  After adding a post or changing a title, run `bun run og` and commit `static/og/` and
+  `src/lib/content/og-posts.json` (title hashes); a stale card falls back to the default image with a
+  build warning. All head tags go through `#lib/components/Seo.svelte`.
 - `sitemap.xml` and `rss.xml` (per language) generated as prerendered endpoints.
 - JSON-LD `Person` on home/about, `Service` on service pages, `BlogPosting` on posts
   (builders in `src/lib/seo.ts`).

@@ -9,12 +9,15 @@ let {
   title,
   description,
   type = 'website',
+  image,
   jsonLd,
 }: {
   lang: Lang;
   title: string;
   description?: string;
   type?: 'website' | 'article';
+  /** Share image other than the default one, e.g. a blog post's card. */
+  image?: { url: string; alt: string };
   jsonLd?: object;
 } = $props();
 
@@ -33,10 +36,10 @@ const ld = $derived(jsonLd && JSON.stringify(jsonLd).replace(/</g, '\\u003c'));
   <meta property="og:url" content={url} />
   <meta property="og:title" content={title} />
   {#if description}<meta property="og:description" content={description} />{/if}
-  <meta property="og:image" content={ogImage(lang)} />
+  <meta property="og:image" content={image?.url ?? ogImage(lang)} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Cédric Pontet" />
+  <meta property="og:image:alt" content={image?.alt ?? 'Cédric Pontet'} />
   <meta name="twitter:card" content="summary_large_image" />
   {#if ld}
     {@html `<script type="application/ld+json">${ld}</script>`}

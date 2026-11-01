@@ -42,6 +42,9 @@
   EN and FR (axe + 320px reflow already run in CI via `bun run a11y`)
 - Talks: resolve the `TODO(cedric)` notes in `src/lib/content/talks.ts`
   (Voxxed Days 2025 repeat, a missing event name, speaker slots without titles)
+- Contact form at 320px: the Turnstile widget (fixed 300px) overflows the form, so the home and
+  contact pages scroll sideways once it loads; `bun run a11y` measures before it appears.
+  Try `size: 'flexible'` (or compact) and tighter padding on phones.
 
 ## Blog ideas
 
@@ -61,7 +64,3 @@ Tag new posts with the service's `tags` in `service-pages.ts`.
     (https://itnation.lu/news/portrait-cedric-pontet-software-architect-at-agile-partner-sa/)
 - Facilitation & workshops
   - Serious games for architecture decisions
-
-## Nice to have
-
-- Compact mobile menu

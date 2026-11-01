@@ -14,6 +14,7 @@ export const en = {
     skip: 'Skip to content',
     newTabPdf: '(PDF, opens in a new tab)',
     footer: 'Footer',
+    menu: 'Menu',
     language: 'Language',
     switchToDark: 'Switch to dark theme',
     switchToLight: 'Switch to light theme',

@@ -252,7 +252,8 @@ Drafts are excluded from the production build. Slugs are kebab-case, file name =
 - Tokens only: never hardcode hex colors in components; use the CSS variables / Tailwind theme.
 - Accessibility: WCAG AA contrast, visible focus, semantic landmarks, `alt` on every image,
   respects `prefers-reduced-motion`.
-- Performance: no client JS on content pages beyond the theme/lang toggles and the blog post
+- Performance: no client JS on content pages beyond the theme/lang toggles, the mobile menu
+  (a `<details>`; JS only closes it on Escape, outside click or link) and the blog post
   "On this page" marker; images as
   responsive webp/avif with explicit width/height.
 

@@ -16,6 +16,7 @@ export const fr: typeof en = {
     skip: 'Aller au contenu',
     newTabPdf: '(PDF, s’ouvre dans un nouvel onglet)',
     footer: 'Pied de page',
+    menu: 'Menu',
     language: 'Langue',
     switchToDark: 'Passer au thème sombre',
     switchToLight: 'Passer au thème clair',

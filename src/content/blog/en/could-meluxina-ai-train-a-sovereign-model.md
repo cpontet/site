@@ -52,12 +52,15 @@ of 3 June 2026 did not include the binding "Buy European" rule that the industry
   Commission are candidates, if their licences allow derivatives to be trained and redistributed.
   OpenEuroLLM, delayed by lack of compute, shows what happens when a good model project does not
   get GPUs.
-- **A legal frame, with gaps.** Under the AI Act, the provider of a general-purpose model built by
-  a consortium is
-  [typically "the coordinator or the consortium itself"](https://artificialintelligenceact.eu/gpai-guidelines-overview/).
-  A frontier model would exceed the 10²⁵ threshold for systemic risk, where the open-source
-  exemption no longer applies, so someone must take on those obligations. Whether weights
-  trained on personal data are themselves personal data still needs an answer from the EDPB.
+- **A legal frame, with gaps.** A frontier model would exceed the AI Act's threshold of 10²⁵
+  training operations (GPT-4 needed about 2×10²⁵) and count as a "systemic risk" model, with
+  testing, incident reporting and security duties that open source does not waive. Someone has
+  to carry them: for a consortium,
+  [typically "the coordinator or the consortium itself"](https://artificialintelligenceact.eu/gpai-guidelines-overview/),
+  and Tapestry has no legal entity yet. On data, the
+  [European Data Protection Board](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)
+  holds that a model trained on personal data is not automatically anonymous; whether sharing its
+  weights is a transfer of personal data is still open.
 
 ## MeluXina-AI in numbers
 

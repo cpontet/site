@@ -53,13 +53,15 @@ d’entreprises réunie autour d’[eurostack.eu](https://eurostack.eu/).
   par la Commission sont des candidats, si leurs licences permettent d’entraîner et de
   redistribuer des dérivés. OpenEuroLLM, retardé faute de calcul, montre ce qui arrive à un bon
   projet de modèle qui n’obtient pas de GPU.
-- **Un cadre juridique, avec des trous.** Selon l’AI Act, le fournisseur d’un modèle d’IA à usage
-  général construit par un consortium est
-  [en général « le coordinateur ou le consortium lui-même »](https://artificialintelligenceact.eu/gpai-guidelines-overview/).
-  Un modèle de frontière dépasserait le seuil de 10²⁵ opérations du risque systémique, où
-  l’exemption open source ne s’applique plus : il faut donc que quelqu’un assume ces obligations.
-  Quant à savoir si des poids entraînés sur des données personnelles sont eux-mêmes des données
-  personnelles, la réponse doit encore venir du CEPD.
+- **Un cadre juridique, avec des trous.** Un modèle de frontière dépasserait le seuil de
+  10²⁵ opérations d’entraînement de l’AI Act (GPT-4 en a demandé environ 2×10²⁵) et serait un
+  modèle à « risque systémique », avec des obligations de tests, de signalement des incidents et
+  de sécurité dont l’open source ne dispense pas. Quelqu’un doit les porter : pour un consortium,
+  [en général « le coordinateur ou le consortium lui-même »](https://artificialintelligenceact.eu/gpai-guidelines-overview/),
+  et Tapestry n’a pas encore d’entité juridique. Côté données, le
+  [Comité européen de la protection des données](https://www.edpb.europa.eu/our-work-tools/our-documents/opinion-board-art-64/opinion-282024-certain-data-protection-aspects_en)
+  estime qu’un modèle entraîné sur des données personnelles n’est pas automatiquement anonyme ;
+  reste à savoir si partager ses poids constitue un transfert de données personnelles.
 
 ## MeluXina-AI en chiffres
 

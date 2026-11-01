@@ -1,42 +1,54 @@
-- Content to provide (placeholders live on the site)
-  - Availability date: "Available for missions from [MONTH YEAR]" (src/lib/i18n/en.ts, fr.ts)
+## Blocked
+
+- Placeholders live on the site, waiting on company paperwork
   - Legal notice: legal form, RCS number, LU VAT number, business permit number,
-    email retention period (src/routes/[[lang=lang]]/legal/+page.svelte)
-- Blog articles
+    email retention period (`src/routes/[[lang=lang]]/legal/+page.svelte`), then remove its
+    `TODO(cedric)` and have the privacy text reviewed
+  - Availability date: "Available for missions from [MONTH YEAR]" (`src/lib/i18n/en.ts`, `fr.ts`)
+
+## Publishing calendar (Thursdays; a scheduled routine flips `draft: false` on the date)
+
+| Date       | Post                                                     | Service                  | Status                |
+| ---------- | -------------------------------------------------------- | ------------------------ | --------------------- |
+| 2026-11-05 | Is Tapestry the future of sovereign AI?                  | Sovereignty              | Draft EN/FR           |
+| 2026-11-12 | Could MeluXina-AI train a sovereign model?               | Sovereignty              | Draft EN/FR           |
+| 2026-11-19 | EuroStack: what was asked for, and what Europe delivered | Sovereignty              | Draft EN/FR, to review |
+| 2026-11-26 | Story mapping a backlog in a day                         | Facilitation             | Needs Cédric's story  |
+| 2026-12-03 | Sovereignty is not resilience (DAS)                      | Sovereignty + Cloud      | Draft EN/FR, to review |
+| 2026-12-10 | Technical excellence without a mandate                   | CTO                      | Needs Cédric's story  |
+| 2026-12-17 | A landing zone in Bicep: what goes in the first sprint   | Cloud                    | Needs Cédric's story  |
+| 2027-01-07 | DDD + AI: specs that coding agents can execute           | DDD + Agentic            | Needs Cédric's story  |
+
+- Once MeluXina is live, link it from the Tapestry post's "What Europe would have to bring" (EN/FR).
+- EuroStack post: unverified items (EP resolution of 22 Jan 2026 wording, key4biz quote,
+  "leaked draft") were left out on purpose; add them only once checked against the source.
+
+## Next
+
+- Accessibility: manual screen-reader pass with NVDA (Windows) and VoiceOver (macOS/iOS),
+  EN and FR (axe + 320px reflow already run in CI via `bun run a11y`)
+- Talks: resolve the `TODO(cedric)` notes in `src/lib/content/talks.ts`
+  (Voxxed Days 2025 repeat, a missing event name, speaker slots without titles)
+
+## Blog ideas
+
+Tag new posts with the service's `tags` in `service-pages.ts`.
+
+- Cloud architecture
+  - Moving all IT workloads to Azure: what the plan missed
+- CTO & strategic advisory
+  - From head of software factory to CTO
+  - Wardley Mapping for technical strategy
+- DDD & EventStorming
   - EventStorming era journey (strategic DDD, cinema 1960s to 2000s): second video post
-  - Sovereignty DAS home/cpontet/repos/ap/digital-autonomy-score
-  - DDD + AI
-  - DDD Course home/cpontet/repos/perso/ddd/course
-  - Goal: at least one solid post per service (tag it with the service's `tags` in service-pages.ts)
-  - CTO & strategic advisory
-    - ~~What a fractional CTO does in the first 90 days~~ (published 2026-10-30)
-    - From head of software factory to CTO
-    - Technical excellence without a mandate: katas, guilds, standards
-    - Wardley Mapping for technical strategy
-  - Agile coaching & transformation
-    - ~~Kanban for IT Ops teams moving to the cloud~~ (published 2026-10-08)
-    - Portfolio governance in Azure DevOps for a public institution
-  - Cloud architecture
-    - ~~FinOps from day one (BI@PP on Azure with Bicep)~~ (published 2026-10-31)
-    - Moving all IT workloads to Azure: what the plan missed
-    - A landing zone in Bicep: what goes in the first sprint
-  - Facilitation & workshops
-    - ~~Twelve years of #play14~~ (published 2026-10-01)
-    - Story mapping a backlog in a day
-    - Serious games for architecture decisions
-  - AI & Sovereign
-    - Is Tapestry the future of sovereign AI? (draft EN/FR, planned 2026-11-05)
-    - Could MeluXina-AI train a sovereign model? (draft EN/FR, planned 2026-11-12;
-      once both are live, link it from the Tapestry post's "What Europe would have to bring")
-    - EuroStack: the 2025 report (euro-stack.info) vs the industry coalition (eurostack.eu),
-      the seven layers, and what the June 2026 Tech Sovereignty Package left out
-  - Agile
-    - What I believed 14 years ago is not outdated
-      - https://itnation.lu/news/portrait-cedric-pontet-software-architect-at-agile-partner-sa/
-  - Cross-service
-    - Sovereignty is not resilience (Sovereignty + Cloud)
-    - Specs that coding agents can execute (Facilitation + Agentic)
-- Accessibility follow-ups (automated axe + 320px reflow checks now run in CI: `bun run a11y`)
-  - Manual screen-reader pass: NVDA (Windows) and VoiceOver (macOS/iOS), EN and FR
-- Nice to have
-  - Compact mobile menu
+  - DDD course (source: `~/repos/perso/ddd/course`)
+- Agile coaching & transformation
+  - Portfolio governance in Azure DevOps for a public institution
+  - What I believed 14 years ago is not outdated
+    (https://itnation.lu/news/portrait-cedric-pontet-software-architect-at-agile-partner-sa/)
+- Facilitation & workshops
+  - Serious games for architecture decisions
+
+## Nice to have
+
+- Compact mobile menu

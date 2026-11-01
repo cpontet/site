@@ -214,7 +214,9 @@ translationOf: fr/migrer-vers-un-cloud-souverain # optional
 ---
 ```
 
-Drafts are excluded from the production build. Slugs are kebab-case, file name = slug.
+Drafts are excluded from the production build: `src/lib/markdown/vite-drop-drafts.ts` replaces them
+with an empty stub, so their title and text never reach the bundles (`bun run dev` still shows them).
+Slugs are kebab-case, file name = slug.
 
 ## Design
 

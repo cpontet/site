@@ -15,6 +15,8 @@ export interface PostMeta {
   translationOf?: string;
   /** h2 headings, filled at build time by the rehype-toc plugin (not front matter). */
   toc?: TocEntry[];
+  /** Word count of the text, filled by the rehype-toc plugin too. */
+  words?: number;
 }
 
 export interface Post extends PostMeta {
@@ -26,23 +28,17 @@ const modules = import.meta.glob<{ metadata: PostMeta; default: Component }>(
   '/src/content/blog/*/*.md',
   { eager: true },
 );
-const sources = import.meta.glob<string>('/src/content/blog/*/*.md', {
-  eager: true,
-  query: '?raw',
-  import: 'default',
-});
 
 const WORDS_PER_MINUTE = 220;
 
 function toPost(path: string): Post {
   const [, lang, slug] = path.match(/\/blog\/(en|fr)\/([^/]+)\.md$/) ?? [];
   const { metadata } = modules[path];
-  const words = sources[path].split(/\s+/).length;
   return {
     ...metadata,
     lang: lang as Lang,
     slug,
-    readingMinutes: Math.max(1, Math.round(words / WORDS_PER_MINUTE)),
+    readingMinutes: Math.max(1, Math.round((metadata.words ?? 0) / WORDS_PER_MINUTE)),
   };
 }
 

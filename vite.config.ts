@@ -5,9 +5,11 @@ import { mdsvex } from 'mdsvex';
 import { defineConfig } from 'vite';
 import { rehypeExternalLinks } from './src/lib/markdown/rehype-external-links.ts';
 import { rehypeToc } from './src/lib/markdown/rehype-toc.ts';
+import { dropDrafts } from './src/lib/markdown/vite-drop-drafts.ts';
 
 export default defineConfig({
   plugins: [
+    dropDrafts(),
     tailwindcss(),
     sveltekit({
       compilerOptions: {

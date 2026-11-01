@@ -1,5 +1,6 @@
 // mdsvex rehype plugin: gives every h2 an id and adds the list to the front matter as `toc`,
-// so `metadata.toc` feeds the "On this page" navigation. Runs at build time only.
+// so `metadata.toc` feeds the "On this page" navigation. Also adds `words` (text only, for the
+// reading time), so blog.ts never needs the raw sources. Runs at build time only.
 
 interface HastNode {
   type: string;
@@ -46,6 +47,9 @@ export function rehypeToc() {
       node.children?.forEach(visit);
     };
     visit(tree);
-    if (file.data.fm) file.data.fm.toc = toc;
+    if (file.data.fm) {
+      file.data.fm.toc = toc;
+      file.data.fm.words = textOf(tree).split(/\s+/).filter(Boolean).length;
+    }
   };
 }

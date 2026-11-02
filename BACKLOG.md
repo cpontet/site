@@ -1,5 +1,11 @@
 ## Blocked
 
+- Case study "Moving strategic EU assets to a sovereign cloud" (Publications Office): draft kept in
+  `resources/drafts/` (gitignored: the repo is public). Waiting on authorisation to publish, then on
+  the five `TODO(cedric)` facts (trigger and scope, options compared, one finding per step, recovery
+  tests, the outcome). Once cleared: move it to `src/content/blog/en/`, date it, run `bun run og`,
+  write the FR version.
+
 - Placeholders live on the site, waiting on company paperwork
   - Legal notice: legal form, RCS number, LU VAT number, business permit number,
     email retention period (`src/routes/[[lang=lang]]/legal/+page.svelte`), then remove its
@@ -57,7 +63,6 @@ Tag new posts with the service's `tags` in `service-pages.ts`.
   - Wardley Mapping for technical strategy
 - DDD & EventStorming
   - EventStorming era journey (strategic DDD, cinema 1960s to 2000s): second video post
-  - DDD course (source: `~/repos/perso/ddd/course`)
 - Agile coaching & transformation
   - Portfolio governance in Azure DevOps for a public institution
   - What I believed 14 years ago is not outdated

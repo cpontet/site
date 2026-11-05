@@ -4,7 +4,7 @@ description: 'The AI Alliance wants countries and organisations to train one ope
 date: '2026-11-05'
 lang: en
 tags: [digital-sovereignty, sovereign-ai, open-source, public-sector]
-draft: true
+draft: false
 translationOf: fr/tapestry-avenir-de-l-ia-souveraine
 ---
 

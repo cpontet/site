@@ -16,7 +16,7 @@
 
 | Date       | Post                                                     | Service                  | Status                |
 | ---------- | -------------------------------------------------------- | ------------------------ | --------------------- |
-| 2026-11-05 | Is Tapestry the future of sovereign AI?                  | Sovereignty              | Draft EN/FR           |
+| 2026-11-05 | ~~Is Tapestry the future of sovereign AI?~~ (published 2026-11-05) | Sovereignty              | Published             |
 | 2026-11-12 | Could MeluXina-AI train a sovereign model?               | Sovereignty              | Draft EN/FR           |
 | 2026-11-19 | EuroStack: what was asked for, and what Europe delivered | Sovereignty              | Draft EN/FR, to review |
 | 2026-11-26 | Story mapping a backlog in a day (Restena My.lu)        | Facilitation             | Draft EN/FR, TODO(cedric) on workshop facts |

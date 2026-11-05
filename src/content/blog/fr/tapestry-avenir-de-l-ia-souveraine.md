@@ -4,7 +4,7 @@ description: 'L’AI Alliance veut que des pays et des organisations entraînent
 date: '2026-11-05'
 lang: fr
 tags: [digital-sovereignty, sovereign-ai, open-source, public-sector]
-draft: true
+draft: false
 translationOf: en/is-tapestry-the-future-of-sovereign-ai
 ---
 

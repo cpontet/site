@@ -17,7 +17,7 @@
 | Date       | Post                                                     | Service                  | Status                |
 | ---------- | -------------------------------------------------------- | ------------------------ | --------------------- |
 | 2026-11-05 | ~~Is Tapestry the future of sovereign AI?~~ (published 2026-11-05) | Sovereignty              | Published             |
-| 2026-11-12 | Could MeluXina-AI train a sovereign model?               | Sovereignty              | Draft EN/FR           |
+| 2026-11-12 | ~~Could MeluXina-AI train a sovereign model?~~ (published 2026-11-12) | Sovereignty              | Published             |
 | 2026-11-19 | EuroStack: what was asked for, and what Europe delivered | Sovereignty              | Draft EN/FR, to review |
 | 2026-11-26 | Story mapping a backlog in a day (Restena My.lu)        | Facilitation             | Draft EN/FR, TODO(cedric) on workshop facts |
 | 2026-12-03 | Sovereignty is not resilience (DAS)                      | Sovereignty + Cloud      | Draft EN/FR, to review |
@@ -25,7 +25,6 @@
 | 2026-12-17 | A landing zone in Bicep: what goes in the first sprint   | Cloud                    | Draft EN/FR, TODO(cedric) on network choices |
 | 2027-01-07 | Domain-Driven Design for coding agents                   | DDD + Agentic            | Draft EN/FR, to review |
 
-- Once MeluXina is live, link it from the Tapestry post's "What Europe would have to bring" (EN/FR).
 - EuroStack post: unverified items (EP resolution of 22 Jan 2026 wording, key4biz quote,
   "leaked draft") were left out on purpose; add them only once checked against the source.
 

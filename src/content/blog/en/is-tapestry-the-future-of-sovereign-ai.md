@@ -195,8 +195,8 @@ proposal, which reminds us that a model is only the top layer of a stack Europe 
 control. What is missing is the connection between these pieces, and a decision to join an open
 commons rather than build a parallel one.
 
-In a second article, I take one of those pieces, Luxembourg's MeluXina-AI supercomputer, and
-work through what it would take to make it a Tapestry node, and how organisations could use the
+In [a second article](/blog/could-meluxina-ai-train-a-sovereign-model), I take one of those
+pieces, Luxembourg's MeluXina-AI supercomputer, and work through what it would take to make it a Tapestry node, and how organisations could use the
 result.
 
 ## My answer

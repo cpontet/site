@@ -213,8 +213,8 @@ la proposition [EuroStack](https://www.euro-stack.info/), qui rappelle qu’un m
 couche supérieure d’une pile que l’Europe contrôle peu. Ce qui manque, c’est le lien entre ces
 pièces, et la décision de rejoindre un bien commun ouvert plutôt que d’en construire un parallèle.
 
-Dans un second article, je prends l’une de ces pièces, le supercalculateur MeluXina-AI au
-Luxembourg, et j’examine ce qu’il faudrait pour en faire un nœud Tapestry, et comment des
+Dans [un second article](/fr/blog/meluxina-ai-peut-il-entrainer-un-modele-souverain), je prends
+l’une de ces pièces, le supercalculateur MeluXina-AI au Luxembourg, et j’examine ce qu’il faudrait pour en faire un nœud Tapestry, et comment des
 organisations pourraient utiliser le résultat.
 
 ## Ma réponse

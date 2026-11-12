@@ -4,7 +4,7 @@ description: 'Luxembourg is installing a 1,008-GPU AI supercomputer. What it cou
 date: '2026-11-12'
 lang: en
 tags: [sovereign-cloud, sovereign-ai, public-sector, cloud-architecture]
-draft: true
+draft: false
 translationOf: fr/meluxina-ai-peut-il-entrainer-un-modele-souverain
 ---
 

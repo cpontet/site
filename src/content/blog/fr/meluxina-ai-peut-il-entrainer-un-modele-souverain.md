@@ -4,7 +4,7 @@ description: 'Le Luxembourg installe un supercalculateur IA de 1 008 GPU. Ce q
 date: '2026-11-12'
 lang: fr
 tags: [sovereign-cloud, sovereign-ai, public-sector, cloud-architecture]
-draft: true
+draft: false
 translationOf: en/could-meluxina-ai-train-a-sovereign-model
 ---
 

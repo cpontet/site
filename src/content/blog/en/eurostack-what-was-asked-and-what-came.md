@@ -4,7 +4,7 @@ description: 'EuroStack is a 2025 report, an industry coalition and a slogan. Wh
 date: '2026-11-19'
 lang: en
 tags: [digital-sovereignty, sovereign-cloud, open-source, public-sector]
-draft: true
+draft: false
 translationOf: fr/eurostack-ce-qui-etait-demande-et-ce-qui-est-venu
 ---
 

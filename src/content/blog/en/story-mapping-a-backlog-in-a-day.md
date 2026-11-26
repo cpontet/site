@@ -4,7 +4,7 @@ description: 'A flat backlog hides the user journey and makes every release a ne
 date: '2026-11-26'
 lang: en
 tags: [story-mapping, facilitation, product-discovery, agile]
-draft: true
+draft: false
 translationOf: fr/story-mapping-d-un-backlog-en-une-journee
 ---
 

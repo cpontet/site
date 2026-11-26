@@ -4,7 +4,7 @@ description: 'Un backlog à plat cache le parcours utilisateur et transforme cha
 date: '2026-11-26'
 lang: fr
 tags: [story-mapping, facilitation, product-discovery, agile]
-draft: true
+draft: false
 translationOf: en/story-mapping-a-backlog-in-a-day
 ---
 

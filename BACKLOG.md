@@ -19,7 +19,7 @@
 | 2026-11-05 | ~~Is Tapestry the future of sovereign AI?~~ (published 2026-11-05) | Sovereignty              | Published             |
 | 2026-11-12 | ~~Could MeluXina-AI train a sovereign model?~~ (published 2026-11-12) | Sovereignty              | Published             |
 | 2026-11-19 | ~~EuroStack: what was asked for, and what Europe delivered~~ (published 2026-11-19) | Sovereignty              | Published             |
-| 2026-11-26 | Story mapping a backlog in a day (Restena My.lu)        | Facilitation             | Draft EN/FR, TODO(cedric) on workshop facts |
+| 2026-11-26 | ~~Story mapping a backlog in a day (Restena My.lu)~~ (published 2026-11-26) | Facilitation             | Published             |
 | 2026-12-03 | Sovereignty is not resilience (DAS)                      | Sovereignty + Cloud      | Draft EN/FR, to review |
 | 2026-12-10 | Technical excellence without a mandate                   | CTO                      | Draft EN/FR, to review |
 | 2026-12-17 | A landing zone in Bicep: what goes in the first sprint   | Cloud                    | Draft EN/FR, TODO(cedric) on network choices |
